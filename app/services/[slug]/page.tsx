@@ -63,7 +63,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 Services
               </Link>
               <h2 className="mt-12 max-w-xl font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Verified execution for high-value mineral work.
+                Practical execution for industrial mineral supply.
               </h2>
               <p className="mt-6 max-w-xl leading-8 text-white/58">
                 {service.description}

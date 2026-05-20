@@ -18,7 +18,7 @@ import { contact, services, visuals, workflow } from "@/lib/site-data";
 export const metadata = {
   title: "Services",
   description:
-    "Bilex Minerals capabilities across gold sourcing, mineral trading, assaying, CIF logistics, exploration support, equipment leasing, and mining consultation.",
+    "Bilex Minerals services for mineral sourcing and advisory, processing support, quality assessment, export coordination, and international supply partnerships.",
 };
 
 const serviceIcons = [Gem, Scale, Microscope, Ship, Compass, Boxes, HardHat];
@@ -33,10 +33,10 @@ const serviceImages = [
 ];
 
 const serviceGroups = [
-  ["Sourcing", "Gold sourcing, mineral trading, and opportunity qualification."],
-  ["Verification", "Assaying, sample custody, documentation, and review."],
-  ["Movement", "CIF logistics, freight planning, and export support."],
-  ["Field", "Exploration support, equipment leasing, and operational consultation."],
+  ["Sourcing", "Bismuth and strategic mineral sourcing coordination."],
+  ["Processing", "Material handling, preparation, and specification support."],
+  ["Quality", "Sample review, testing coordination, and documentation."],
+  ["Export", "Freight planning, cargo coordination, and buyer communication."],
 ];
 
 export default function ServicesPage() {
@@ -46,8 +46,8 @@ export default function ServicesPage() {
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
           eyebrow="Services"
-          title="Sourcing, verification, logistics, and field capability."
-          text="A full-service mineral trade desk for qualified buyers, regional operators, and strategic partners working across East Africa."
+          title="Mineral sourcing, processing support and export coordination."
+          text="A practical service desk for industrial buyers, processors, exporters, and supply partners working with bismuth and strategic minerals."
           image={visuals.refinery}
         />
 
@@ -117,12 +117,13 @@ export default function ServicesPage() {
                 Capability Model
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                One desk, four operating lanes.
+                One desk, four industrial supply lanes.
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-white/60">
-                Buyers and partners can enter through a specific service need,
-                then move into verification, documentation, and logistics
-                support without losing operational continuity.
+                Buyers and partners can begin with a defined supply need, then
+                move into quality assessment, processing coordination,
+                documentation and export support without losing operational
+                continuity.
               </p>
             </div>
 
@@ -148,11 +149,11 @@ export default function ServicesPage() {
                 Engagement Flow
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Each service connects to a controlled transaction process.
+                Each service connects to a practical supply process.
               </h2>
             </div>
 
-            <div className="mt-12 grid gap-4 md:grid-cols-7">
+            <div className="mt-12 grid gap-4 md:grid-cols-4">
               {workflow.map((step, index) => (
                 <div
                   key={step}
@@ -175,11 +176,12 @@ export default function ServicesPage() {
             <div>
               <ClipboardCheck className="text-[#d8bd6a]" size={25} />
               <h2 className="mt-4 font-display text-3xl text-[#fff7e7] md:text-4xl">
-                Need a custom mineral trade workflow?
+                Need a custom industrial mineral supply workflow?
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-7 text-white/58">
-                Start privately and the team will route your inquiry to the
-                correct sourcing, assay, logistics, or field support lane.
+                Start with a defined requirement and the team will route your
+                inquiry to the correct sourcing, processing, quality or export
+                support lane.
               </p>
             </div>
             <a

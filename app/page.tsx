@@ -8,7 +8,7 @@ const organizationSchema = {
   url: "https://bilexminerals.com",
   logo: "https://bilexminerals.com/bilex-logo.webp",
   description:
-    "East African mineral trading, gold sourcing, assaying, CIF logistics, exploration support, and equipment leasing company.",
+    "Industrial and strategic mineral sourcing, bismuth supply support, processing coordination, quality assessment, and export partnership company.",
   areaServed: ["Kenya", "Tanzania", "East Africa"],
   address: {
     "@type": "PostalAddress",
@@ -24,11 +24,11 @@ const organizationSchema = {
   },
   knowsAbout: [
     "mineral trading East Africa",
-    "gold sourcing Kenya",
-    "gold assaying",
-    "mining logistics East Africa",
+    "bismuth supply",
+    "strategic minerals",
+    "mineral processing support",
     "mineral export services",
-    "exploration support Africa",
+    "industrial mineral sourcing",
   ],
 };
 

@@ -15,24 +15,24 @@ import { operatingStandards, visuals, workflow } from "@/lib/site-data";
 export const metadata = {
   title: "Standards",
   description:
-    "Bilex Minerals operating standards for KYC, assaying, custody, documentation, and CIF export support.",
+    "Bilex Minerals supply chain standards for counterparty review, quality assessment, processing support, traceable sourcing, and export documentation.",
 };
 
 const standardCards = [
   {
     icon: LockKeyhole,
-    title: "KYC and Buyer Review",
-    text: "Sensitive sourcing details are handled after verified intent, buyer qualification, and responsible communication.",
+    title: "Counterparty Review",
+    text: "Supply discussions are handled after buyer requirements, destination, documentation needs, and commercial intent are understood.",
   },
   {
     icon: Microscope,
-    title: "Assay-Led Confidence",
-    text: "Samples, testing coordination, and reviewable assay evidence support mineral quality discussions.",
+    title: "Quality Assessment",
+    text: "Samples, testing coordination, specification checks, and documentation support mineral quality discussions.",
   },
   {
     icon: FileCheck2,
     title: "Documentation Discipline",
-    text: "Commercial movement is supported by transaction records, custody steps, export paperwork, and delivery coordination.",
+    text: "Commercial movement is supported by processing records, quality documentation, export paperwork, and delivery coordination.",
   },
 ];
 
@@ -43,8 +43,8 @@ export default function StandardsPage() {
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
           eyebrow="Standards"
-          title="Proof before promise."
-          text="Bilex Minerals treats verification, custody, documentation, and export readiness as the foundation of every serious mineral engagement."
+          title="Supply chain standards before shipment."
+          text="Bilex Minerals treats traceable sourcing, quality assessment, documentation, processing support and export readiness as the foundation of every serious mineral engagement."
           image={visuals.refinery}
         />
 
@@ -55,12 +55,12 @@ export default function StandardsPage() {
                 Operating Standard
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Verification comes before commitment.
+                Reliability comes before commitment.
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-white/60">
                 These standards help protect buyers, partners, and the company
-                from unsupported claims, informal handling, and unclear movement
-                paths.
+                from unsupported claims, inconsistent handling, unclear
+                specifications and weak export preparation.
               </p>
             </div>
 
@@ -114,7 +114,7 @@ export default function StandardsPage() {
                 Transaction Path
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                The process stays visible from inquiry to documentation.
+                The process stays visible from sourcing to delivery and export.
               </h2>
 
               <div className="mt-10 grid gap-3">
@@ -141,11 +141,12 @@ export default function StandardsPage() {
             <div>
               <ShieldCheck className="text-[#d8bd6a]" size={25} />
               <h2 className="mt-4 font-display text-3xl text-[#fff7e7] md:text-4xl">
-                Need documentation or assay support?
+                Need quality assessment or export documentation support?
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-7 text-white/58">
-                Start a private inquiry and define the verification requirement
-                before commercial movement begins.
+                Start a private inquiry and define the mineral, specification,
+                processing, documentation and export requirement before
+                commercial movement begins.
               </p>
             </div>
             <Link

@@ -8,7 +8,7 @@ import { mineralCategories, visuals } from "@/lib/site-data";
 export const metadata = {
   title: "Minerals",
   description:
-    "Gold, rare minerals, gemstones, and industrial mineral access coordinated by Bilex Minerals across East Africa.",
+    "Bismuth, strategic minerals, industrial minerals, and processed material supply support from Bilex Minerals.",
 };
 
 const mineralImages = [
@@ -26,13 +26,13 @@ const mineralStandards = [
   },
   {
     icon: Microscope,
-    title: "Assay Support",
-    text: "Gold and selected mineral lots can move through sample handling, test coordination, and result review.",
+    title: "Quality Assessment",
+    text: "Selected mineral lots can move through sample handling, testing coordination, specification checks, and result review.",
   },
   {
     icon: Truck,
     title: "Export Planning",
-    text: "Movement is planned around custody, freight, insurance, compliance support, and buyer communication.",
+    text: "Movement is planned around freight, cargo handling, export documentation, and buyer communication.",
   },
 ];
 
@@ -43,8 +43,8 @@ export default function MineralsPage() {
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
           eyebrow="Minerals"
-          title="Mineral access worth verifying."
-          text="Bilex Minerals supports qualified access to precious metals, selected rare minerals, gemstones, and industrial minerals through a verification-led process."
+          title="Bismuth and strategic minerals for industrial supply chains."
+          text="Bilex Minerals supports bismuth, strategic minerals, industrial minerals and processed materials for manufacturing, processing and export markets."
           image={visuals.hero}
         />
 
@@ -93,13 +93,13 @@ export default function MineralsPage() {
                 Verification Lens
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                The category matters less than the quality of proof.
+                The mineral category matters less than the reliability of supply.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
                 Every mineral conversation is treated as a commercial and
-                operational review. Bilex prioritizes origin context,
-                documentation quality, assay support, and secure movement over
-                unsupported claims.
+                operational review. Bilex prioritizes origin context, supplier
+                reliability, documentation quality, processing requirements and
+                export planning over unsupported claims.
               </p>
             </div>
 
@@ -134,7 +134,7 @@ export default function MineralsPage() {
             <div className="relative min-h-[560px] overflow-hidden rounded-sm border border-white/10">
               <Image
                 src={visuals.assay}
-                alt="Gold and mineral sample review for qualified buyers"
+                alt="Bismuth and strategic mineral sample review for industrial buyers"
                 fill
                 sizes="(min-width: 1024px) 52vw, 100vw"
                 className="object-cover"
@@ -147,19 +147,19 @@ export default function MineralsPage() {
                 Buyer Readiness
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Mineral access is private, structured, and qualification-led.
+                Industrial mineral supply is structured around requirements.
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/60">
                 Bilex Minerals works best with buyers and partners who can
-                define volume expectations, verification needs, destination
-                requirements, and documentation standards before sensitive lot
-                details are released.
+                define mineral type, specification, volume expectations,
+                processing needs, destination requirements, and documentation
+                standards before supply discussions move forward.
               </p>
               <Link
                 href="/contact"
                 className="mt-8 inline-flex items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:bg-[#f5df9a]"
               >
-                Discuss mineral access
+                Discuss mineral supply
                 <ArrowRight size={17} />
               </Link>
             </div>

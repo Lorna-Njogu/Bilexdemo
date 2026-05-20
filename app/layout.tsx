@@ -22,20 +22,20 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://bilexminerals.com"),
   title: {
     default:
-      "Bilex Minerals | Gold Sourcing, Mineral Trading & Logistics East Africa",
+      "Bilex Minerals | Bismuth & Strategic Industrial Mineral Supply",
     template: "%s | Bilex Minerals",
   },
   description:
-    "Premium East African mineral trading, gold sourcing in Kenya, assaying services, CIF logistics, mineral export support, exploration support, and equipment leasing from Bilex Minerals.",
+    "Bilex Minerals supports bismuth and strategic industrial mineral sourcing, processing support, quality assessment, export coordination, and international supply partnerships.",
   keywords: [
-    "mineral trading East Africa",
-    "gold sourcing Kenya",
-    "gold dealers Kenya",
-    "assaying services Kenya",
+    "bismuth supplier",
+    "strategic minerals",
+    "industrial mineral sourcing",
+    "mineral processing support",
     "mining logistics East Africa",
     "mineral export services",
-    "exploration support Africa",
-    "gold trading company Kenya",
+    "industrial minerals East Africa",
+    "international mineral supply",
   ],
   alternates: {
     canonical: "https://bilexminerals.com",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bilex Minerals",
     description:
-      "Trusted East African mineral trading, gold sourcing, assaying, CIF logistics, and exploration support.",
+      "Bismuth and strategic industrial mineral sourcing, processing support, quality assessment, and export coordination.",
     url: "https://bilexminerals.com",
     siteName: "Bilex Minerals",
     images: [
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bilex Minerals",
     description:
-      "Premium East African gold sourcing, mineral trading, assaying, and export logistics.",
+      "Bismuth and strategic industrial mineral sourcing, processing support, and export coordination.",
     images: ["/bilex-logo.webp"],
   },
 };

@@ -37,9 +37,13 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-7 text-white/54">
-              Premium East African mineral sourcing, gold assaying, mineral
-              trading, CIF logistics, exploration support, and equipment
-              capability for qualified buyers and strategic partners.
+              Bilex Minerals is focused on industrial mineral sourcing,
+              processing support, export and import coordination, and long-term
+              supply partnerships for bismuth and strategic minerals.
+            </p>
+            <p className="mt-4 max-w-sm text-xs leading-6 text-white/42">
+              Company registration and export documentation details are shared
+              with qualified buyers and partners during formal engagement.
             </p>
           </div>
 
@@ -115,7 +119,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs uppercase tracking-[0.18em] text-white/36 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Bilex Minerals EA</p>
-          <p>Gold sourcing / mineral trading / export logistics</p>
+          <p>Bismuth / strategic minerals / export partnerships</p>
         </div>
       </div>
     </footer>

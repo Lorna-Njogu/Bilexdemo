@@ -14,7 +14,7 @@ import { contact, visuals } from "@/lib/site-data";
 export const metadata = {
   title: "Contact",
   description:
-    "Request private consultation with Bilex Minerals for gold sourcing, mineral trading, assaying, logistics, exploration support, and equipment leasing.",
+    "Speak with Bilex Minerals about bismuth supply, industrial mineral sourcing, processing support, export coordination, and supply partnerships.",
 };
 
 const contactItems = [
@@ -23,7 +23,7 @@ const contactItems = [
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "Private consultation",
+    value: "Handled with discretion",
     href: contact.whatsapp,
   },
   { icon: MapPin, label: "Offices", value: "Nairobi / Dar es Salaam" },
@@ -35,8 +35,8 @@ const contactItems = [
 ];
 
 const offices = [
-  ["Nairobi Desk", contact.primaryOffice, "Buyer intake, sourcing coordination, and documentation review."],
-  ["Dar es Salaam Desk", contact.secondaryOffice, "Export support, trade corridors, and logistics coordination."],
+  ["Nairobi Desk", contact.primaryOffice, "Supply requirements, buyer coordination, and documentation review."],
+  ["Dar es Salaam Desk", contact.secondaryOffice, "Export support, cargo movement, and logistics coordination."],
 ];
 
 export default function ContactPage() {
@@ -45,9 +45,9 @@ export default function ContactPage() {
       <SiteHeader variant="solid" />
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
-          eyebrow="Private Consultation"
-          title="Start a serious mineral inquiry privately."
-          text="Contact Bilex Minerals for gold sourcing, mineral trading, assaying, CIF logistics, exploration support, equipment leasing, or mining consultation."
+          eyebrow="Supply Inquiry"
+          title="Speak with our team about mineral supply requirements."
+          text="Speak with our team about bismuth supply, industrial mineral sourcing, processing support, export coordination or partnership opportunities."
           image={visuals.logistics}
         />
 
@@ -56,12 +56,12 @@ export default function ContactPage() {
             <div>
               <div className="border-y border-white/10 py-10">
                 <h2 className="max-w-3xl font-display text-5xl leading-[1] text-[#fff7e7] md:text-7xl">
-                  Tell us what you need sourced, verified, moved, or supported.
+                  Tell us the mineral, specification, destination and supply requirement.
                 </h2>
                 <p className="mt-7 max-w-2xl text-lg leading-8 text-white/60">
                   The clearer the requirement, the faster the team can route
-                  the inquiry to sourcing, assay, logistics, field support, or
-                  consultation.
+                  the inquiry to sourcing, quality assessment, processing
+                  support, export coordination or partnership review.
                 </p>
               </div>
 
@@ -140,15 +140,14 @@ export default function ContactPage() {
                   <select
                     name="inquiry"
                     className="h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white outline-none transition focus:border-[#d8bd6a]"
-                    defaultValue="Gold sourcing"
+                    defaultValue="Mineral sourcing"
                   >
-                    <option className="bg-[#0b0907]">Gold sourcing</option>
-                    <option className="bg-[#0b0907]">Mineral trading</option>
-                    <option className="bg-[#0b0907]">Assaying</option>
-                    <option className="bg-[#0b0907]">Export logistics</option>
-                    <option className="bg-[#0b0907]">Exploration support</option>
-                    <option className="bg-[#0b0907]">Equipment leasing</option>
-                    <option className="bg-[#0b0907]">Mining consultation</option>
+                    <option className="bg-[#0b0907]">Mineral sourcing</option>
+                    <option className="bg-[#0b0907]">Bismuth supply</option>
+                    <option className="bg-[#0b0907]">Processing support</option>
+                    <option className="bg-[#0b0907]">Quality assessment</option>
+                    <option className="bg-[#0b0907]">Export coordination</option>
+                    <option className="bg-[#0b0907]">Supply partnership</option>
                   </select>
                 </label>
                 <label className="grid gap-2 text-sm text-white/68 md:col-span-2">
@@ -158,7 +157,7 @@ export default function ContactPage() {
                     rows={6}
                     required
                     className="resize-none rounded-sm border border-white/10 bg-white/[0.04] px-4 py-3 text-white outline-none transition placeholder:text-white/32 focus:border-[#d8bd6a]"
-                    placeholder="Tell us what you need sourced, verified, moved, or supported."
+                    placeholder="Share the mineral, specification, quantity range, destination, timeline and partnership requirement."
                   />
                 </label>
               </div>
@@ -210,11 +209,12 @@ export default function ContactPage() {
             <div>
               <ShieldCheck className="text-[#d8bd6a]" size={25} />
               <h2 className="mt-4 font-display text-3xl text-[#fff7e7] md:text-4xl">
-                Private by default.
+                Handled with discretion.
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-7 text-white/58">
-                High-value mineral inquiries are handled with discretion,
-                qualification, and disciplined communication.
+                Industrial mineral inquiries are handled with discretion,
+                clear requirements, documentation discipline and responsive
+                communication.
               </p>
             </div>
             <a

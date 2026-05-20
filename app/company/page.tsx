@@ -16,31 +16,31 @@ import { companyPillars, visuals } from "@/lib/site-data";
 export const metadata = {
   title: "Company",
   description:
-    "Bilex Minerals is an East African mineral sourcing, trading, assaying, logistics, and exploration support company for qualified buyers and strategic partners.",
+    "Bilex Minerals supports bismuth and strategic industrial mineral sourcing, processing support, export coordination, and supply partnerships.",
 };
 
 const capabilities = [
   {
     icon: ShieldCheck,
-    title: "Private Transaction Desk",
-    text: "Qualified buyer intake, controlled communication, and disciplined release of sensitive sourcing details.",
+    title: "Supply Requirement Review",
+    text: "Buyer requirements, mineral specifications, destination, and documentation needs are reviewed before sourcing begins.",
   },
   {
     icon: Microscope,
-    title: "Verification Culture",
-    text: "Assay coordination, sample custody, documentation review, and proof-led commercial engagement.",
+    title: "Quality Assessment",
+    text: "Sample review, testing coordination, specification checks, and documentation support for industrial mineral supply.",
   },
   {
     icon: Truck,
-    title: "Movement Readiness",
-    text: "CIF logistics support, freight planning, insurance coordination, and export documentation alignment.",
+    title: "Export Readiness",
+    text: "Freight planning, cargo coordination, export and import documentation support, and buyer communication.",
   },
 ];
 
 const milestones = [
-  ["Kenya", "Nairobi commercial desk and buyer coordination."],
-  ["Tanzania", "Dar es Salaam export and regional corridor support."],
-  ["East Africa", "Mineral sourcing, exploration access, and field relationships."],
+  ["Kenya", "Nairobi commercial desk for supply requirements and buyer coordination."],
+  ["Tanzania", "Dar es Salaam support for export corridors and cargo coordination."],
+  ["Global Markets", "International supply partnerships for bismuth and strategic minerals."],
 ];
 
 export default function CompanyPage() {
@@ -50,8 +50,8 @@ export default function CompanyPage() {
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
           eyebrow="Company"
-          title="Regional authority with verified mineral movement."
-          text="Bilex Minerals is built for serious buyers, operators, and strategic partners who need disciplined access to East African mineral opportunities."
+          title="Industrial mineral supply built on reliability and documentation."
+          text="Bilex Minerals works with industrial and strategic minerals for manufacturing, processing and export markets."
           image={visuals.mine}
         />
 
@@ -62,20 +62,21 @@ export default function CompanyPage() {
                 Position
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Built for mineral trade where trust has to be earned.
+                Built for industrial buyers who need dependable supply.
               </h2>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-white/60">
-                The company combines sourcing access, assay-led verification,
-                export support, and field coordination across Kenya, Tanzania,
-                and regional trade corridors. The result is a more controlled
-                path from inquiry to documented mineral movement.
+                The company focuses on bismuth and strategic minerals,
+                dependable supply chains, transparent operations and long-term
+                business relationships. Each engagement is structured around
+                sourcing requirements, quality assessment, processing support
+                and export coordination.
               </p>
             </div>
 
             <div className="relative min-h-[560px] overflow-hidden rounded-sm border border-white/10">
               <Image
                 src={visuals.assay}
-                alt="Bilex Minerals assay and verification desk"
+                alt="Bilex Minerals industrial mineral quality assessment desk"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
@@ -86,7 +87,7 @@ export default function CompanyPage() {
                   Operational Standard
                 </p>
                 <h3 className="mt-3 font-display text-3xl text-[#fff7e7]">
-                  Verification before commitment.
+                  Quality standards before shipment.
                 </h3>
               </div>
             </div>
@@ -121,7 +122,7 @@ export default function CompanyPage() {
                 Operating Pillars
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Serious access, careful process, documented movement.
+                Traceable sourcing, supply reliability, export readiness.
               </h2>
             </div>
 
@@ -150,7 +151,7 @@ export default function CompanyPage() {
                 Regional Desk
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Nairobi and Dar es Salaam give the company regional gravity.
+                East African coordination for international mineral buyers.
               </h2>
             </div>
 
@@ -185,8 +186,9 @@ export default function CompanyPage() {
                 Start with verified intent.
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-7 text-black/70">
-                Bilex Minerals begins sensitive sourcing and logistics
-                conversations through private qualification and review.
+                Bilex Minerals begins supply conversations by defining the
+                mineral, specification, destination, documentation and export
+                requirements.
               </p>
             </div>
             <Link

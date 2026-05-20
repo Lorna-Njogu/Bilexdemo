@@ -32,193 +32,190 @@ export const heroImages = {
 };
 
 export const stats = [
-  { value: "2", label: "East African operating hubs" },
-  { value: "KYC", label: "Verified transaction access" },
-  { value: "CIF", label: "International delivery support" },
+  { value: "Supply", label: "Strategic mineral partnerships" },
+  { value: "Export", label: "Export-focused operations" },
+  { value: "Industry", label: "Industrial mineral support" },
 ];
 
 export const services = [
   {
-    slug: "gold-sourcing",
-    title: "Gold Sourcing",
+    slug: "mineral-sourcing-advisory",
+    title: "Mineral Sourcing & Advisory",
     eyebrow: "Sourcing",
     summary:
-      "Verified gold sourcing for qualified buyers across Kenya, Tanzania, and regional East African mineral corridors.",
+      "Sourcing guidance for bismuth, strategic minerals, and industrial mineral supply requirements.",
     description:
-      "Bilex Minerals supports serious buyers with disciplined sourcing, documentation checks, assay coordination, and transaction support for high-value gold opportunities.",
+      "Bilex Minerals supports industrial buyers and supply partners with dependable mineral sourcing coordination, supplier review, documentation checks, and commercial advisory for bismuth and strategic minerals.",
     highlights: [
-      "Qualified buyer intake and origin matching",
-      "Gold lot review before commercial engagement",
-      "Assay and documentation coordination",
-      "Local support from Nairobi and Dar es Salaam",
+      "Supplier and buyer requirement review",
+      "Bismuth and strategic mineral sourcing coordination",
+      "Traceable origin and documentation checks",
+      "Commercial advisory for long-term supply needs",
     ],
   },
   {
-    slug: "mineral-trading",
-    title: "Mineral Trading",
-    eyebrow: "Trading",
+    slug: "mineral-processing-support",
+    title: "Mineral Processing Support",
+    eyebrow: "Processing",
     summary:
-      "Structured mineral trading support for precious metals, selected rare minerals, gemstones, and industrial mineral lots.",
+      "Processing coordination for industrial mineral preparation, handling, sorting, and buyer-specific requirements.",
     description:
-      "The trading desk connects qualified demand with verified mineral opportunities through documentation-first engagement and disciplined commercial coordination.",
+      "The processing support desk helps coordinate mineral handling, preparation, quality review, and operational partners for industrial buyers who require consistent specification control.",
     highlights: [
-      "Buyer and seller qualification",
-      "Documentation-led transaction review",
-      "Commercial coordination for selected lots",
-      "Regional market intelligence and pricing support",
+      "Processing partner coordination",
+      "Material handling and preparation support",
+      "Specification review before shipment planning",
+      "Quality-focused supply coordination",
     ],
   },
   {
-    slug: "gold-assaying",
-    title: "Gold Assaying",
-    eyebrow: "Assay",
+    slug: "quality-assessment",
+    title: "Quality Assessment",
+    eyebrow: "Quality",
     summary:
-      "Independent assay coordination, sample handling, and chain-of-custody workflows for mineral verification.",
+      "Quality assessment, sample review, and documentation support for industrial mineral transactions.",
     description:
-      "The assaying workflow is designed around sample custody, lab coordination, and evidence buyers can review before transaction commitment.",
+      "Bilex Minerals supports mineral quality review through sample handling, testing coordination, documentation packages, and specification checks before commercial movement.",
     highlights: [
       "Sample intake and custody tracking",
-      "Assay booking and result coordination",
-      "Documentation packages for transaction review",
-      "Quality checks before logistics release",
+      "Testing and result coordination",
+      "Documentation packages for buyer review",
+      "Consistent mineral quality standards",
     ],
   },
   {
-    slug: "export-logistics",
-    title: "Export Logistics",
-    eyebrow: "CIF",
+    slug: "export-logistics-coordination",
+    title: "Export & Logistics Coordination",
+    eyebrow: "Export",
     summary:
-      "CIF logistics support, export paperwork coordination, freight planning, and secure movement for mineral shipments.",
+      "Export documentation, freight planning, cargo coordination, and delivery support for mineral shipments.",
     description:
-      "From local handling to international delivery planning, Bilex Minerals coordinates the practical details required for careful CIF movement.",
+      "From local handling to export planning, Bilex Minerals coordinates the practical logistics, documentation, freight, and buyer communication required for mineral movement.",
     highlights: [
-      "Bonded transport coordination",
-      "Insurance and freight planning",
-      "Export paperwork support",
+      "Export and import documentation support",
+      "Freight and cargo coordination",
+      "Shipment planning for qualified buyers",
       "Buyer-side delivery communication",
     ],
   },
   {
-    slug: "exploration-support",
-    title: "Exploration Support",
+    slug: "international-supply-partnerships",
+    title: "International Supply Partnerships",
+    eyebrow: "Partnerships",
+    summary:
+      "Long-term supply partnership support for manufacturing, refining, processing, and export markets.",
+    description:
+      "Bilex Minerals works with industrial buyers and supply partners that require dependable sourcing relationships, responsive communication, and clear export coordination.",
+    highlights: [
+      "Industrial buyer relationship support",
+      "Long-term supply coordination",
+      "Manufacturing and refining market alignment",
+      "Export partnership communication",
+    ],
+  },
+  {
+    slug: "field-operations-support",
+    title: "Field Operations Support",
     eyebrow: "Field",
     summary:
-      "Field partner coordination, site information gathering, and strategic support for mining operators and investors.",
+      "Field coordination, geological support, site information gathering, and equipment access for mineral projects.",
     description:
-      "Bilex Minerals helps partners understand regional opportunities with field support, stakeholder coordination, and practical operating insight.",
+      "Field operations support helps partners coordinate exploration requirements, site information, sampling support, and practical operational resources.",
     highlights: [
-      "Regional partner introductions",
-      "Site data and opportunity review",
-      "Operator and investor coordination",
-      "Sustainability-aligned planning support",
+      "Geological survey coordination",
+      "Exploration and sampling support",
+      "Project-based equipment access",
+      "Site and operator alignment",
     ],
   },
   {
-    slug: "equipment-leasing",
-    title: "Equipment Leasing",
-    eyebrow: "Equipment",
-    summary:
-      "Access to field equipment, mining support assets, and operational tools for exploration and extraction partners.",
-    description:
-      "Equipment leasing support helps operators move faster with practical access to field-ready assets, technical support, and deployment coordination.",
-    highlights: [
-      "Exploration and field support equipment",
-      "Short-term and project-based coordination",
-      "Deployment planning and operator alignment",
-      "Maintenance-aware asset scheduling",
-    ],
-  },
-  {
-    slug: "mining-consultation",
-    title: "Mining Consultation",
+    slug: "mineral-market-consultation",
+    title: "Mineral Market Consultation",
     eyebrow: "Advisory",
     summary:
-      "Strategic consultation for mineral sourcing, due diligence, operating readiness, and regional commercial planning.",
+      "Practical consultation for industrial mineral sourcing, supply planning, market entry, and export readiness.",
     description:
-      "Bilex Minerals provides practical mining and mineral trade consultation for buyers, operators, and partners entering East African markets.",
+      "Bilex Minerals provides practical mineral market consultation for buyers, processors, exporters, and partners entering industrial mineral supply channels.",
     highlights: [
       "Market entry and sourcing advisory",
-      "Transaction and documentation guidance",
-      "Operational readiness review",
-      "Regional stakeholder coordination",
+      "Supply requirement planning",
+      "Documentation and export guidance",
+      "Industrial buyer readiness review",
     ],
   },
 ];
 
 export const mineralShowcase = [
   {
-    name: "Gold Doré & Bullion",
-    note: "Documented precious metal opportunities for qualified buyers.",
+    name: "Bismuth",
+    note: "Strategic mineral supply support for manufacturing, alloy, chemical, and processing markets.",
   },
   {
-    name: "Rare Mineral Lots",
-    note: "Selected high-value minerals with verification-led engagement.",
+    name: "Strategic Minerals",
+    note: "Sourcing coordination for high-value minerals used in industrial and technology supply chains.",
   },
   {
-    name: "Gemstone Parcels",
-    note: "Sourcing support for vetted regional gemstone opportunities.",
+    name: "Industrial Mineral Lots",
+    note: "Supply coordination for processors, refiners, exporters, and long-term commercial partners.",
   },
   {
-    name: "Industrial Minerals",
-    note: "Supply coordination for strategic mining and processing partners.",
+    name: "Processed Materials",
+    note: "Processing support, specification review, and shipment planning for buyer-ready materials.",
   },
 ];
 
 export const workflow = [
-  "Inquiry",
-  "Verification",
-  "Assaying",
-  "Agreement",
-  "Logistics",
-  "Delivery",
-  "Documentation",
+  "Mineral Sourcing",
+  "Quality Assessment",
+  "Processing Coordination",
+  "Delivery & Export",
 ];
 
 export const complianceItems = [
-  "KYC and buyer verification before sensitive transaction engagement.",
-  "Assay-led review process with documented sample and result handling.",
-  "Export paperwork, freight, and insurance coordination for CIF delivery.",
-  "Sustainability-first partner screening across regional mineral networks.",
+  "Counterparty review before sensitive supply discussions.",
+  "Quality assessment and documented sample handling where required.",
+  "Export paperwork, freight, and cargo coordination for mineral shipments.",
+  "Traceable sourcing and responsible supply partner screening.",
 ];
 
 export const companyPillars = [
   {
-    title: "Origin Network",
-    text: "Regional access across East African mineral corridors, coordinated from Nairobi and Dar es Salaam.",
+    title: "Traceable Sourcing",
+    text: "Industrial and strategic mineral sourcing is reviewed through origin context, supplier reliability, and documentation quality.",
   },
   {
-    title: "Buyer Trust",
-    text: "Discreet engagement for qualified buyers and strategic partners.",
+    title: "Supply Reliability",
+    text: "We support industrial buyers with dependable supply coordination, responsive communication, and long-term relationship building.",
   },
   {
-    title: "Verified Movement",
-    text: "Assay-led review, transaction discipline, and export-ready delivery support.",
+    title: "Export Readiness",
+    text: "Processing support, quality review, documentation, and logistics planning are aligned before mineral shipments move.",
   },
 ];
 
 export const mineralCategories = [
   {
-    title: "Gold",
-    text: "Dore, bullion, and vetted precious metal opportunities for qualified buyers.",
+    title: "Bismuth",
+    text: "Sourcing and supply support for bismuth used in manufacturing, alloy production, chemical applications, and strategic mineral markets.",
   },
   {
-    title: "Rare Minerals",
-    text: "Selected high-value mineral lots reviewed through documentation-first engagement.",
-  },
-  {
-    title: "Gemstones",
-    text: "Private sourcing support for regional gemstone parcels and strategic mineral assets.",
+    title: "Strategic Minerals",
+    text: "Selected high-value minerals reviewed through documentation, origin context, quality assessment, and buyer specification requirements.",
   },
   {
     title: "Industrial Minerals",
-    text: "Supply coordination for operators, processors, and long-term commercial partners.",
+    text: "Supply coordination for processors, refiners, exporters, and companies requiring dependable mineral inputs.",
+  },
+  {
+    title: "Processed Materials",
+    text: "Processing coordination, handling support, quality checks, and export preparation for buyer-ready mineral products.",
   },
 ];
 
 export const operatingStandards = [
-  "KYC qualification before sensitive transaction engagement.",
-  "Independent assay coordination and sample custody discipline.",
-  "Documentation review before release of funds or logistics.",
-  "CIF export support, freight planning, and insurance coordination.",
-  "Partner screening aligned to sustainable regional operations.",
+  "Counterparty qualification before sensitive supply engagement.",
+  "Quality assessment, sample review, and documentation discipline.",
+  "Processing and specification checks before logistics planning.",
+  "Export and import documentation support for mineral shipments.",
+  "Supply partner screening aligned with traceable sourcing standards.",
 ];
