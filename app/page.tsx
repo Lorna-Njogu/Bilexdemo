@@ -8,7 +8,7 @@ const organizationSchema = {
   url: "https://bilexminerals.com",
   logo: "https://bilexminerals.com/bilex-logo.webp",
   description:
-    "Industrial and strategic mineral sourcing, bismuth supply support, processing coordination, quality assessment, and export partnership company.",
+    "Rare and industrial mineral sourcing, bismuth supply support, processing coordination, mineral analysis, and export partnership company.",
   areaServed: ["Kenya", "Tanzania", "East Africa"],
   address: {
     "@type": "PostalAddress",

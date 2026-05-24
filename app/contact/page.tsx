@@ -16,7 +16,7 @@ import { contact, visuals } from "@/lib/site-data";
 export const metadata = {
   title: "Contact",
   description:
-    "Speak with Bilex Minerals about bismuth supply, industrial mineral sourcing, processing support, export coordination, and supply partnerships.",
+    "Discuss rare mineral supply, sourcing partnerships, industrial procurement requirements, export coordination, and payment or appointment review with Bilex Minerals.",
 };
 
 const contactItems = [
@@ -48,8 +48,8 @@ export default function ContactPage() {
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
           eyebrow="Supply Inquiry"
-          title="Speak with our team about mineral supply requirements."
-          text="Speak with our team about bismuth supply, industrial mineral sourcing, processing support, export coordination or partnership opportunities."
+          title="Discuss mineral supply, sourcing partnerships or procurement requirements."
+          text="Share the mineral, specification, volume, destination, documentation status and preferred settlement route so the team can review the requirement properly."
           image={visuals.logistics}
         />
 
@@ -62,7 +62,7 @@ export default function ContactPage() {
                 </h2>
                 <p className="mt-7 max-w-2xl text-lg leading-8 text-white/60">
                   The clearer the requirement, the faster the team can route
-                  the inquiry to sourcing, quality assessment, processing
+                  the inquiry to mineral sourcing, analysis, processing
                   support, export coordination or partnership review.
                 </p>
               </div>
@@ -147,7 +147,7 @@ export default function ContactPage() {
                     <option className="bg-[#0b0907]">Mineral sourcing</option>
                     <option className="bg-[#0b0907]">Bismuth supply</option>
                     <option className="bg-[#0b0907]">Processing support</option>
-                    <option className="bg-[#0b0907]">Quality assessment</option>
+                    <option className="bg-[#0b0907]">Mineral analysis</option>
                     <option className="bg-[#0b0907]">Export coordination</option>
                     <option className="bg-[#0b0907]">Supply partnership</option>
                   </select>

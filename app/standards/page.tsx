@@ -15,7 +15,7 @@ import { operatingStandards, visuals, workflow } from "@/lib/site-data";
 export const metadata = {
   title: "Standards",
   description:
-    "Bilex Minerals supply chain standards for counterparty review, quality assessment, processing support, traceable sourcing, and export documentation.",
+    "Bilex Minerals supply chain standards for counterparty review, mineral analysis, processing support, traceable sourcing, and export documentation.",
 };
 
 const standardCards = [
@@ -26,8 +26,8 @@ const standardCards = [
   },
   {
     icon: Microscope,
-    title: "Quality Assessment",
-    text: "Samples, testing coordination, specification checks, and documentation support mineral quality discussions.",
+    title: "Mineral Analysis",
+    text: "Samples, testing coordination, specification checks, and documentation support mineral-grade discussions.",
   },
   {
     icon: FileCheck2,
@@ -44,7 +44,7 @@ export default function StandardsPage() {
         <PageIntro
           eyebrow="Standards"
           title="Supply chain standards before shipment."
-          text="Bilex Minerals treats traceable sourcing, quality assessment, documentation, processing support and export readiness as the foundation of every serious mineral engagement."
+          text="Bilex Minerals treats traceable sourcing, mineral analysis, documentation, processing support and export readiness as the foundation of every serious mineral engagement."
           image={visuals.refinery}
         />
 
@@ -141,7 +141,7 @@ export default function StandardsPage() {
             <div>
               <ShieldCheck className="text-[#d8bd6a]" size={25} />
               <h2 className="mt-4 font-display text-3xl text-[#fff7e7] md:text-4xl">
-                Need quality assessment or export documentation support?
+                Need mineral analysis or export documentation support?
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-7 text-white/58">
                 Start a private inquiry and define the mineral, specification,

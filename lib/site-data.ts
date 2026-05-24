@@ -32,25 +32,25 @@ export const heroImages = {
 };
 
 export const stats = [
-  { value: "Supply", label: "Strategic mineral partnerships" },
+  { value: "Network", label: "Regional supply network" },
   { value: "Export", label: "Export-focused operations" },
-  { value: "Industry", label: "Industrial mineral support" },
+  { value: "Sectors", label: "Multi-sector mineral applications" },
 ];
 
 export const services = [
   {
     slug: "mineral-sourcing-advisory",
-    title: "Mineral Sourcing & Advisory",
+    title: "Mineral Sourcing",
     eyebrow: "Sourcing",
     summary:
-      "Sourcing guidance for bismuth, strategic minerals, and industrial mineral supply requirements.",
+      "Strategic sourcing of industrial and rare minerals through verified supply networks.",
     description:
-      "Bilex Minerals supports industrial buyers and supply partners with dependable mineral sourcing coordination, supplier review, documentation checks, and commercial advisory for bismuth and strategic minerals.",
+      "Bilex Minerals supports industrial buyers and supply partners with mineral sourcing, supplier review, documentation checks, and procurement planning for bismuth, rare minerals and strategic mineral requirements.",
     highlights: [
       "Supplier and buyer requirement review",
-      "Bismuth and strategic mineral sourcing coordination",
-      "Traceable origin and documentation checks",
-      "Commercial advisory for long-term supply needs",
+      "Rare and strategic mineral sourcing",
+      "Origin and documentation checks",
+      "Procurement planning for long-term demand",
     ],
   },
   {
@@ -58,39 +58,39 @@ export const services = [
     title: "Mineral Processing Support",
     eyebrow: "Processing",
     summary:
-      "Processing coordination for industrial mineral preparation, handling, sorting, and buyer-specific requirements.",
+      "Processing coordination for mineral preparation, handling, sorting and buyer-specific specifications.",
     description:
-      "The processing support desk helps coordinate mineral handling, preparation, quality review, and operational partners for industrial buyers who require consistent specification control.",
+      "The processing support desk helps coordinate handling, preparation, specification review and operational partners for buyers who require consistent industrial-grade supply.",
     highlights: [
       "Processing partner coordination",
       "Material handling and preparation support",
       "Specification review before shipment planning",
-      "Quality-focused supply coordination",
+      "Specification-focused supply coordination",
     ],
   },
   {
     slug: "quality-assessment",
-    title: "Quality Assessment",
-    eyebrow: "Quality",
+    title: "Mineral Analysis",
+    eyebrow: "Verification",
     summary:
-      "Quality assessment, sample review, and documentation support for industrial mineral transactions.",
+      "Material verification and mineral analysis to support consistent industrial use.",
     description:
-      "Bilex Minerals supports mineral quality review through sample handling, testing coordination, documentation packages, and specification checks before commercial movement.",
+      "Bilex Minerals supports mineral analysis through sample handling, testing coordination, documentation packages and specification checks before commercial movement.",
     highlights: [
       "Sample intake and custody tracking",
       "Testing and result coordination",
       "Documentation packages for buyer review",
-      "Consistent mineral quality standards",
+      "Commercial-grade consistency standards",
     ],
   },
   {
     slug: "export-logistics-coordination",
-    title: "Export & Logistics Coordination",
+    title: "Export & Logistics",
     eyebrow: "Export",
     summary:
-      "Export documentation, freight planning, cargo coordination, and delivery support for mineral shipments.",
+      "Coordinated mineral transportation and export handling for regional and international markets.",
     description:
-      "From local handling to export planning, Bilex Minerals coordinates the practical logistics, documentation, freight, and buyer communication required for mineral movement.",
+      "From local handling to export planning, Bilex Minerals coordinates documentation, freight, cargo movement and buyer communication for mineral shipments.",
     highlights: [
       "Export and import documentation support",
       "Freight and cargo coordination",
@@ -100,12 +100,12 @@ export const services = [
   },
   {
     slug: "international-supply-partnerships",
-    title: "International Supply Partnerships",
+    title: "Supply Partnerships",
     eyebrow: "Partnerships",
     summary:
-      "Long-term supply partnership support for manufacturing, refining, processing, and export markets.",
+      "Long-term procurement partnerships tailored for manufacturers and industrial buyers.",
     description:
-      "Bilex Minerals works with industrial buyers and supply partners that require dependable sourcing relationships, responsive communication, and clear export coordination.",
+      "Bilex Minerals works with manufacturers, processors, exporters and supply partners that require structured procurement relationships and clear supply-chain coordination.",
     highlights: [
       "Industrial buyer relationship support",
       "Long-term supply coordination",
@@ -118,7 +118,7 @@ export const services = [
     title: "Field Operations Support",
     eyebrow: "Field",
     summary:
-      "Field coordination, geological support, site information gathering, and equipment access for mineral projects.",
+      "Field coordination, geological support, site information gathering and equipment access for mineral supply projects.",
     description:
       "Field operations support helps partners coordinate exploration requirements, site information, sampling support, and practical operational resources.",
     highlights: [
@@ -133,9 +133,9 @@ export const services = [
     title: "Mineral Market Consultation",
     eyebrow: "Advisory",
     summary:
-      "Practical consultation for industrial mineral sourcing, supply planning, market entry, and export readiness.",
+      "Practical consultation for mineral sourcing, supply planning, market entry and export readiness.",
     description:
-      "Bilex Minerals provides practical mineral market consultation for buyers, processors, exporters, and partners entering industrial mineral supply channels.",
+      "Bilex Minerals provides market consultation for buyers, processors, exporters and partners entering rare and industrial mineral supply channels.",
     highlights: [
       "Market entry and sourcing advisory",
       "Supply requirement planning",
@@ -148,11 +148,11 @@ export const services = [
 export const mineralShowcase = [
   {
     name: "Bismuth",
-    note: "Strategic mineral supply support for manufacturing, alloy, chemical, and processing markets.",
+    note: "Rare mineral supply support for manufacturing, alloy, chemical and processing markets.",
   },
   {
-    name: "Strategic Minerals",
-    note: "Sourcing coordination for high-value minerals used in industrial and technology supply chains.",
+    name: "Rare Minerals",
+    note: "Sourcing coordination for high-value minerals used in industrial, energy and technology supply chains.",
   },
   {
     name: "Industrial Mineral Lots",
@@ -166,30 +166,30 @@ export const mineralShowcase = [
 
 export const workflow = [
   "Mineral Sourcing",
-  "Quality Assessment",
+  "Mineral Analysis",
   "Processing Coordination",
   "Delivery & Export",
 ];
 
 export const complianceItems = [
   "Counterparty review before sensitive supply discussions.",
-  "Quality assessment and documented sample handling where required.",
+  "Mineral analysis and documented sample handling where required.",
   "Export paperwork, freight, and cargo coordination for mineral shipments.",
   "Traceable sourcing and responsible supply partner screening.",
 ];
 
 export const companyPillars = [
   {
-    title: "Traceable Sourcing",
-    text: "Industrial and strategic mineral sourcing is reviewed through origin context, supplier reliability, and documentation quality.",
+    title: "Reliable Supply Chains",
+    text: "Structured sourcing and logistics are designed around consistency, documentation and timely mineral movement.",
   },
   {
-    title: "Supply Reliability",
-    text: "We support industrial buyers with dependable supply coordination, responsive communication, and long-term relationship building.",
+    title: "Industry-Focused Operations",
+    text: "The operating model is built around the needs of industrial buyers, manufacturers, processors and export partners.",
   },
   {
-    title: "Export Readiness",
-    text: "Processing support, quality review, documentation, and logistics planning are aligned before mineral shipments move.",
+    title: "Verified Quality Standards",
+    text: "Mineral handling and assessment processes focus on commercial-grade consistency before shipments move.",
   },
 ];
 
@@ -200,7 +200,7 @@ export const mineralCategories = [
   },
   {
     title: "Strategic Minerals",
-    text: "Selected high-value minerals reviewed through documentation, origin context, quality assessment, and buyer specification requirements.",
+    text: "Selected high-value minerals reviewed through documentation, origin context, mineral analysis, and buyer specification requirements.",
   },
   {
     title: "Industrial Minerals",
@@ -214,7 +214,7 @@ export const mineralCategories = [
 
 export const operatingStandards = [
   "Counterparty qualification before sensitive supply engagement.",
-  "Quality assessment, sample review, and documentation discipline.",
+  "Mineral analysis, sample review, and documentation discipline.",
   "Processing and specification checks before logistics planning.",
   "Export and import documentation support for mineral shipments.",
   "Supply partner screening aligned with traceable sourcing standards.",

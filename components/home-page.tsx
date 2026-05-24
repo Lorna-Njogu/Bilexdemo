@@ -31,7 +31,13 @@ import {
 import { BookingInquiryForm } from "@/components/booking-inquiry-form";
 import { BuyerQualificationSection } from "@/components/buyer-qualification-section";
 import { HeroGoldChartBackground } from "@/components/live-gold-chart";
-import { contact, services, visuals, workflow } from "@/lib/site-data";
+import {
+  contact,
+  mineralShowcase,
+  services,
+  visuals,
+  workflow,
+} from "@/lib/site-data";
 
 const fadeUp = {
   initial: { opacity: 1, y: 18 },
@@ -41,26 +47,26 @@ const fadeUp = {
 } as const;
 
 const heroStats = [
-  { value: "Supply", label: "Strategic supply partnerships" },
+  { value: "Network", label: "Regional supply network" },
   { value: "Export", label: "Export-focused operations" },
-  { value: "Industry", label: "Industrial mineral support" },
+  { value: "Sectors", label: "Multi-sector mineral applications" },
 ];
 
 const trustItems = [
   {
     icon: Globe2,
-    title: "Strategic Minerals",
-    text: "Bismuth and industrial mineral supply coordination.",
+    title: "Mineral Portfolio",
+    text: "Rare, strategic and industrial minerals for buyer demand.",
   },
   {
     icon: ShieldCheck,
-    title: "Traceable Sourcing",
-    text: "Supplier review, origin context, and documentation checks.",
+    title: "Reliable Supply Chains",
+    text: "Structured sourcing and export planning for consistency.",
   },
   {
     icon: Microscope,
-    title: "Quality Assessment",
-    text: "Sample review, testing coordination, and specification support.",
+    title: "Mineral Analysis",
+    text: "Material verification, sample review and specification support.",
   },
   {
     icon: Ship,
@@ -69,8 +75,8 @@ const trustItems = [
   },
   {
     icon: Handshake,
-    title: "Supply Partnerships",
-    text: "Long-term relationships with industrial buyers and partners.",
+    title: "Industrial Partnerships",
+    text: "Long-term procurement relationships with supply partners.",
   },
 ];
 
@@ -102,7 +108,7 @@ const operations = [
   },
   {
     icon: Microscope,
-    title: "Quality assessment",
+    title: "Mineral analysis",
     text: "Material is reviewed through sample handling, testing coordination, documentation, and specification checks.",
   },
   {
@@ -118,12 +124,12 @@ const operations = [
 ];
 
 const reasons = [
-  ["Reliable Sourcing Coordination", "Reviewed mineral sources, clearer buyer requirements, and practical supply planning."],
-  ["Export-Focused Operations", "Freight, documentation, cargo handling, and delivery support built into the workflow."],
-  ["Responsive Communication", "A clear commercial desk for industrial buyers, exporters, processors, and supply partners."],
-  ["Long-Term Partnership Approach", "Supply relationships are treated as ongoing commercial partnerships, not one-off transactions."],
-  ["Consistent Supply Handling", "Material handling, preparation, and quality review are coordinated before shipment planning."],
-  ["Industrial Buyer Support", "Bismuth and strategic mineral support for manufacturing, refining, processing, and export markets."],
+  ["Reliable Supply Chains", "Structured sourcing and logistics designed for consistency and timely delivery."],
+  ["Industry-Focused Operations", "Built around the operational needs of industrial buyers and manufacturing partners."],
+  ["Verified Quality Standards", "Mineral handling and assessment processes focused on commercial-grade consistency."],
+  ["Strategic Partnerships", "Long-term relationships with suppliers, processors and industrial clients."],
+  ["Export-Focused Operations", "Documentation, cargo handling and freight planning built into the supply workflow."],
+  ["Industrial Applications", "Rare and strategic mineral support for manufacturing, refining, energy and technology markets."],
 ];
 
 const gallery = [
@@ -135,7 +141,7 @@ const gallery = [
   },
   {
     image: visuals.assay,
-    title: "Quality Assessment",
+    title: "Mineral Analysis",
     label: "Sample review and testing",
     className: "",
   },
@@ -213,8 +219,8 @@ const regions = [
 
 const trustSignals = [
   {
-    title: "Consistent Mineral Quality",
-    text: "We maintain consistent mineral quality standards through material review, documentation, and buyer specification checks.",
+    title: "Commercial-Grade Consistency",
+    text: "We support consistent mineral handling through material review, documentation, and buyer specification checks.",
   },
   {
     title: "Traceable Sourcing",
@@ -231,6 +237,7 @@ export function HomePage() {
     <main className="overflow-hidden bg-[#050505] text-[#f8f1e4]">
       <HeroSection />
       <TrustBar />
+      <MineralPortfolioSection />
       <AboutSection />
       <ServicesSection />
       <OperationsSection />
@@ -319,34 +326,33 @@ function HeroSection() {
           className="max-w-5xl pt-8 md:pt-14"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#d8bd6a]">
-            Industrial minerals / bismuth / export support
+            Rare minerals / industrial supply / global trade
           </p>
           <h1 className="mt-7 max-w-5xl font-display text-5xl leading-[0.92] text-balance text-[#fff7e7] md:text-7xl xl:text-8xl">
-            Supplying High-Value Industrial Minerals With Precision
+            Reliable Rare Mineral Supply for Industrial and Global Markets
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
-            Reliable sourcing, processing and export support for bismuth and
-            strategic minerals across global markets.
+            Bilex Minerals sources and supplies high-value minerals through
+            structured supply networks focused on consistency, traceability
+            and long-term industrial partnerships.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">
             <a
-              href={contact.whatsapp}
-              target="_blank"
-              rel="noreferrer"
+              href="#intake"
               className="group inline-flex items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#080706] transition hover:bg-[#f5df9a]"
             >
-              Request a consultation
+              Request supply information
               <ArrowRight
                 size={17}
                 className="transition group-hover:translate-x-1"
               />
             </a>
             <Link
-              href="#services"
+              href="/minerals"
               className="inline-flex items-center gap-3 rounded-sm border border-white/18 bg-white/[0.04] px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white transition hover:border-[#d8bd6a] hover:text-[#d8bd6a]"
             >
-              View our services
+              View mineral portfolio
             </Link>
           </div>
         </motion.div>
@@ -401,6 +407,42 @@ function TrustBar() {
   );
 }
 
+function MineralPortfolioSection() {
+  return (
+    <section id="minerals" className="relative bg-[#050505] px-5 py-24 md:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+          <SectionHeader
+            eyebrow="Mineral Portfolio"
+            title="Minerals positioned around industrial demand."
+            text="Industrial buyers care about mineral type, specification, availability, sourcing reliability and export capability. This portfolio is structured around those commercial requirements."
+          />
+          <div className="grid gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 sm:grid-cols-2">
+            {mineralShowcase.map((mineral, index) => (
+              <motion.article
+                key={mineral.name}
+                {...fadeUp}
+                transition={{ ...fadeUp.transition, delay: index * 0.04 }}
+                className="bg-[#11100d] p-6"
+              >
+                <p className="font-display text-3xl text-[#d8bd6a]">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-7 font-display text-3xl text-[#fff7e7]">
+                  {mineral.name}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-white/58">
+                  {mineral.note}
+                </p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function AboutSection() {
   return (
     <section id="company" className="relative px-5 py-28 md:px-8 lg:px-12">
@@ -412,7 +454,7 @@ function AboutSection() {
         >
           <Image
             src={visuals.assay}
-            alt="Industrial mineral quality assessment and sample review workbench"
+            alt="Industrial mineral analysis and sample review workbench"
             fill
             sizes="(min-width: 1024px) 45vw, 100vw"
             className="object-cover"
@@ -432,8 +474,8 @@ function AboutSection() {
         <div>
           <SectionHeader
             eyebrow="Company"
-            title="Industrial mineral supply support for manufacturing and export markets."
-            text="Bilex Minerals works with industrial and strategic minerals for manufacturing, processing and export markets. We focus on dependable supply chains, transparent operations and long-term business relationships."
+            title="Mineral sourcing, industrial supply and global trade."
+            text="Bilex Minerals operates at the intersection of mineral sourcing, industrial supply and global trade, focusing on reliability, traceability and long-term partnerships."
           />
 
           <motion.div
@@ -441,9 +483,9 @@ function AboutSection() {
             className="mt-12 grid gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 sm:grid-cols-3"
           >
             {[
-              ["Mineral sourcing", "Reviewed supply channels for bismuth and strategic minerals."],
-              ["Processing support", "Coordination for handling, preparation, quality review, and buyer specifications."],
-              ["Export partnerships", "Logistics communication, documentation support, and long-term supply relationships."],
+              ["Mineral sourcing", "Strategic sourcing of industrial and rare minerals through verified supply networks."],
+              ["Processing support", "Material handling, preparation and specification review for commercial requirements."],
+              ["Export partnerships", "Mineral transportation and export handling for regional and international markets."],
             ].map(([title, text]) => (
               <div key={title} className="bg-[#0d0b08] p-6">
                 <p className="font-display text-2xl text-[#d8bd6a]">
@@ -466,14 +508,14 @@ function ServicesSection() {
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <SectionHeader
             eyebrow="Core Services"
-            title="Industrial mineral services for supply, processing and export."
-            text="Each engagement is structured around supply requirements, material review, processing coordination, export documentation, and clear operating responsibility."
+            title="Supply capabilities for mineral procurement and export."
+            text="Each service is defined by the commercial outcome: sourcing, verification, processing coordination, logistics, supply partnerships and export readiness."
           />
           <Link
             href="/services"
             className="inline-flex w-fit items-center gap-3 rounded-sm border border-[#d8bd6a]/40 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#d8bd6a] transition hover:bg-[#d8bd6a] hover:text-black"
           >
-            View all
+            View capabilities
             <ArrowRight size={16} />
           </Link>
         </div>
@@ -522,7 +564,7 @@ function ServicesSection() {
                       href={`/services/${service.slug}`}
                       className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#d8bd6a]"
                     >
-                      Open service
+                      View capability
                       <ArrowRight
                         size={15}
                         className="transition group-hover:translate-x-1"
@@ -548,7 +590,7 @@ function OperationsSection() {
           <SectionHeader
             eyebrow="Operations & Logistics"
             title="A practical supply workflow from mineral source to export delivery."
-            text="The operating model connects mineral sourcing, quality assessment, processing coordination, documentation, freight planning, and buyer communication."
+            text="The operating model connects mineral sourcing, analysis, processing coordination, documentation, freight planning, and buyer communication."
           />
 
           <motion.div
@@ -676,13 +718,13 @@ function WhyChooseSection() {
 
 function IndustriesSection() {
   return (
-    <section className="relative px-5 py-28 md:px-8 lg:px-12">
+    <section id="applications" className="relative px-5 py-28 md:px-8 lg:px-12">
       <div className="absolute inset-0 bg-[#050505]" />
       <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
         <SectionHeader
           eyebrow="Industries Served"
-          title="Mineral supply support for industrial buyers and export markets."
-          text="Bilex Minerals supports companies that require dependable mineral inputs, clear specification handling, and export-ready supply coordination."
+          title="Applications and industries served."
+          text="Bilex Minerals supports mineral demand across manufacturing, processing, export markets, metal refining, energy, technology and industrial supply chains."
         />
 
         <div className="grid gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 sm:grid-cols-2">
@@ -716,7 +758,7 @@ function GallerySection() {
           <SectionHeader
             eyebrow="Projects & Operations"
             title="Industrial mineral handling, processing and export environments."
-            text="The visual language centers on mineral textures, quality assessment, processing support, field operations, and cargo movement."
+            text="The visual language centers on mineral textures, analysis, processing support, field operations, and cargo movement."
           />
           <p className="max-w-xs text-sm leading-7 text-white/50">
             Mineral sourcing, processing support, logistics handling, and
@@ -763,7 +805,7 @@ function ProcessSection() {
         <SectionHeader
           eyebrow="Operational Process"
           title="Four clear steps from sourcing to delivery and export."
-          text="Industrial mineral supply needs a clear operating path. Bilex Minerals keeps the process focused on sourcing, quality assessment, processing coordination, and export delivery."
+          text="Industrial mineral supply needs a clear operating path. Bilex Minerals keeps the process focused on sourcing, mineral analysis, processing coordination, and export delivery."
           align="center"
         />
 
@@ -825,7 +867,7 @@ function EquipmentSection() {
           <SectionHeader
             eyebrow="Processing & Field Capability"
             title="Practical support for mineral handling, fieldwork and export readiness."
-            text="Bilex Minerals supports sourcing, geological review, processing coordination, quality assessment, and mineral movement with field-aware operational support."
+            text="Bilex Minerals supports sourcing, geological review, processing coordination, mineral analysis, and mineral movement with field-aware operational support."
           />
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
@@ -941,7 +983,7 @@ function TrustSection() {
         <SectionHeader
           eyebrow="Supply Chain Standards"
           title="Built for buyers who need reliable supply, not unsupported claims."
-          text="The trust layer is practical: consistent mineral quality standards, traceable sourcing, documented processing support, and export-ready coordination."
+          text="The trust layer is practical: commercial-grade consistency, traceable sourcing, documented processing support, and export-ready coordination."
           align="center"
         />
 
@@ -970,7 +1012,7 @@ function TrustSection() {
 
 function PaymentBookingSection() {
   return (
-    <section className="bg-[#050505] px-5 py-24 md:px-8 lg:px-12">
+    <section id="intake" className="bg-[#050505] px-5 py-24 md:px-8 lg:px-12">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
         <SectionHeader
           eyebrow="Payment & Appointment Intake"
@@ -1007,7 +1049,7 @@ function ContactSection() {
           <SectionHeader
             eyebrow="Contact & Inquiry"
             title="Speak with our team about mineral supply requirements."
-            text="Speak with our team about mineral sourcing, bismuth supply, processing support, export coordination, or partnership opportunities."
+            text="Discuss mineral supply, sourcing partnerships or industrial procurement requirements with our team."
           />
 
           <div className="mt-10 grid gap-4">
@@ -1089,7 +1131,7 @@ function ContactSection() {
                 <option className="bg-[#0b0907]">Mineral sourcing</option>
                 <option className="bg-[#0b0907]">Bismuth supply</option>
                 <option className="bg-[#0b0907]">Processing support</option>
-                <option className="bg-[#0b0907]">Quality assessment</option>
+                <option className="bg-[#0b0907]">Mineral analysis</option>
                 <option className="bg-[#0b0907]">Export coordination</option>
                 <option className="bg-[#0b0907]">Supply partnership</option>
               </select>

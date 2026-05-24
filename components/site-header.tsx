@@ -8,9 +8,10 @@ type SiteHeaderProps = {
 };
 
 const navItems = [
-  { href: "/company", label: "Company" },
-  { href: "/services", label: "Services" },
   { href: "/minerals", label: "Minerals" },
+  { href: "/#applications", label: "Applications" },
+  { href: "/services", label: "Capabilities" },
+  { href: "/company", label: "Company" },
   { href: "/standards", label: "Standards" },
   { href: "/contact", label: "Contact" },
 ];

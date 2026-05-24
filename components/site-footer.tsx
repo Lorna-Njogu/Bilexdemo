@@ -4,9 +4,10 @@ import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { contact, services } from "@/lib/site-data";
 
 const links = [
-  { href: "/company", label: "Company" },
-  { href: "/services", label: "Services" },
   { href: "/minerals", label: "Minerals" },
+  { href: "/#applications", label: "Applications" },
+  { href: "/services", label: "Capabilities" },
+  { href: "/company", label: "Company" },
   { href: "/standards", label: "Standards" },
   { href: "/contact", label: "Contact" },
 ];
@@ -37,9 +38,9 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-7 text-white/54">
-              Bilex Minerals is focused on industrial mineral sourcing,
-              processing support, export and import coordination, and long-term
-              supply partnerships for bismuth and strategic minerals.
+              Industrial mineral sourcing with global reach. Bilex Minerals
+              focuses on rare mineral supply, processing support, export and
+              import coordination, and long-term procurement partnerships.
             </p>
             <p className="mt-4 max-w-sm text-xs leading-6 text-white/42">
               Company registration and export documentation details are shared
@@ -119,7 +120,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs uppercase tracking-[0.18em] text-white/36 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Bilex Minerals EA</p>
-          <p>Bismuth / strategic minerals / export partnerships</p>
+          <p>Rare minerals. Reliable supply.</p>
         </div>
       </div>
     </footer>

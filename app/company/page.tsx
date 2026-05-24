@@ -16,7 +16,7 @@ import { companyPillars, visuals } from "@/lib/site-data";
 export const metadata = {
   title: "Company",
   description:
-    "Bilex Minerals supports bismuth and strategic industrial mineral sourcing, processing support, export coordination, and supply partnerships.",
+    "Bilex Minerals operates across rare mineral sourcing, industrial supply, traceability, export coordination, and long-term procurement partnerships.",
 };
 
 const capabilities = [
@@ -27,8 +27,8 @@ const capabilities = [
   },
   {
     icon: Microscope,
-    title: "Quality Assessment",
-    text: "Sample review, testing coordination, specification checks, and documentation support for industrial mineral supply.",
+    title: "Mineral Analysis",
+    text: "Sample review, testing coordination, specification checks, and documentation support for commercial-grade consistency.",
   },
   {
     icon: Truck,
@@ -50,8 +50,8 @@ export default function CompanyPage() {
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
           eyebrow="Company"
-          title="Industrial mineral supply built on reliability and documentation."
-          text="Bilex Minerals works with industrial and strategic minerals for manufacturing, processing and export markets."
+          title="Rare mineral sourcing built on reliability and documentation."
+          text="Bilex Minerals works with mining operations, industrial buyers and supply partners to deliver minerals that meet strict commercial and operational standards."
           image={visuals.mine}
         />
 
@@ -65,18 +65,17 @@ export default function CompanyPage() {
                 Built for industrial buyers who need dependable supply.
               </h2>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-white/60">
-                The company focuses on bismuth and strategic minerals,
-                dependable supply chains, transparent operations and long-term
-                business relationships. Each engagement is structured around
-                sourcing requirements, quality assessment, processing support
-                and export coordination.
+                Bilex Minerals operates at the intersection of mineral
+                sourcing, industrial supply and global trade. Each engagement
+                is structured around sourcing requirements, verification,
+                processing support and export coordination.
               </p>
             </div>
 
             <div className="relative min-h-[560px] overflow-hidden rounded-sm border border-white/10">
               <Image
                 src={visuals.assay}
-                alt="Bilex Minerals industrial mineral quality assessment desk"
+                alt="Bilex Minerals industrial mineral analysis desk"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
@@ -87,7 +86,7 @@ export default function CompanyPage() {
                   Operational Standard
                 </p>
                 <h3 className="mt-3 font-display text-3xl text-[#fff7e7]">
-                  Quality standards before shipment.
+                  Verification before shipment.
                 </h3>
               </div>
             </div>
@@ -122,7 +121,7 @@ export default function CompanyPage() {
                 Operating Pillars
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Traceable sourcing, supply reliability, export readiness.
+                Supply chains, industrial operations, verified standards.
               </h2>
             </div>
 

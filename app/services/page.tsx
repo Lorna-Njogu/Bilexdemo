@@ -16,9 +16,9 @@ import { SiteHeader } from "@/components/site-header";
 import { contact, services, visuals, workflow } from "@/lib/site-data";
 
 export const metadata = {
-  title: "Services",
+  title: "Supply Capabilities",
   description:
-    "Bilex Minerals services for mineral sourcing and advisory, processing support, quality assessment, export coordination, and international supply partnerships.",
+    "Bilex Minerals supply capabilities for rare mineral sourcing, mineral analysis, processing support, export logistics, and industrial procurement partnerships.",
 };
 
 const serviceIcons = [Gem, Scale, Microscope, Ship, Compass, Boxes, HardHat];
@@ -33,9 +33,9 @@ const serviceImages = [
 ];
 
 const serviceGroups = [
-  ["Sourcing", "Bismuth and strategic mineral sourcing coordination."],
+  ["Sourcing", "Rare and strategic mineral sourcing coordination."],
   ["Processing", "Material handling, preparation, and specification support."],
-  ["Quality", "Sample review, testing coordination, and documentation."],
+  ["Analysis", "Sample review, testing coordination, and documentation."],
   ["Export", "Freight planning, cargo coordination, and buyer communication."],
 ];
 
@@ -45,9 +45,9 @@ export default function ServicesPage() {
       <SiteHeader variant="solid" />
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
-          eyebrow="Services"
-          title="Mineral sourcing, processing support and export coordination."
-          text="A practical service desk for industrial buyers, processors, exporters, and supply partners working with bismuth and strategic minerals."
+          eyebrow="Supply Capabilities"
+          title="Mineral sourcing, analysis, processing support and export coordination."
+          text="A practical capability desk for industrial buyers, processors, exporters and procurement partners working with rare and strategic minerals."
           image={visuals.refinery}
         />
 
@@ -95,7 +95,7 @@ export default function ServicesPage() {
                           href={`/services/${service.slug}`}
                           className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#d8bd6a]"
                         >
-                          Open service
+                          View capability
                           <ArrowRight
                             size={15}
                             className="transition group-hover:translate-x-1"
@@ -120,8 +120,8 @@ export default function ServicesPage() {
                 One desk, four industrial supply lanes.
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-white/60">
-                Buyers and partners can begin with a defined supply need, then
-                move into quality assessment, processing coordination,
+                Buyers and partners can begin with a defined mineral requirement, then
+                move into analysis, processing coordination,
                 documentation and export support without losing operational
                 continuity.
               </p>
@@ -180,7 +180,7 @@ export default function ServicesPage() {
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-7 text-white/58">
                 Start with a defined requirement and the team will route your
-                inquiry to the correct sourcing, processing, quality or export
+                inquiry to the correct sourcing, processing, analysis or export
                 support lane.
               </p>
             </div>
@@ -190,7 +190,7 @@ export default function ServicesPage() {
               rel="noreferrer"
               className="inline-flex w-fit items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:bg-[#f5df9a]"
             >
-              Request consultation
+              Request supply information
               <ArrowRight size={17} />
             </a>
           </div>

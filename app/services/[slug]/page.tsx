@@ -60,10 +60,10 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-white/50 transition hover:text-[#d8bd6a]"
               >
                 <ArrowLeft size={16} />
-                Services
+                Supply capabilities
               </Link>
               <h2 className="mt-12 max-w-xl font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Practical execution for industrial mineral supply.
+                Practical execution for industrial-grade mineral demand.
               </h2>
               <p className="mt-6 max-w-xl leading-8 text-white/58">
                 {service.description}
@@ -89,7 +89,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                   rel="noreferrer"
                   className="inline-flex items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:bg-[#f5df9a]"
                 >
-                  Request consultation
+                  Request supply information
                   <ArrowRight size={17} />
                 </a>
               </div>

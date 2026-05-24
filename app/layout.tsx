@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://bilexminerals.com"),
   title: {
     default:
-      "Bilex Minerals | Bismuth & Strategic Industrial Mineral Supply",
+      "Bilex Minerals | Rare Mineral Supply & Industrial Procurement",
     template: "%s | Bilex Minerals",
   },
   description:
-    "Bilex Minerals supports bismuth and strategic industrial mineral sourcing, processing support, quality assessment, export coordination, and international supply partnerships.",
+    "Bilex Minerals supports rare mineral sourcing, bismuth supply, mineral analysis, processing support, export coordination, and international procurement partnerships.",
   keywords: [
     "bismuth supplier",
     "strategic minerals",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bilex Minerals",
     description:
-      "Bismuth and strategic industrial mineral sourcing, processing support, quality assessment, and export coordination.",
+      "Rare mineral sourcing, bismuth supply, mineral analysis, processing support, and export coordination.",
     url: "https://bilexminerals.com",
     siteName: "Bilex Minerals",
     images: [
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bilex Minerals",
     description:
-      "Bismuth and strategic industrial mineral sourcing, processing support, and export coordination.",
+      "Rare mineral sourcing, bismuth supply, mineral analysis, processing support, and export coordination.",
     images: ["/bilex-logo.webp"],
   },
 };

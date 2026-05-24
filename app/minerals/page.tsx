@@ -8,7 +8,7 @@ import { mineralCategories, visuals } from "@/lib/site-data";
 export const metadata = {
   title: "Minerals",
   description:
-    "Bismuth, strategic minerals, industrial minerals, and processed material supply support from Bilex Minerals.",
+    "Rare minerals, bismuth, strategic minerals, industrial minerals, and processed material supply support from Bilex Minerals.",
 };
 
 const mineralImages = [
@@ -26,7 +26,7 @@ const mineralStandards = [
   },
   {
     icon: Microscope,
-    title: "Quality Assessment",
+    title: "Mineral Analysis",
     text: "Selected mineral lots can move through sample handling, testing coordination, specification checks, and result review.",
   },
   {
@@ -43,8 +43,8 @@ export default function MineralsPage() {
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
           eyebrow="Minerals"
-          title="Bismuth and strategic minerals for industrial supply chains."
-          text="Bilex Minerals supports bismuth, strategic minerals, industrial minerals and processed materials for manufacturing, processing and export markets."
+          title="Rare minerals for industrial and global markets."
+          text="Bilex Minerals supports rare minerals, bismuth, strategic minerals, industrial mineral lots and processed materials for manufacturing, energy, technology, processing and export markets."
           image={visuals.hero}
         />
 
@@ -93,12 +93,12 @@ export default function MineralsPage() {
                 Verification Lens
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                The mineral category matters less than the reliability of supply.
+                Mineral demand depends on grade, availability and supply reliability.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
                 Every mineral conversation is treated as a commercial and
                 operational review. Bilex prioritizes origin context, supplier
-                reliability, documentation quality, processing requirements and
+                reliability, documentation quality, purity or grade requirements and
                 export planning over unsupported claims.
               </p>
             </div>
@@ -159,7 +159,7 @@ export default function MineralsPage() {
                 href="/contact"
                 className="mt-8 inline-flex items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:bg-[#f5df9a]"
               >
-                Discuss mineral supply
+                Request supply information
                 <ArrowRight size={17} />
               </Link>
             </div>
