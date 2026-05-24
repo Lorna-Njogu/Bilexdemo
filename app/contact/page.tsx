@@ -7,6 +7,8 @@ import {
   Phone,
   ShieldCheck,
 } from "lucide-react";
+import { BookingInquiryForm } from "@/components/booking-inquiry-form";
+import { BuyerQualificationSection } from "@/components/buyer-qualification-section";
 import { PageIntro } from "@/components/page-intro";
 import { SiteHeader } from "@/components/site-header";
 import { contact, visuals } from "@/lib/site-data";
@@ -183,6 +185,28 @@ export default function ContactPage() {
             </form>
           </div>
         </section>
+
+        <section id="intake" className="bg-[#050505] px-5 py-24 md:px-8 lg:px-12">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.36em] text-[#d8bd6a]">
+                Payment & Appointment Intake
+              </p>
+              <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
+                Structured review for USD, crypto and cash appointment requests.
+              </h2>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
+                Qualified buyers can submit settlement preference,
+                documentation status, destination, volume and appointment
+                requirements before instructions are shared.
+              </p>
+            </div>
+
+            <BookingInquiryForm />
+          </div>
+        </section>
+
+        <BuyerQualificationSection />
 
         <section className="bg-[#0b0907] px-5 py-24 md:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2">

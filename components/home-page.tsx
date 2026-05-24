@@ -28,6 +28,9 @@ import {
   Ship,
   Truck,
 } from "lucide-react";
+import { BookingInquiryForm } from "@/components/booking-inquiry-form";
+import { BuyerQualificationSection } from "@/components/buyer-qualification-section";
+import { HeroGoldChartBackground } from "@/components/live-gold-chart";
 import { contact, services, visuals, workflow } from "@/lib/site-data";
 
 const fadeUp = {
@@ -238,6 +241,8 @@ export function HomePage() {
       <EquipmentSection />
       <RegionalPresenceSection />
       <TrustSection />
+      <BuyerQualificationSection />
+      <PaymentBookingSection />
       <ContactSection />
       <MobileContactDock />
     </main>
@@ -281,19 +286,17 @@ function SectionHeader({
 
 function HeroSection() {
   return (
-    <section className="relative min-h-[92svh] overflow-hidden bg-[#030303] px-5 pb-10 pt-28 md:px-8 lg:px-12">
-      <div className="absolute inset-0">
-        <Image
-          src={visuals.hero}
-          alt="Industrial mineral sourcing operation with heavy equipment and mineral-bearing material"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#030303_0%,rgba(3,3,3,0.92)_32%,rgba(3,3,3,0.52)_62%,rgba(3,3,3,0.78)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,3,3,0.42)_0%,rgba(3,3,3,0.12)_46%,#050505_100%)]" />
-        <div className="hero-grid absolute inset-0 opacity-45" />
+    <section
+      id="gold-market"
+      className="relative min-h-[92svh] overflow-hidden bg-[#030303] px-5 pb-10 pt-28 md:px-8 lg:px-12"
+    >
+      <div className="absolute inset-0 bg-[#050505]">
+        <div className="absolute inset-0 opacity-100">
+          <HeroGoldChartBackground />
+        </div>
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#030303_0%,rgba(3,3,3,0.96)_34%,rgba(3,3,3,0.42)_62%,rgba(3,3,3,0.08)_100%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(3,3,3,0.62)_0%,rgba(3,3,3,0.1)_45%,#050505_100%)]" />
+        <div className="hero-grid pointer-events-none absolute inset-0 opacity-18" />
         <div className="noise-layer absolute inset-0" />
         {[8, 18, 30, 45, 58, 72, 84].map((left, index) => (
           <span
@@ -960,6 +963,22 @@ function TrustSection() {
             </motion.article>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function PaymentBookingSection() {
+  return (
+    <section className="bg-[#050505] px-5 py-24 md:px-8 lg:px-12">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+        <SectionHeader
+          eyebrow="Payment & Appointment Intake"
+          title="Structured review for USD, crypto and cash appointment requests."
+          text="Qualified buyers can submit settlement preference, documentation status, destination, volume and appointment requirements before instructions are shared."
+        />
+
+        <BookingInquiryForm />
       </div>
     </section>
   );
