@@ -4,8 +4,7 @@ const baseUrl = "https://bilexminerals.com";
 
 const routes = [
   "",
-  "/services",
-  "/gold-prices",
+  "/testing-assaying",
   "/contact",
 ];
 
@@ -13,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === "" || route === "/gold-prices" ? "daily" : "monthly",
+    changeFrequency: route === "" ? "daily" : "monthly",
     priority: route === "" ? 1 : 0.8,
   }));
 }

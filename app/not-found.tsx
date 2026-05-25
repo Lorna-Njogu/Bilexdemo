@@ -14,8 +14,8 @@ export default function NotFound() {
             The page you requested is not available.
           </h1>
           <p className="mt-5 max-w-2xl text-white/68">
-            Return to the homepage to explore Bilex Minerals services,
-            live gold prices, and consultation options.
+            Return to the homepage to explore Bilex Minerals testing,
+            assaying, market reference and consultation options.
           </p>
           <Link
             href="/"

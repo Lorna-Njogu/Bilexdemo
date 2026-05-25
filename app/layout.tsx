@@ -27,17 +27,15 @@ export const metadata: Metadata = {
     template: "%s | Bilex Minerals",
   },
   description:
-    "Bilex Minerals provides professional gold testing, assaying, purity analysis, verification and consultation services for buyers, traders and investors.",
+    "Book gold testing, assaying, purity review and private consultation with Bilex Minerals. Payment is accepted by bank transfer, USDT, cryptocurrency and cash.",
   keywords: [
-    "gold suppliers Kenya",
     "gold assaying Kenya",
     "gold testing services",
     "gold purity testing",
-    "gold verification Kenya",
+    "gold purity review",
     "gold testing Kenya",
-    "live gold prices",
-    "gold price chart USD",
-    "gold market trends",
+    "gold result review",
+    "gold testing appointment",
   ],
   alternates: {
     canonical: "https://bilexminerals.com",
@@ -45,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Gold Testing & Assaying Services in Kenya | Bilex Minerals",
     description:
-      "Professional gold testing, assaying, purity analysis, verification and consultation services.",
+      "Book gold testing, assaying, purity review and private consultation with Bilex Minerals.",
     url: "https://bilexminerals.com",
     siteName: "Bilex Minerals",
     images: [
@@ -63,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bilex Minerals",
     description:
-      "Professional gold testing, assaying, purity analysis and live gold price reference.",
+      "Gold testing, assaying, purity review and XAU/USD market reference.",
     images: ["/bilex-logo.webp"],
   },
 };

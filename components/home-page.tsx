@@ -34,67 +34,75 @@ const serviceSnapshot = [
   {
     icon: FlaskConical,
     title: "Gold Assaying",
-    text: "Professional assay support for gold samples presented for analysis.",
+    text: "Assay support for submitted gold samples, with review based on the tested material.",
   },
   {
     icon: Microscope,
     title: "Gold Testing",
-    text: "Structured testing and verification for buyers, traders and investors.",
+    text: "Testing support before buying, selling or making a decision.",
   },
   {
     icon: Gem,
-    title: "Purity Analysis",
-    text: "Review of gold purity indicators, sample condition and commercial context.",
+    title: "Purity Review",
+    text: "Purity review of the submitted sample and its condition.",
   },
   {
     icon: FileText,
-    title: "Consultation",
-    text: "Clear guidance on testing results, documentation and next steps.",
+    title: "Private Consultation",
+    text: "Private guidance after testing, including result review and next steps.",
   },
 ];
 
 const reasons = [
-  ["Accurate Testing", "Testing is handled through a clear, sample-led process focused on the material presented."],
-  ["Professional Handling", "Appointments, samples and client conversations are managed with discretion and care."],
-  ["Transparent Process", "Clients understand what is being tested, how results are handled and what consultation covers."],
-  ["Trusted Verification", "Bilex separates testing and consultation from unsupported ownership or market claims."],
-  ["Consultation Support", "Results can be discussed with the team so clients understand the practical meaning of analysis."],
+  ["Accurate Testing", "Testing is based on the material submitted for review."],
+  ["Private Handling", "Appointments, samples and client discussions are handled privately."],
+  ["Clear Process", "Clients are briefed on the testing process before the appointment proceeds."],
+  ["Defined Boundaries", "Bilex does not confirm ownership, origin or future market value of submitted material."],
+  ["Result Review", "Results can be reviewed with the team before the client decides the next step."],
 ];
 
 const process = [
-  "Sample Submission",
-  "Testing & Analysis",
-  "Verification",
-  "Results & Consultation",
+  "Book Appointment",
+  "Submit Sample",
+  "Testing & Assay Review",
+  "Result Discussion",
 ];
 
 const payments = [
   [CreditCard, "Bank Transfer"],
   [BadgeCheck, "USDT"],
   [Bitcoin, "Cryptocurrency"],
-  [Banknote, "Cash Payments"],
+  [Banknote, "Cash"],
 ];
 
 const faqs = [
   [
     "How long does gold testing take?",
-    "Timing depends on the sample, appointment schedule and analysis required. The team confirms expected timing before the appointment proceeds.",
+    "Timing depends on the sample and service required. The team confirms the expected timeline during appointment review.",
   ],
   [
-    "What testing methods are used?",
-    "Bilex focuses on professional gold testing, assaying support, purity analysis and consultation based on the sample presented.",
+    "What services can I book?",
+    "You can book testing, assaying, purity review, result review, buying consultation or selling consultation.",
   ],
   [
     "Is consultation available after testing?",
-    "Yes. Consultation can help clients understand results, documentation context and appropriate next steps.",
+    "Yes. Results can be reviewed with the team before you decide the next step.",
   ],
   [
     "How are results provided?",
-    "Results are shared through the agreed appointment or consultation process, based on the service requested and sample review.",
+    "Results are shared through the agreed appointment process, based on the service requested.",
   ],
   [
     "What payment methods are accepted?",
-    "Accepted payment methods include bank transfer, USDT, cryptocurrency and cash payments.",
+    "Bank transfer, USDT, cryptocurrency and cash are accepted.",
+  ],
+  [
+    "Does Bilex also sell gold?",
+    "Gold sales and sourcing support are available through direct inquiry. Testing and assaying remain the main focus.",
+  ],
+  [
+    "Does the test result affect payment?",
+    "No. Payment is for the service provided and is not affected by the test result.",
   ],
 ];
 
@@ -103,6 +111,7 @@ export function HomePage() {
     <main className="overflow-hidden bg-[#050505] text-[#f8f1e4]">
       <HeroSection />
       <ServicesSnapshot />
+      <GoldSalesSupportSection />
       <WhyChooseSection />
       <ProcessSection />
       <PaymentMethodsSection />
@@ -157,19 +166,19 @@ function HeroSection() {
       <div className="relative z-10 mx-auto grid min-h-[calc(100svh-7rem)] max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <motion.div {...fadeUp}>
           <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#d8bd6a]">
-            Gold testing / assaying / verification
+            Gold Testing • Assaying • Consultation
           </p>
           <h1 className="mt-7 max-w-5xl font-display text-5xl leading-[0.94] text-balance text-[#fff7e7] md:text-7xl xl:text-8xl">
-            Professional Gold Testing and Assaying Services
+            Gold Testing and Assaying by Appointment
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
-            Reliable gold analysis, verification and consultation for buyers,
-            traders and investors who need a professional sample-led testing
-            process.
+            Bilex Minerals provides gold testing, assaying, purity review and
+            private consultation for clients who need clear results before
+            buying, selling or proceeding.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2">
-            {["Gold Testing", "Assaying", "Purity Analysis", "Consultation"].map((item) => (
+            {["Testing", "Assaying", "Purity Review", "Private Consultation"].map((item) => (
               <span
                 key={item}
                 className="rounded-sm border border-[#d8bd6a]/28 bg-[#d8bd6a]/10 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#d8bd6a]"
@@ -184,14 +193,14 @@ function HeroSection() {
               href="#booking"
               className="group inline-flex items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#080706] transition hover:bg-[#f5df9a]"
             >
-              Book Appointment
+              Book Gold Test
               <ArrowRight size={17} className="transition group-hover:translate-x-1" />
             </a>
             <Link
-              href="/services"
+              href="/testing-assaying"
               className="inline-flex items-center gap-3 rounded-sm border border-white/18 bg-white/[0.04] px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white transition hover:border-[#d8bd6a] hover:text-[#d8bd6a]"
             >
-              View Services
+              View Testing Services
             </Link>
           </div>
         </motion.div>
@@ -214,15 +223,15 @@ function ServicesSnapshot() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <SectionHeader
-            eyebrow="Services Snapshot"
-            title="Gold testing services built around clarity and trust."
-            text="The homepage covers the core services clients ask for most often, while the Services page supports deeper SEO and service detail."
+            eyebrow="Testing Services"
+            title="Testing, assaying and purity review in one appointment."
+            text="Choose the service that matches your sample, your question and the decision you need to make."
           />
           <Link
-            href="/services"
+            href="/testing-assaying"
             className="inline-flex w-fit items-center gap-3 rounded-sm border border-[#d8bd6a]/40 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#d8bd6a] transition hover:bg-[#d8bd6a] hover:text-black"
           >
-            Services
+            View Testing Services
             <ArrowRight size={16} />
           </Link>
         </div>
@@ -254,14 +263,45 @@ function ServicesSnapshot() {
   );
 }
 
+function GoldSalesSupportSection() {
+  return (
+    <section className="bg-[#050505] px-5 py-20 md:px-8 lg:px-12">
+      <div className="mx-auto flex max-w-7xl flex-col gap-6 border-y border-white/10 py-10 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#d8bd6a]">
+            Gold Sales Support
+          </p>
+          <h2 className="mt-4 font-display text-3xl text-[#fff7e7] md:text-4xl">
+            Gold sales are available by inquiry only.
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-white/58">
+            Bilex mainly focuses on gold testing, assaying and consultation.
+            Gold sales and sourcing support are handled through direct inquiry
+            where available.
+          </p>
+        </div>
+        <a
+          href={contact.whatsapp}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex w-fit items-center gap-3 rounded-sm border border-[#d8bd6a]/40 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#d8bd6a] transition hover:bg-[#d8bd6a] hover:text-black"
+        >
+          Ask About Gold Sales
+          <MessageCircle size={16} />
+        </a>
+      </div>
+    </section>
+  );
+}
+
 function WhyChooseSection() {
   return (
     <section className="px-5 py-24 md:px-8 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          eyebrow="Why Clients Choose Bilex"
-          title="Professional verification without exaggerated promises."
-          text="Bilex is positioned around testing, assaying and consultation. The process is clear about what testing can confirm and what it cannot guarantee."
+          eyebrow="Appointment Handling"
+          title="Clear handling from appointment to result review."
+          text="Each appointment is handled around the service requested, the submitted material and the client's next step."
           align="center"
         />
 
@@ -291,9 +331,9 @@ function ProcessSection() {
     <section className="bg-[#0b0907] px-5 py-24 md:px-8 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          eyebrow="Simple Process"
-          title="From sample submission to results and consultation."
-          text="A concise appointment flow helps serious clients understand exactly what happens before booking."
+          eyebrow="Appointment Process"
+          title="A clear process for testing appointments."
+          text="Appointments are confirmed before testing proceeds."
           align="center"
         />
 
@@ -325,8 +365,8 @@ function PaymentMethodsSection() {
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
         <SectionHeader
           eyebrow="Accepted Payment Methods"
-          title="Convenient payment options for testing and consultation."
-          text="Payments made to Bilex are strictly for gold testing, assaying, consultation or related professional services."
+          title="Payment methods accepted for appointments."
+          text="Payments are for testing, assaying, consultation or related services. Payment is not affected by the test result."
         />
 
         <div className="grid gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 sm:grid-cols-2">
@@ -354,8 +394,8 @@ function BookingSection() {
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
         <SectionHeader
           eyebrow="Book Appointment"
-          title="Request gold testing, assaying or consultation."
-          text="Submit your details, preferred appointment window, sample type and payment method. Consent terms must be accepted before the form can proceed."
+          title="Book a gold testing appointment."
+          text="Send your details and preferred appointment time. The Bilex team will confirm availability before testing proceeds."
         />
         <BookingInquiryForm />
       </div>
@@ -369,8 +409,8 @@ function FaqSection() {
       <div className="mx-auto max-w-5xl">
         <SectionHeader
           eyebrow="FAQ"
-          title="Frequently asked questions before gold testing."
-          text="Clear answers replace unnecessary extra pages and help clients understand the booking process."
+          title="Questions before booking"
+          text="Quick answers before booking a testing or assaying appointment."
           align="center"
         />
         <div className="mt-12 divide-y divide-white/10 border-y border-white/10">
@@ -400,11 +440,10 @@ function FinalCtaSection() {
         <div>
           <ClipboardCheck className="text-[#d8bd6a]" size={25} />
           <h2 className="mt-4 font-display text-3xl text-[#fff7e7] md:text-4xl">
-            Book a consultation with the Bilex team.
+            Need to test gold before making a decision?
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-7 text-white/58">
-            Request gold testing, speak with our team or confirm appointment
-            availability before presenting a sample.
+            Book a private appointment for testing, assaying or result review.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">

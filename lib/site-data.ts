@@ -6,7 +6,7 @@ export const contact = {
   primaryOffice: "Off Mombasa Road, Nairobi, Kenya",
   secondaryOffice: "Dar es Salaam, Tanzania",
   hours: {
-    weekdays: "Mon-Sat by appointment",
+    weekdays: "Monday to Saturday, by appointment",
     sunday: "Sunday closed",
   },
   whatsapp:
@@ -33,7 +33,7 @@ export const heroImages = {
 
 export const stats = [
   { value: "Testing", label: "Gold testing appointments" },
-  { value: "Assay", label: "Assaying and purity analysis" },
+  { value: "Assay", label: "Assaying and purity review" },
   { value: "Consult", label: "Results and client consultation" },
 ];
 
@@ -42,23 +42,23 @@ export const services = [
     slug: "gold-assaying",
     title: "Gold Assaying",
     eyebrow: "Assaying",
-    summary: "Professional assay support for gold samples presented for analysis.",
+    summary: "Assay support for submitted gold samples.",
     description:
-      "Bilex Minerals provides professional gold assaying support for samples presented by clients, with attention to handling, documentation context and clear result consultation.",
+      "Bilex Minerals provides gold assaying support for submitted samples, with attention to handling, documentation context and clear result review.",
     highlights: [
-      "Sample-led assay support",
-      "Professional appointment handling",
-      "Result consultation",
-      "Clear service boundaries",
+      "Assay support",
+      "Private handling",
+      "Result review",
+      "Appointment terms",
     ],
   },
   {
     slug: "gold-testing",
     title: "Gold Testing",
     eyebrow: "Testing",
-    summary: "Structured gold testing services for buyers, traders and investors.",
+    summary: "Gold testing by appointment for submitted samples.",
     description:
-      "Gold testing services help buyers, traders and investors review samples through a structured professional process before making their own commercial decisions.",
+      "Gold testing services help clients review submitted samples before making their own commercial decisions.",
     highlights: [
       "Gold sample testing",
       "Appointment-based review",
@@ -68,11 +68,11 @@ export const services = [
   },
   {
     slug: "purity-analysis",
-    title: "Purity Analysis",
+    title: "Purity Review",
     eyebrow: "Purity",
-    summary: "Gold purity testing and sample-led analysis consultation.",
+    summary: "Gold purity review and result guidance.",
     description:
-      "Purity analysis focuses on the sample presented for testing, helping clients understand quality indicators, limitations and appropriate next steps.",
+      "Purity review focuses on the submitted sample, helping clients understand quality indicators, limitations and appropriate next steps.",
     highlights: [
       "Purity-focused sample review",
       "Material condition context",
@@ -82,11 +82,11 @@ export const services = [
   },
   {
     slug: "consultation",
-    title: "Consultation",
+    title: "Result Review",
     eyebrow: "Consultation",
-    summary: "Professional consultation around testing results and next steps.",
+    summary: "Private consultation around testing results and next steps.",
     description:
-      "Consultation gives clients a professional way to discuss testing results, documentation questions, payment options and appointment requirements.",
+      "Consultation gives clients a private way to discuss testing results, documentation questions, payment options and appointment requirements.",
     highlights: [
       "Testing result discussion",
       "Documentation context",

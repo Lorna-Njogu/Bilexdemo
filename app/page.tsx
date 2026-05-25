@@ -2,9 +2,11 @@ import { HomePage } from "@/components/home-page";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata = {
-  title: "Professional Gold Testing and Assaying Services",
+  title: {
+    absolute: "Gold Testing & Assaying Services in Kenya | Bilex Minerals",
+  },
   description:
-    "Professional gold testing, assaying, purity analysis, verification and consultation for buyers, traders and investors, with a live XAU/USD gold price reference.",
+    "Book gold testing, assaying, purity review and private consultation with Bilex Minerals. Payment is accepted by bank transfer, USDT, cryptocurrency and cash.",
 };
 
 const organizationSchema = {
@@ -14,7 +16,7 @@ const organizationSchema = {
   url: "https://bilexminerals.com",
   logo: "https://bilexminerals.com/bilex-logo.webp",
   description:
-    "Professional gold testing, assaying, purity analysis, verification and consultation services in Kenya.",
+    "Gold testing, assaying, purity review and private consultation services in Kenya.",
   areaServed: ["Kenya", "Tanzania", "East Africa"],
   address: {
     "@type": "PostalAddress",
@@ -32,8 +34,8 @@ const organizationSchema = {
     "gold assaying Kenya",
     "gold testing services",
     "gold purity testing",
-    "gold quality verification",
-    "live gold prices",
+    "gold result review",
+    "XAU/USD market reference",
   ],
 };
 

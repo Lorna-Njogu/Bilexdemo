@@ -15,60 +15,60 @@ import { SiteHeader } from "@/components/site-header";
 import { visuals } from "@/lib/site-data";
 
 export const metadata = {
-  title: "Gold Assaying and Testing Services",
+  title: "Gold Testing and Assaying Services",
   description:
-    "Gold assaying Kenya, gold testing services, gold purity testing, verification, consultation and reporting from Bilex Minerals.",
+    "Gold testing, assaying, purity review, result documentation and private consultation for clients presenting gold samples by appointment.",
 };
 
 const services = [
   {
     icon: FlaskConical,
     title: "Gold Assaying",
-    text: "Professional assay support for samples presented for analysis, with a clear focus on the tested material.",
-    points: ["Sample-led analysis", "Assay consultation", "Professional handling"],
+    text: "Assay support for submitted samples, with review based on the tested material.",
+    points: ["Sample review", "Assay support", "Private handling"],
   },
   {
     icon: Microscope,
     title: "Gold Testing Services",
-    text: "Gold testing for buyers, traders and investors who need structured verification before making commercial decisions.",
-    points: ["Testing appointment", "Sample review", "Result explanation"],
+    text: "Testing support for clients who need sample review before buying, selling or proceeding.",
+    points: ["Appointment", "Sample review", "Result discussion"],
   },
   {
     icon: Gem,
     title: "Gold Purity Testing",
-    text: "Purity-focused analysis that helps clients understand sample quality, limitations and practical context.",
-    points: ["Purity indicators", "Material review", "Clear boundaries"],
+    text: "Purity review to help clients understand the quality and condition of the submitted sample.",
+    points: ["Purity review", "Material condition", "Result guidance"],
   },
   {
     icon: ShieldCheck,
-    title: "Verification Consultation",
-    text: "Consultation around testing results, documentation context and professional next steps.",
-    points: ["Result discussion", "Documentation review", "Client guidance"],
+    title: "Result Review",
+    text: "Private review of test results, documentation context and next steps.",
+    points: ["Result discussion", "Document context", "Next steps"],
   },
   {
     icon: FileText,
-    title: "Reporting Support",
-    text: "Structured communication of testing outcomes for clients who need professional records and consultation notes.",
-    points: ["Result summary", "Appointment notes", "Service record"],
+    title: "Result Documentation",
+    text: "A written result summary or service record where required.",
+    points: ["Result summary", "Service record", "Client copy"],
   },
 ];
 
 const standards = [
-  "Results are based on the sample presented for analysis.",
-  "Bilex does not guarantee sample origin, ownership or future market value.",
-  "Clients confirm they have the legal right to present samples for testing.",
-  "Payments are for testing, assaying, consultation or related professional services.",
+  "Results are based on the material submitted for testing.",
+  "Bilex does not confirm origin, ownership or future market value.",
+  "Clients confirm they have the legal right to present material for testing.",
+  "Payments are for testing, assaying, consultation or related services and are not affected by test results.",
 ];
 
-export default function ServicesPage() {
+export default function TestingAssayingPage() {
   return (
     <>
       <SiteHeader variant="solid" />
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
-          eyebrow="Services"
-          title="Gold assaying, testing, purity analysis and consultation."
-          text="A focused services page for gold assaying Kenya, gold testing services, gold purity testing, verification consultation and reporting."
+          eyebrow="Testing & Assaying"
+          title="Gold Testing and Assaying Services"
+          text="Testing, assaying, purity review and result guidance for clients presenting gold samples by appointment."
           image={visuals.assay}
         />
 
@@ -76,15 +76,14 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-7xl">
             <div className="mb-12 max-w-4xl">
               <p className="text-xs font-semibold uppercase tracking-[0.36em] text-[#d8bd6a]">
-                Service Detail
+                Services
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                One clear service page instead of shallow subpages.
+                Gold testing services in one place.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
-                Bilex focuses the user journey around testing, consultation
-                and appointment conversion. This page supports SEO without
-                splitting attention across unnecessary service routes.
+                Clients can book one appointment for testing, assaying, result
+                review or consultation, depending on the service required.
               </p>
             </div>
 
@@ -123,10 +122,10 @@ export default function ServicesPage() {
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.75fr_1.25fr]">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.36em] text-[#d8bd6a]">
-                Professional Boundaries
+                Appointment Terms
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Clear testing terms build trust before appointments.
+                Clear terms before every appointment.
               </h2>
             </div>
 
@@ -151,11 +150,11 @@ export default function ServicesPage() {
                 Book Appointment
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Request gold testing or consultation.
+                Book a testing appointment.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
-                Submit your appointment details and accept the required consent
-                terms before the request proceeds.
+                Send your details and preferred time. The Bilex team will
+                confirm availability directly.
               </p>
             </div>
             <BookingInquiryForm />
@@ -167,18 +166,18 @@ export default function ServicesPage() {
             <div>
               <ClipboardCheck className="text-[#d8bd6a]" size={25} />
               <h2 className="mt-4 font-display text-3xl text-[#fff7e7] md:text-4xl">
-                Need to discuss the right testing service?
+                Not sure which service to book?
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-7 text-white/58">
-                Start with a consultation if you are unsure which testing or
-                assaying service fits your sample.
+                Start with a private consultation and the team will guide you
+                on the next step.
               </p>
             </div>
             <Link
               href="/contact"
               className="inline-flex w-fit items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:bg-[#f5df9a]"
             >
-              Contact Bilex
+              Book Consultation
               <ArrowRight size={17} />
             </Link>
           </div>

@@ -111,10 +111,10 @@ export function CompactGoldPriceCard() {
     <aside className="overflow-hidden rounded-sm border border-[#d8bd6a]/28 bg-[#080705]/94 shadow-[0_28px_90px_rgba(0,0,0,0.46)] backdrop-blur-xl">
       <div className="border-b border-white/10 px-5 py-4">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#d8bd6a]">
-          Live Gold Price
+          Market Reference
         </p>
         <h2 className="mt-1 text-sm font-bold uppercase tracking-[0.16em] text-[#fff7e7]">
-          XAU/USD spot reference
+          XAU/USD live reference
         </h2>
       </div>
       <div className="border-b border-white/10 px-3 py-2">
@@ -125,9 +125,9 @@ export function CompactGoldPriceCard() {
       </div>
       <div className="grid grid-cols-3 gap-px bg-white/10">
         {[
-          [BadgeDollarSign, "Spot", "USD"],
-          [LineChart, "24h", "Market move"],
-          [Clock3, "Live", "TradingView"],
+          [BadgeDollarSign, "Spot Price", "USD / oz"],
+          [LineChart, "24h Movement", "Market Context"],
+          [Clock3, "Live Chart", "TradingView"],
         ].map(([Icon, label, text]) => {
           const CardIcon = Icon as typeof BadgeDollarSign;
 
@@ -144,6 +144,10 @@ export function CompactGoldPriceCard() {
           );
         })}
       </div>
+      <p className="border-t border-white/10 px-5 py-4 text-xs leading-6 text-white/48">
+        Gold prices are shown for market reference only. Testing results apply
+        only to the submitted sample.
+      </p>
     </aside>
   );
 }
@@ -154,20 +158,19 @@ export function GoldPriceReferenceSection() {
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#d8bd6a]">
-            Live XAU/USD
+            Market Reference
           </p>
           <h2 className="mt-5 font-display text-4xl leading-[1.02] text-balance text-[#fff7e7] md:text-6xl">
-            Live gold price reference for testing and consultation.
+            Live XAU/USD reference.
           </h2>
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/62 md:text-lg">
-            Gold market pricing is useful context before consultation, but
-            Bilex test results are based only on the sample presented for
-            analysis.
+            Gold pricing is shown for general market context. Testing results
+            apply only to the material submitted.
           </p>
           <div className="mt-8 grid gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 sm:grid-cols-2">
             {[
-              ["Market reference", "Live XAU/USD chart and current spot price context."],
-              ["Professional boundary", "Final consultation depends on sample testing, not market speculation."],
+              ["Gold Price Context", "Live XAU/USD chart for general price reference."],
+              ["Testing Boundary", "Result review is based on testing, not market speculation."],
             ].map(([title, text]) => (
               <div key={title} className="bg-[#11100d] p-5">
                 <ShieldCheck className="text-[#d8bd6a]" size={21} />

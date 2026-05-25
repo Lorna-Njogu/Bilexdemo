@@ -63,3 +63,456 @@
  GET /gold-prices 200 in 177ms
  GET /services 200 in 174ms
  GET / 200 in 73ms
+ GET /gold-prices 200 in 347ms
+ ✓ Compiled in 9.8s (1590 modules)
+ GET /gold-prices 200 in 682ms
+ ✓ Compiled in 1238ms (1590 modules)
+ GET /gold-prices 200 in 516ms
+ ✓ Compiled in 1123ms (1590 modules)
+ GET /gold-prices 200 in 497ms
+ ✓ Compiled in 963ms (1590 modules)
+ GET /gold-prices 200 in 457ms
+ ✓ Compiled in 1588ms (1590 modules)
+ GET /gold-prices 200 in 638ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.2s (1571 modules)
+ GET /gold-prices 404 in 2194ms
+ GET /gold-prices 404 in 326ms
+ GET /gold-prices 404 in 241ms
+ GET /gold-prices 404 in 153ms
+ GET /gold-prices 404 in 849ms
+ GET /logo.png 404 in 156ms
+ ✓ Compiled in 886ms (1571 modules)
+ GET /gold-prices 404 in 391ms
+ GET /gold-prices 404 in 581ms
+ GET /logo.png 404 in 155ms
+ ✓ Compiled in 1236ms (1571 modules)
+ GET /gold-prices 404 in 927ms
+ GET /gold-prices 404 in 638ms
+ GET /logo.png 404 in 175ms
+ ✓ Compiled in 1275ms (1571 modules)
+ GET /gold-prices 404 in 763ms
+ GET /gold-prices 404 in 489ms
+ GET /logo.png 404 in 239ms
+ ✓ Compiled in 950ms (1571 modules)
+ GET /gold-prices 404 in 826ms
+ GET /gold-prices 404 in 500ms
+ GET /logo.png 404 in 159ms
+ ✓ Compiled in 978ms (1571 modules)
+ GET /gold-prices 404 in 813ms
+ GET /gold-prices 404 in 518ms
+ GET /logo.png 404 in 175ms
+ ✓ Compiled in 782ms (1571 modules)
+ GET /gold-prices 404 in 303ms
+ GET /gold-prices 404 in 584ms
+ GET /logo.png 404 in 189ms
+ ✓ Compiled in 376ms (701 modules)
+ ✓ Compiled in 432ms (701 modules)
+ GET /gold-prices 404 in 564ms
+ GET /gold-prices 404 in 358ms
+ GET /logo.png 404 in 162ms
+ ⨯ Error: Cannot find module './124.js'
+Require stack:
+- C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\webpack-runtime.js
+- C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\_not-found\page.js
+- C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\require.js
+- C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\load-components.js
+- C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\build\utils.js
+- C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\build\swc\options.js
+- C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\build\swc\index.js
+- C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\config.js
+- C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\next.js
+- C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\page.js:2:7900)
+    at Object.<anonymous> (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\page.js:2:7955) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ○ Compiling /_error ...
+ GET / 500 in 2936ms
+ ✓ Compiled /_not-found in 3.1s (1901 modules)
+ ✓ Compiled (1904 modules)
+ GET /gold-prices 404 in 3488ms
+ GET /gold-prices 404 in 1204ms
+ GET /gold-prices 404 in 618ms
+ GET /logo.png 404 in 199ms
+ ○ Compiling /testing-assaying ...
+ ✓ Compiled /testing-assaying in 2.4s (1930 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET / 500 in 2786ms
+ GET /testing-assaying 200 in 3815ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 738ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\_not-found\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\_not-found\\page.js'
+}
+ GET /gold-prices 500 in 181ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\_not-found\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\_not-found\\page.js'
+}
+ GET /logo.png 500 in 136ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 371ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\_not-found\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\_not-found\\page.js'
+}
+ GET /gold-prices 500 in 177ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\_not-found\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\_not-found\\page.js'
+}
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /logo.png 500 in 184ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 371ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\_not-found\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\_not-found\\page.js'
+}
+ GET /gold-prices 500 in 304ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\_not-found\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\_not-found\\page.js'
+}
+ GET /logo.png 500 in 200ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET / 500 in 231ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\_not-found\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\_not-found\\page.js'
+}
+ GET /logo.png 500 in 328ms
+ GET / 200 in 1523ms
+ GET / 200 in 402ms
+ GET /testing-assaying 404 in 53ms
+ GET /testing-assaying 404 in 140ms
+ GET /testing-assaying 404 in 33ms
+ GET /contact 404 in 83ms
+ GET /contact 404 in 70ms
+ GET /contact 404 in 60ms
+ GET /contact 404 in 40ms
+ GET /contact 404 in 56ms
+ GET /contact 404 in 32ms
+ GET /contact 404 in 123ms
+ GET /contact 404 in 98ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 9.5s (1930 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET / 200 in 5428ms
+ GET /contact 500 in 14953ms
+ GET / 200 in 8764ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\_not-found\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\_not-found\\page.js'
+}
+ GET /logo.png 500 in 186ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 155ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 690ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 201ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 310ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 240ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 210ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 238ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 332ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 412ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 224ms
+ GET / 200 in 483ms
+ GET /testing-assaying 200 in 558ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\app\contact\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\app\\contact\\page.js',
+  page: '/contact'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\server\\pages\\_document.js'
+}
+ GET /contact 500 in 133ms
+[Error: ENOENT: no such file or directory, stat 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\cache\webpack\server-development\18.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\cache\\webpack\\server-development\\18.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\cache\webpack\server-development\18.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\cache\\webpack\\server-development\\18.pack.gz'
+}
+ ⨯ unhandledRejection:  [Error: ENOENT: no such file or directory, stat 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\cache\webpack\server-development\18.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'C:\\Users\\Njogu\\Desktop\\New folder\\Websites\\Bilex\\.next\\cache\\webpack\\server-development\\18.pack.gz'
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\cache\webpack\server-development\18.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, open 'C:\Users\Njogu\Desktop\New folder\Websites\Bilex\.next\cache\webpack\client-development\7.pack.gz_'
+ ✓ Compiled in 4.2s (1927 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /contact 200 in 162ms
+ReferenceError: require is not defined
+    at file:///C:/Users/Njogu/Desktop/New%20folder/Websites/Bilex/.next/server/app/page.js:418:27
+    at file:///C:/Users/Njogu/Desktop/New%20folder/Websites/Bilex/.next/server/app/page.js:424:3
+    at ModuleJobSync.runSync (node:internal/modules/esm/module_job:517:37)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:388:47)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1578:24)
+    at Module._compile (node:internal/modules/cjs/loader:1743:5)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1504:12)
+    at mod.require (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\require-hook.js:68:28)
+    at require (node:internal/modules/helpers:152:16)
+    at requirePage (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\require.js:99:80)
+    at loadComponentsImpl (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\load-components.js:132:57)
+    at async DevServer.findPageComponentsImpl (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\next-server.js:900:36)
+    at async DevServer.findPageComponents (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\dev\next-dev-server.js:706:16)
+    at async DevServer.renderPageComponent (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\base-server.js:1468:24)
+    at async DevServer.renderToResponseImpl (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\base-server.js:1522:32)
+    at async DevServer.pipeImpl (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\base-server.js:1026:25)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\next-server.js:394:17)
+    at async DevServer.handleRequestImpl (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\base-server.js:917:17)
+    at async C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\dev\next-dev-server.js:400:20
+    at async Span.traceAsyncFn (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\trace\trace.js:157:20)
+    at async DevServer.handleRequest (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\dev\next-dev-server.js:396:24)
+    at async invokeRender (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\lib\router-server.js:240:21)
+    at async handleRequest (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\lib\router-server.js:437:24)
+    at async requestHandlerImpl (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\lib\router-server.js:485:13)
+    at async Server.requestListener (C:\Users\Njogu\Desktop\New folder\Websites\Bilex\node_modules\next\dist\server\lib\start-server.js:226:13)
+[?25h

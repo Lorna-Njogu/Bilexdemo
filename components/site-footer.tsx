@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { contact, services } from "@/lib/site-data";
+import { contact } from "@/lib/site-data";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/gold-prices", label: "Gold Prices" },
+  { href: "/testing-assaying", label: "Testing & Assaying" },
   { href: "/contact", label: "Contact" },
 ];
+
+const serviceLinks = ["Testing", "Assaying", "Purity Review", "Result Review"];
 
 export function SiteFooter() {
   return (
@@ -36,13 +37,12 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-7 text-white/54">
-              Professional gold testing, assaying, purity analysis and
-              consultation for buyers, traders and investors who need clear
-              sample-led verification.
+              Gold testing, assaying, purity review and private consultation
+              for clients who need clear sample-based results.
             </p>
             <p className="mt-4 max-w-sm text-xs leading-6 text-white/42">
               Payments are accepted for testing, assaying, consultation and
-              related professional services only.
+              related services only. Payment is not affected by test results.
             </p>
           </div>
 
@@ -68,13 +68,13 @@ export function SiteFooter() {
               Services
             </h2>
             <nav className="mt-5 grid gap-3 text-sm text-white/58">
-              {services.slice(0, 5).map((service) => (
+              {serviceLinks.map((service) => (
                 <Link
-                  key={service.slug}
-                  href="/services"
+                  key={service}
+                  href="/testing-assaying"
                   className="transition hover:text-[#d8bd6a]"
                 >
-                  {service.title}
+                  {service}
                 </Link>
               ))}
             </nav>
@@ -118,7 +118,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs uppercase tracking-[0.18em] text-white/36 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Bilex Minerals EA</p>
-          <p>Gold testing. Clear consultation.</p>
+          <p>Gold testing. Assaying. Clear results.</p>
         </div>
       </div>
     </footer>

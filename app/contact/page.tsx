@@ -15,9 +15,9 @@ import { SiteHeader } from "@/components/site-header";
 import { contact, visuals } from "@/lib/site-data";
 
 export const metadata = {
-  title: "Contact and Consultation Booking",
+  title: "Book Gold Testing Appointment",
   description:
-    "Contact Bilex Minerals for gold testing, assaying, purity analysis, consultation booking, WhatsApp, email, phone and accepted payment methods.",
+    "Request a private gold testing, assaying or consultation appointment with Bilex Minerals. Bank transfer, USDT, cryptocurrency and cash accepted.",
 };
 
 const contactItems = [
@@ -29,7 +29,7 @@ const contactItems = [
     value: "Appointment support",
     href: contact.whatsapp,
   },
-  { icon: Clock, label: "Hours", value: `${contact.hours.weekdays} / ${contact.hours.sunday}` },
+  { icon: Clock, label: "Hours", value: `${contact.hours.weekdays}\n${contact.hours.sunday}` },
   { icon: MapPin, label: "Office", value: contact.primaryOffice },
 ];
 
@@ -46,9 +46,9 @@ export default function ContactPage() {
       <SiteHeader variant="solid" />
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
-          eyebrow="Contact"
-          title="Book gold testing, assaying or consultation."
-          text="Share your sample details, appointment preference and payment method so the Bilex team can confirm the booking."
+          eyebrow="Appointment"
+          title="Book a Gold Testing Appointment"
+          text="Send your details and preferred appointment time. The Bilex team will confirm availability directly."
           image={visuals.logistics}
         />
 
@@ -56,15 +56,14 @@ export default function ContactPage() {
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.36em] text-[#d8bd6a]">
-                Contact Desk
+                Appointment Desk
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Speak with the team before presenting a sample.
+                Speak with the Bilex team before presenting a sample.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
-                Use the form for appointment booking, or contact Bilex directly
-                by WhatsApp, phone or email for gold testing and consultation
-                availability.
+                Use the form to request an appointment, or contact Bilex
+                directly by WhatsApp, phone or email.
               </p>
 
               <div className="mt-10 grid gap-4">
@@ -79,7 +78,7 @@ export default function ContactPage() {
                         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/38">
                           {item.label}
                         </p>
-                        <p className="mt-2 text-lg text-white/68">
+                        <p className="mt-2 whitespace-pre-line text-lg text-white/68">
                           {item.value}
                         </p>
                       </div>
@@ -114,11 +113,11 @@ export default function ContactPage() {
                 Accepted Payment Methods
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Payments for testing, assaying and consultation.
+                Accepted payment methods.
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-white/60">
-                Payments are for professional services only and are not
-                influenced by test outcomes.
+                Payments are for testing, assaying, consultation and related
+                services only. Payment is not affected by test results.
               </p>
             </div>
 
