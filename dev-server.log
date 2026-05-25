@@ -11,3 +11,55 @@
  ○ Compiling / ...
  ✓ Compiled / in 4.3s (1554 modules)
  GET / 200 in 5151ms
+ GET / 200 in 701ms
+ GET / 200 in 716ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /services in 4.2s (1559 modules)
+ GET /about 404 in 4845ms
+ GET /services 200 in 4377ms
+ ○ Compiling /gold-prices ...
+ ✓ Compiled /gold-prices in 773ms (1569 modules)
+ GET /products 404 in 1285ms
+ GET /gold-prices 200 in 1341ms
+ GET /gold-market-insights 404 in 205ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 925ms (1579 modules)
+ GET /gold-sourcing-verification 404 in 1430ms
+ GET /contact 200 in 1627ms
+ GET /industries-served 404 in 133ms
+ ○ Compiling /sitemap.xml ...
+ ✓ Compiled /sitemap.xml in 620ms (1598 modules)
+ GET /sitemap.xml 200 in 846ms
+ GET /company 404 in 1375ms
+ ○ Compiling /robots.txt ...
+ ✓ Compiled /robots.txt in 567ms (1601 modules)
+ GET /robots.txt 200 in 677ms
+ GET /minerals 404 in 1119ms
+ GET /standards 404 in 121ms
+ GET /services/gold-testing 404 in 126ms
+ ✓ Compiled in 1321ms (1133 modules)
+ ✓ Compiled / in 137ms (855 modules)
+ GET /?theme=light 200 in 947ms
+ ○ Compiling /services ...
+ ✓ Compiled /services in 583ms (869 modules)
+ GET /services?theme=light 200 in 1203ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 552ms (878 modules)
+ GET /contact 200 in 154ms
+ ✓ Compiled /_not-found in 313ms (881 modules)
+ GET /logo.png 404 in 774ms
+ GET /contact 200 in 216ms
+ GET /logo.png 404 in 156ms
+ GET / 200 in 60ms
+ GET /services 200 in 113ms
+ GET /services 200 in 226ms
+ GET /logo.png 404 in 140ms
+ GET / 200 in 39ms
+ GET /services 200 in 61ms
+ ○ Compiling /gold-prices ...
+ ✓ Compiled /gold-prices in 930ms (887 modules)
+ GET /gold-prices 200 in 1214ms
+ GET /contact 200 in 69ms
+ GET /gold-prices 200 in 177ms
+ GET /services 200 in 174ms
+ GET / 200 in 73ms
