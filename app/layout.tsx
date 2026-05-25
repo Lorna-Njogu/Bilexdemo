@@ -92,6 +92,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.variable} ${cinzel.variable} font-body antialiased`}
+        suppressHydrationWarning
       >
         <SmoothScroll />
         {children}
