@@ -3,12 +3,12 @@ import { SiteHeader } from "@/components/site-header";
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "LocalBusiness",
   name: "Bilex Minerals",
   url: "https://bilexminerals.com",
   logo: "https://bilexminerals.com/bilex-logo.webp",
   description:
-    "Rare and industrial mineral sourcing, bismuth supply support, processing coordination, mineral analysis, and export partnership company.",
+    "Industrial mineral supplier in Kenya supporting bulk mineral supply, processed minerals, mining and mineral sourcing, and export coordination.",
   areaServed: ["Kenya", "Tanzania", "East Africa"],
   address: {
     "@type": "PostalAddress",
@@ -23,12 +23,13 @@ const organizationSchema = {
     availableLanguage: ["English", "Swahili"],
   },
   knowsAbout: [
-    "mineral trading East Africa",
+    "industrial minerals Kenya",
+    "mineral suppliers Kenya",
+    "mineral export company",
+    "bulk mineral supply",
+    "processed minerals",
+    "mining and mineral sourcing",
     "bismuth supply",
-    "strategic minerals",
-    "mineral processing support",
-    "mineral export services",
-    "industrial mineral sourcing",
   ],
 };
 

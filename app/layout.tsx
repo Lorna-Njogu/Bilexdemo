@@ -22,28 +22,29 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://bilexminerals.com"),
   title: {
     default:
-      "Bilex Minerals | Rare Mineral Supply & Industrial Procurement",
+      "Industrial Mineral Suppliers in Kenya | Bilex Minerals",
     template: "%s | Bilex Minerals",
   },
   description:
-    "Bilex Minerals supports rare mineral sourcing, bismuth supply, mineral analysis, processing support, export coordination, and international procurement partnerships.",
+    "Bilex Minerals supplies industrial minerals for construction, manufacturing and export markets, with reliable sourcing, quality focus and bulk supply capability.",
   keywords: [
+    "industrial minerals Kenya",
+    "mineral suppliers Kenya",
+    "mineral export company",
+    "bulk mineral supply",
+    "processed minerals",
+    "mining and mineral sourcing",
+    "mineral processing support",
     "bismuth supplier",
     "strategic minerals",
-    "industrial mineral sourcing",
-    "mineral processing support",
-    "mining logistics East Africa",
-    "mineral export services",
-    "industrial minerals East Africa",
-    "international mineral supply",
   ],
   alternates: {
     canonical: "https://bilexminerals.com",
   },
   openGraph: {
-    title: "Bilex Minerals",
+    title: "Industrial Mineral Suppliers in Kenya | Bilex Minerals",
     description:
-      "Rare mineral sourcing, bismuth supply, mineral analysis, processing support, and export coordination.",
+      "Industrial mineral sourcing, bulk supply, processing support and export coordination for construction, manufacturing and export markets.",
     url: "https://bilexminerals.com",
     siteName: "Bilex Minerals",
     images: [
@@ -61,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bilex Minerals",
     description:
-      "Rare mineral sourcing, bismuth supply, mineral analysis, processing support, and export coordination.",
+      "Industrial mineral sourcing, bulk supply, processing support and export coordination in Kenya.",
     images: ["/bilex-logo.webp"],
   },
 };

@@ -29,9 +29,9 @@ export function BookingInquiryForm() {
 
     const form = event.currentTarget as FormElements;
     const fields = form.elements;
-    const subject = "Bilex Minerals buyer intake / appointment request";
+    const subject = "Bilex Minerals supply quote request";
     const body = [
-      "Bilex Minerals buyer intake",
+      "Bilex Minerals supply quote request",
       "",
       `Name: ${fields.name.value}`,
       `Company / Representative: ${fields.company.value}`,
@@ -66,7 +66,7 @@ export function BookingInquiryForm() {
         </span>
         <div>
           <h3 className="font-display text-3xl text-[#fff7e7]">
-            Buyer intake and appointment request.
+            Request Supply Quote.
           </h3>
           <p className="mt-2 text-sm leading-7 text-white/56">
             Form details are prepared for {contact.email}. Include company
@@ -121,34 +121,37 @@ export function BookingInquiryForm() {
           <select
             name="inquiry"
             className="h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white outline-none transition focus:border-[#d8bd6a]"
-            defaultValue="Gold / XAU inquiry"
+            defaultValue="Bulk mineral supply"
           >
-            <option className="bg-[#0b0907]">Gold / XAU inquiry</option>
+            <option className="bg-[#0b0907]">Bulk mineral supply</option>
+            <option className="bg-[#0b0907]">Industrial minerals Kenya</option>
+            <option className="bg-[#0b0907]">Processed minerals</option>
+            <option className="bg-[#0b0907]">Mining and mineral sourcing</option>
             <option className="bg-[#0b0907]">Bismuth supply</option>
-            <option className="bg-[#0b0907]">Strategic minerals</option>
+            <option className="bg-[#0b0907]">Gold / XAU inquiry</option>
             <option className="bg-[#0b0907]">Export coordination</option>
             <option className="bg-[#0b0907]">Processing support</option>
             <option className="bg-[#0b0907]">Partnership review</option>
           </select>
         </label>
         <label className="grid gap-2 text-sm text-white/68">
-          Mineral / Product
+          Mineral or Service Needed
           <input
             name="mineral"
             type="text"
             required
             className="h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white outline-none transition placeholder:text-white/32 focus:border-[#d8bd6a]"
-            placeholder="Gold, bismuth, concentrate..."
+            placeholder="Industrial mineral, processed mineral, export support..."
           />
         </label>
         <label className="grid gap-2 text-sm text-white/68">
-          Quantity / Volume
+          Quantity or Project Details
           <input
             name="quantity"
             type="text"
             required
             className="h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white outline-none transition placeholder:text-white/32 focus:border-[#d8bd6a]"
-            placeholder="Example: 5kg, 20MT, monthly volume"
+            placeholder="Example: 20MT, monthly volume, project requirement"
           />
         </label>
         <label className="grid gap-2 text-sm text-white/68">
@@ -213,7 +216,7 @@ export function BookingInquiryForm() {
           type="submit"
           className="inline-flex items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:bg-[#f5df9a]"
         >
-          Send details by email
+          Request Supply Quote
           <Mail size={17} />
         </button>
         <a

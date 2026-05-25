@@ -89,10 +89,10 @@ export function SiteHeader({ variant = "solid" }: SiteHeaderProps) {
             <MessageCircle size={18} />
           </a>
           <Link
-            href="/contact"
+            href="/#quote"
             className="hidden items-center gap-3 rounded-sm bg-[#d8bd6a] px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-black transition hover:bg-[#f5df9a] sm:inline-flex"
           >
-            Request consultation
+            Request Supply Quote
             <ArrowRight size={16} />
           </Link>
         </div>

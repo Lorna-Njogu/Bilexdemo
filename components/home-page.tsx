@@ -46,10 +46,11 @@ const fadeUp = {
   transition: { duration: 0.8, ease: "easeOut" },
 } as const;
 
-const heroStats = [
-  { value: "Network", label: "Regional supply network" },
-  { value: "Export", label: "Export-focused operations" },
-  { value: "Sectors", label: "Multi-sector mineral applications" },
+const trustBadges = [
+  "Industrial Minerals",
+  "Bulk Supply",
+  "Export Ready",
+  "Quality Focused",
 ];
 
 const trustItems = [
@@ -241,6 +242,7 @@ export function HomePage() {
       <AboutSection />
       <ServicesSection />
       <OperationsSection />
+      <MarketInsightSection />
       <WhyChooseSection />
       <IndustriesSection />
       <GallerySection />
@@ -251,6 +253,7 @@ export function HomePage() {
       <BuyerQualificationSection />
       <PaymentBookingSection />
       <ContactSection />
+      <FaqSection />
       <MobileContactDock />
     </main>
   );
@@ -326,34 +329,45 @@ function HeroSection() {
           className="max-w-5xl pt-8 md:pt-14"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#d8bd6a]">
-            Rare minerals / industrial supply / global trade
+            Industrial minerals Kenya / bulk supply / export
           </p>
           <h1 className="mt-7 max-w-5xl font-display text-5xl leading-[0.92] text-balance text-[#fff7e7] md:text-7xl xl:text-8xl">
-            Reliable Rare Mineral Supply for Industrial and Global Markets
+            Industrial Mineral Sourcing, Supply and Export
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
-            Bilex Minerals sources and supplies high-value minerals through
-            structured supply networks focused on consistency, traceability
-            and long-term industrial partnerships.
+            Bilex Minerals supplies industrial minerals for construction,
+            manufacturing and export markets, with reliable sourcing, quality
+            focus and bulk supply capability.
           </p>
+
+          <div className="mt-8 flex flex-wrap gap-2">
+            {trustBadges.map((badge) => (
+              <span
+                key={badge}
+                className="rounded-sm border border-[#d8bd6a]/28 bg-[#d8bd6a]/10 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#d8bd6a]"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
 
           <div className="mt-10 flex flex-wrap gap-3">
             <a
-              href="#intake"
+              href="#quote"
               className="group inline-flex items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#080706] transition hover:bg-[#f5df9a]"
             >
-              Request supply information
+              Request a Quote
               <ArrowRight
                 size={17}
                 className="transition group-hover:translate-x-1"
               />
             </a>
-            <Link
-              href="/minerals"
+            <a
+              href="#contact"
               className="inline-flex items-center gap-3 rounded-sm border border-white/18 bg-white/[0.04] px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white transition hover:border-[#d8bd6a] hover:text-[#d8bd6a]"
             >
-              View mineral portfolio
-            </Link>
+              Contact Us
+            </a>
           </div>
         </motion.div>
 
@@ -363,7 +377,11 @@ function HeroSection() {
           transition={{ delay: 0.4, duration: 0.85, ease: "easeOut" }}
           className="grid max-w-4xl gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.42)] backdrop-blur md:grid-cols-3"
         >
-          {heroStats.map((item) => (
+          {[
+            { value: "Market", label: "Live XAU/USD chart" },
+            { value: "Export", label: "Export-focused operations" },
+            { value: "Bulk", label: "Bulk mineral supply" },
+          ].map((item) => (
             <div key={item.label} className="bg-[#070605]/78 p-5 md:p-6">
               <p className="font-display text-3xl text-[#d8bd6a] md:text-4xl">
                 {item.value}
@@ -413,8 +431,8 @@ function MineralPortfolioSection() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
           <SectionHeader
-            eyebrow="Mineral Portfolio"
-            title="Minerals positioned around industrial demand."
+            eyebrow="Our Mineral Products"
+            title="Industrial mineral products positioned around commercial demand."
             text="Industrial buyers care about mineral type, specification, availability, sourcing reliability and export capability. This portfolio is structured around those commercial requirements."
           />
           <div className="grid gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 sm:grid-cols-2">
@@ -473,7 +491,7 @@ function AboutSection() {
 
         <div>
           <SectionHeader
-            eyebrow="Company"
+            eyebrow="About Bilex"
             title="Mineral sourcing, industrial supply and global trade."
             text="Bilex Minerals operates at the intersection of mineral sourcing, industrial supply and global trade, focusing on reliability, traceability and long-term partnerships."
           />
@@ -689,7 +707,7 @@ function WhyChooseSection() {
     <section className="bg-[#0a0907] px-5 py-28 md:px-8 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          eyebrow="Why Companies Work With Us"
+          eyebrow="Why Choose Bilex"
           title="Dependable supply coordination for industrial mineral buyers."
           text="The work is direct and practical: reviewed sourcing channels, consistent handling, responsive communication, export planning, and long-term commercial relationships."
           align="center"
@@ -716,13 +734,45 @@ function WhyChooseSection() {
   );
 }
 
+function MarketInsightSection() {
+  return (
+    <section id="market-insight" className="bg-[#080705] px-5 py-24 md:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeader
+          eyebrow="Live Market Insight"
+          title="Gold price visibility for mineral supply discussions."
+          text="The hero includes a live XAU/USD market chart to give buyers a current USD reference before quote discussions, documentation review and supply negotiation."
+          align="center"
+        />
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          {[
+            ["XAU/USD reference", "Live TradingView market data for gold quoted against USD."],
+            ["Quote context", "Useful for gold-related inquiries before formal pricing and documentation review."],
+            ["Commercial review", "Final supply terms are confirmed only after buyer qualification and written engagement."],
+          ].map(([title, text]) => (
+            <article
+              key={title}
+              className="rounded-sm border border-white/10 bg-white/[0.035] p-7"
+            >
+              <h3 className="font-display text-3xl text-[#d8bd6a]">
+                {title}
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-white/58">{text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function IndustriesSection() {
   return (
     <section id="applications" className="relative px-5 py-28 md:px-8 lg:px-12">
       <div className="absolute inset-0 bg-[#050505]" />
       <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
         <SectionHeader
-          eyebrow="Industries Served"
+          eyebrow="Industries We Serve"
           title="Applications and industries served."
           text="Bilex Minerals supports mineral demand across manufacturing, processing, export markets, metal refining, energy, technology and industrial supply chains."
         />
@@ -803,7 +853,7 @@ function ProcessSection() {
     <section className="bg-[#0b0907] px-5 py-28 md:px-8 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          eyebrow="Operational Process"
+          eyebrow="Our Process"
           title="Four clear steps from sourcing to delivery and export."
           text="Industrial mineral supply needs a clear operating path. Bilex Minerals keeps the process focused on sourcing, mineral analysis, processing coordination, and export delivery."
           align="center"
@@ -1012,12 +1062,12 @@ function TrustSection() {
 
 function PaymentBookingSection() {
   return (
-    <section id="intake" className="bg-[#050505] px-5 py-24 md:px-8 lg:px-12">
+    <section id="quote" className="bg-[#050505] px-5 py-24 md:px-8 lg:px-12">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
         <SectionHeader
-          eyebrow="Payment & Appointment Intake"
-          title="Structured review for USD, crypto and cash appointment requests."
-          text="Qualified buyers can submit settlement preference, documentation status, destination, volume and appointment requirements before instructions are shared."
+          eyebrow="Request Supply Quote"
+          title="Request a quote for industrial minerals, bulk supply or export support."
+          text="Qualified buyers can submit mineral requirements, quantity or project details, documentation status, destination and appointment requirements before instructions are shared."
         />
 
         <BookingInquiryForm />
@@ -1167,6 +1217,59 @@ function ContactSection() {
             </a>
           </div>
         </motion.form>
+      </div>
+    </section>
+  );
+}
+
+function FaqSection() {
+  const faqs = [
+    [
+      "What minerals does Bilex Minerals supply?",
+      "Bilex Minerals supports industrial minerals, rare minerals, processed minerals, bismuth, strategic minerals and selected mineral lots for construction, manufacturing, processing and export markets.",
+    ],
+    [
+      "Can Bilex handle bulk mineral supply?",
+      "Yes. The quote process asks for quantity, destination and project details so the team can assess bulk mineral supply requirements and logistics planning.",
+    ],
+    [
+      "Does Bilex Minerals support mineral export?",
+      "Yes. Bilex supports export-focused operations including documentation coordination, freight planning, cargo movement and buyer communication.",
+    ],
+    [
+      "How are mineral requirements reviewed?",
+      "Requirements are reviewed through sourcing context, sample or specification details, documentation status, processing needs, destination and commercial fit.",
+    ],
+    [
+      "Is the XAU/USD chart live?",
+      "The hero uses a TradingView OANDA:XAUUSD widget that updates with market data supplied by TradingView/OANDA. It is a reference for gold-related discussions, not final transaction pricing.",
+    ],
+  ];
+
+  return (
+    <section className="bg-[#080705] px-5 py-24 md:px-8 lg:px-12">
+      <div className="mx-auto max-w-5xl">
+        <SectionHeader
+          eyebrow="FAQ"
+          title="Frequently asked questions about industrial mineral supply."
+          text="Clear answers for mineral buyers, procurement teams and export partners before submitting a quote request."
+          align="center"
+        />
+        <div className="mt-12 divide-y divide-white/10 border-y border-white/10">
+          {faqs.map(([question, answer]) => (
+            <details key={question} className="group py-6">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left font-display text-2xl text-[#fff7e7] [&::-webkit-details-marker]:hidden">
+                {question}
+                <span className="text-[#d8bd6a] transition group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="mt-4 max-w-3xl text-sm leading-7 text-white/58">
+                {answer}
+              </p>
+            </details>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -186,19 +186,19 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section id="intake" className="bg-[#050505] px-5 py-24 md:px-8 lg:px-12">
+        <section id="quote" className="bg-[#050505] px-5 py-24 md:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.36em] text-[#d8bd6a]">
-                Payment & Appointment Intake
+                Request Supply Quote
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Structured review for USD, crypto and cash appointment requests.
+                Request a quote for industrial minerals, bulk supply or export support.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
-                Qualified buyers can submit settlement preference,
-                documentation status, destination, volume and appointment
-                requirements before instructions are shared.
+                Qualified buyers can submit mineral requirements, quantity or
+                project details, documentation status, destination and
+                appointment requirements before instructions are shared.
               </p>
             </div>
 
