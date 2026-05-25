@@ -27,13 +27,13 @@ type BookingInquiryFormProps = {
 };
 
 const consentTerms = [
-  "Bilex provides gold testing, assaying, purity review and consultation services.",
-  "Results are based only on the material submitted for testing.",
+  "Bilex provides gold testing, assaying, purity review and consultation. No other services are implied by this appointment.",
+  "Results are based on the material submitted for testing.",
   "Bilex does not assess origin, ownership or market value.",
-  "Clients are expected to present material they are authorized to submit for testing.",
-  "Payments made to Bilex are strictly for testing, assaying, consultation or related services and are not influenced by the outcome of the test results.",
-  "Accepted payment methods include bank transfer, USDT, cryptocurrency and cash.",
-  "Appointment times are subject to confirmation by the Bilex team.",
+  "The material presented for testing is submitted under your legal authority to do so.",
+  "Payment is for the service rendered and is not affected by the test outcome.",
+  "Accepted payment methods: bank transfer, USDT, cryptocurrency and cash.",
+  "Appointment times are confirmed directly by the Bilex team.",
 ];
 
 export function BookingInquiryForm({
@@ -262,8 +262,7 @@ export function BookingInquiryForm({
 
             <div className="mt-6 text-sm leading-7 text-white/68">
               <p>
-                Before booking an appointment, please confirm that you
-                understand and agree to the following:
+                By submitting a booking request, you confirm the following:
               </p>
               <ol className="mt-5 grid gap-3">
                 {consentTerms.map((term, index) => (

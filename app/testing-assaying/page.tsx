@@ -68,7 +68,7 @@ export default function TestingAssayingPage() {
         <PageIntro
           eyebrow="Testing & Assaying"
           title="Gold Testing and Assaying Services"
-          text="Comprehensive sample review, from initial testing through to documented results, by appointment."
+          text="Comprehensive sample review, from initial testing through to documented results."
           image={visuals.assay}
         />
 
@@ -82,7 +82,7 @@ export default function TestingAssayingPage() {
                 Available services.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
-                Clients can book one appointment for testing, assaying, result
+                Clients can book an appointment for testing, assaying, result
                 review or consultation, depending on the service required.
               </p>
             </div>
