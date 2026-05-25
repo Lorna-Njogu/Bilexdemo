@@ -11,7 +11,7 @@ import { SiteHeader } from "@/components/site-header";
 import { contact, visuals } from "@/lib/site-data";
 
 export const metadata = {
-  title: "Book Appointment",
+  title: "Book an appointment.",
   description:
     "Request a private gold testing, assaying or consultation appointment with Bilex Minerals. Bank transfer, USDT, cryptocurrency and cash accepted.",
 };
@@ -36,8 +36,8 @@ export default function ContactPage() {
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
           eyebrow="Appointment"
-          title="Book Appointment"
-          text="Send your details and preferred appointment time. The Bilex team will confirm availability directly."
+          title="Book an appointment."
+          text="Submit your details and preferred time. The team confirms availability directly."
           image={visuals.logistics}
         />
 

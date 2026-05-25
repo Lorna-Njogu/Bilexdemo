@@ -24,40 +24,40 @@ const services = [
   {
     icon: FlaskConical,
     title: "Gold Assaying",
-    text: "Assay support for submitted samples, with review based on the tested material.",
+    text: "Detailed chemical analysis of submitted gold samples, with results documented against the tested material.",
     points: ["Sample review", "Assay support", "Private handling"],
   },
   {
     icon: Microscope,
     title: "Gold Testing Services",
-    text: "Testing support for clients who need sample review before buying, selling or proceeding.",
+    text: "Professional sample evaluation for clients preparing to buy, sell or proceed.",
     points: ["Appointment", "Sample review", "Result discussion"],
   },
   {
     icon: Gem,
     title: "Gold Purity Testing",
-    text: "Purity review to help clients understand the quality and condition of the submitted sample.",
+    text: "A precise assessment of sample grade and physical condition.",
     points: ["Purity review", "Material condition", "Result guidance"],
   },
   {
     icon: ShieldCheck,
     title: "Result Review",
-    text: "Private review of test results, documentation context and next steps.",
+    text: "One-on-one review of your results and a clear discussion of next steps.",
     points: ["Result discussion", "Document context", "Next steps"],
   },
   {
     icon: FileText,
     title: "Result Documentation",
-    text: "A written result summary or service record where required.",
+    text: "Written documentation of test results, issued as a service record where required.",
     points: ["Result summary", "Service record", "Client copy"],
   },
 ];
 
 const standards = [
   "Results are based on the material submitted for testing.",
-  "Bilex does not confirm origin, ownership or future market value.",
+  "Bilex does not assess origin, ownership or market value.",
   "Clients confirm they have the legal right to present material for testing.",
-  "Payments are for testing, assaying, consultation or related services and are not affected by test results.",
+  "Payment applies to the service rendered, independent of the test outcome.",
 ];
 
 export default function TestingAssayingPage() {
@@ -68,7 +68,7 @@ export default function TestingAssayingPage() {
         <PageIntro
           eyebrow="Testing & Assaying"
           title="Gold Testing and Assaying Services"
-          text="Testing, assaying, purity review and result guidance for clients presenting gold samples by appointment."
+          text="Comprehensive sample review, from initial testing through to documented results, by appointment."
           image={visuals.assay}
         />
 
@@ -79,7 +79,7 @@ export default function TestingAssayingPage() {
                 Services
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Gold testing services in one place.
+                Available services.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
                 Clients can book one appointment for testing, assaying, result
@@ -125,7 +125,7 @@ export default function TestingAssayingPage() {
                 Appointment Terms
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Clear terms before every appointment.
+                Appointment terms.
               </h2>
             </div>
 

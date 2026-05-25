@@ -29,7 +29,7 @@ type BookingInquiryFormProps = {
 const consentTerms = [
   "Bilex provides gold testing, assaying, purity review and consultation services.",
   "Results are based only on the material submitted for testing.",
-  "Bilex does not confirm the origin, ownership or future market value of any gold or mineral sample.",
+  "Bilex does not assess origin, ownership or market value.",
   "Clients are expected to present material they are authorized to submit for testing.",
   "Payments made to Bilex are strictly for testing, assaying, consultation or related services and are not influenced by the outcome of the test results.",
   "Accepted payment methods include bank transfer, USDT, cryptocurrency and cash.",
@@ -248,7 +248,7 @@ export function BookingInquiryForm({
                 id="consent-title"
                 className="font-display text-3xl text-[#fff7e7] md:text-4xl"
               >
-                Client Consent Before Booking
+                Booking consent
               </h2>
               <button
                 type="button"

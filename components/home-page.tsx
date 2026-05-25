@@ -30,31 +30,31 @@ const serviceSnapshot = [
   {
     icon: FlaskConical,
     title: "Testing",
-    text: "Testing support before buying, selling or making a decision.",
+    text: "Professional sample evaluation for clients preparing to buy, sell or proceed.",
   },
   {
     icon: Microscope,
     title: "Assaying",
-    text: "Assay support for submitted gold samples, with review based on the tested material.",
+    text: "Detailed chemical analysis of submitted gold samples, with results documented against the tested material.",
   },
   {
     icon: Gem,
     title: "Purity Review",
-    text: "Purity review of the submitted sample and its condition.",
+    text: "A precise assessment of sample grade and physical condition.",
   },
   {
     icon: FileText,
     title: "Private Consultation",
-    text: "Private guidance after testing, including result review and next steps.",
+    text: "One-on-one review of your results and a clear discussion of next steps.",
   },
 ];
 
 const reasons = [
-  ["Accurate Testing", "Testing is based on the material submitted for review."],
-  ["Private Handling", "Appointments, samples and client discussions are handled privately."],
-  ["Clear Process", "Clients are briefed on the testing process before the appointment proceeds."],
-  ["Defined Boundaries", "Bilex does not confirm ownership, origin or future market value of submitted material."],
-  ["Result Review", "Results can be reviewed with the team before the client decides the next step."],
+  ["Accurate Testing", "Results are produced from the submitted sample. The methodology is consistent across all appointments."],
+  ["Private Handling", "Appointments, samples and client discussions are handled with full discretion."],
+  ["Clear Process", "The testing process is confirmed with the client before the appointment begins."],
+  ["Defined Boundaries", "Bilex provides sample-based results. Origin, ownership and market value sit outside the scope of a testing appointment."],
+  ["Result Review", "Results are reviewed with the client directly. Next steps are at your discretion."],
 ];
 
 const process = [
@@ -74,7 +74,7 @@ const payments = [
 const faqs = [
   [
     "How long does gold testing take?",
-    "Timing depends on the sample and service required. The team confirms the expected timeline during appointment review.",
+    "Timing is confirmed at booking and depends on the service and sample. Most appointments are completed within the session.",
   ],
   [
     "What services can I book?",
@@ -86,7 +86,7 @@ const faqs = [
   ],
   [
     "How are results provided?",
-    "Results are shared through the agreed appointment process, based on the service requested.",
+    "Results are reviewed in person at the appointment. A written service record is provided where required.",
   ],
   [
     "What payment methods are accepted?",
@@ -98,7 +98,7 @@ const faqs = [
   ],
   [
     "Does the test result affect payment?",
-    "No. Payment is for the service provided and is not affected by the test result.",
+    "No. Payment is for the service. The result has no bearing on the fee.",
   ],
 ];
 
@@ -168,13 +168,9 @@ function HeroSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#d8bd6a]">
               Gold Testing • Assaying • Consultation
             </p>
-            <h1 className="mt-7 max-w-5xl font-display text-5xl leading-[0.94] text-balance text-[#fff7e7] md:text-7xl xl:text-8xl">
-              Book Appointment
-            </h1>
+          
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
-              Bilex Minerals provides gold testing, assaying, purity review and
-              private consultation for clients who need clear results before
-              buying, selling or proceeding.
+              Bilex Minerals provides testing, assaying, purity review and private consultation for clients with gold samples requiring accurate results.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">
@@ -189,7 +185,7 @@ function HeroSection() {
                 href="/testing-assaying"
                 className="inline-flex items-center gap-3 rounded-sm border border-white/18 bg-white/[0.04] px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white transition hover:border-[#d8bd6a] hover:text-[#d8bd6a]"
               >
-                View Testing Services
+                View Services
               </Link>
             </div>
           </motion.div>
@@ -206,8 +202,8 @@ function ServicesSnapshot() {
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <SectionHeader
             eyebrow="Testing Services"
-            title="Testing, assaying and purity review in one appointment."
-            text="Choose the service that matches your sample, your question and the decision you need to make."
+            title="Testing, assaying and purity review, handled in a single appointment."
+            text="From a first pass test to a detailed assay with documented results. Choose the service that matches your needs."
           />
           <Link
             href="/testing-assaying"
@@ -254,12 +250,10 @@ function GoldSalesSupportSection() {
             Gold Sales Support
           </p>
           <h2 className="mt-4 font-display text-3xl text-[#fff7e7] md:text-4xl">
-            Gold sales are available by inquiry only.
+            Gold sales and sourcing, by private inquiry.
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-white/58">
-            Bilex mainly focuses on gold testing, assaying and consultation.
-            Gold sales and sourcing support are handled through direct inquiry
-            where available.
+            Select sales and sourcing are available for qualifying clients. Inquiries are handled directly.
           </p>
         </div>
         <a
@@ -268,7 +262,7 @@ function GoldSalesSupportSection() {
           rel="noreferrer"
           className="inline-flex w-fit items-center gap-3 rounded-sm border border-[#d8bd6a]/40 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#d8bd6a] transition hover:bg-[#d8bd6a] hover:text-black"
         >
-          Ask About Gold Sales
+          Submit an Inquiry
           <MessageCircle size={16} />
         </a>
       </div>
@@ -282,8 +276,8 @@ function WhyChooseSection() {
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Appointment Handling"
-          title="Clear handling from appointment to result review."
-          text="Each appointment is handled around the service requested, the submitted material and the client's next step."
+          title="How appointments are run."
+          text="Each appointment follows a defined process from submission through to result discussion."
           align="center"
         />
 
