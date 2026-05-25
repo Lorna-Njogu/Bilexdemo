@@ -10,7 +10,7 @@ export const contact = {
     sunday: "Sunday closed",
   },
   whatsapp:
-    "https://wa.me/254735405910?text=Hello%20Bilex%20Minerals%2C%20I%20would%20like%20to%20request%20a%20consultation.",
+    "https://wa.me/254735405910?text=Hello%20Bilex%20Minerals%2C%20I%20would%20like%20to%20request%20an%20appointment.",
 };
 
 export const visuals = {
@@ -34,7 +34,7 @@ export const heroImages = {
 export const stats = [
   { value: "Testing", label: "Gold testing appointments" },
   { value: "Assay", label: "Assaying and purity review" },
-  { value: "Consult", label: "Results and client consultation" },
+  { value: "Review", label: "Results and client review" },
 ];
 
 export const services = [
@@ -77,16 +77,16 @@ export const services = [
       "Purity-focused sample review",
       "Material condition context",
       "Testing limitation clarity",
-      "Consultation after results",
+      "Result discussion",
     ],
   },
   {
-    slug: "consultation",
+    slug: "result-review",
     title: "Result Review",
-    eyebrow: "Consultation",
-    summary: "Private consultation around testing results and next steps.",
+    eyebrow: "Review",
+    summary: "Private review around testing results and next steps.",
     description:
-      "Consultation gives clients a private way to discuss testing results, documentation questions, payment options and appointment requirements.",
+      "Result review gives clients a private way to discuss testing results, documentation questions, payment options and appointment requirements.",
     highlights: [
       "Testing result discussion",
       "Documentation context",
@@ -116,10 +116,10 @@ export const mineralShowcase = [
 ];
 
 export const workflow = [
-  "Sample Submission",
-  "Testing & Analysis",
-  "Verification",
-  "Results & Consultation",
+  "Book Appointment",
+  "Submit Sample",
+  "Testing & Assay Review",
+  "Result Discussion",
 ];
 
 export const complianceItems = [
@@ -131,8 +131,8 @@ export const complianceItems = [
 
 export const companyPillars = [
   {
-    title: "Reliable Supply Chains",
-    text: "Structured sourcing and logistics are designed around consistency, documentation and timely mineral movement.",
+    title: "Supply Chains",
+    text: "Sourcing and logistics are handled around documentation and timely mineral movement.",
   },
   {
     title: "Industry-Focused Operations",

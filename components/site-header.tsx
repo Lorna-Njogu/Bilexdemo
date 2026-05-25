@@ -80,7 +80,7 @@ export function SiteHeader({ variant = "solid" }: SiteHeaderProps) {
             href={contact.whatsapp}
             target="_blank"
             rel="noreferrer"
-            aria-label="Open WhatsApp consultation"
+            aria-label="Open WhatsApp appointment"
             className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-white/14 bg-white/[0.04] text-white transition hover:border-[#d8bd6a] hover:text-[#d8bd6a]"
           >
             <MessageCircle size={18} />

@@ -127,6 +127,34 @@ html[data-theme="light"] body {
   height: 100% !important;
 }
 
+.hero-chart-background .tradingview-widget-container,
+.hero-chart-background .tradingview-widget-container__widget {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.phone-input {
+  --PhoneInputCountryFlag-borderColor: rgba(255, 255, 255, 0.22);
+  --PhoneInputCountrySelectArrow-color: rgba(255, 255, 255, 0.62);
+}
+
+.phone-input input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  outline: none;
+}
+
+.phone-input input::placeholder {
+  color: rgba(255, 255, 255, 0.32);
+}
+
+.phone-input select {
+  color: #17120b;
+}
+
 html[data-theme="light"] main,
 html[data-theme="light"] section,
 html[data-theme="light"] footer {

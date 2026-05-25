@@ -23,11 +23,11 @@ export function PageIntro({
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-46"
+          className="object-cover opacity-[0.86]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#050505_0%,rgba(5,5,5,0.9)_45%,rgba(5,5,5,0.48)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,5,0.16),#050505_100%)]" />
-        <div className="hero-grid absolute inset-0 opacity-32" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,5,0.72)_0%,rgba(5,5,5,0.5)_45%,rgba(5,5,5,0.18)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,5,0.08),rgba(5,5,5,0.62)_100%)]" />
+        <div className="hero-grid absolute inset-0 opacity-20" />
         <div className="noise-layer absolute inset-0" />
       </div>
 

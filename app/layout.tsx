@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Inter } from "next/font/google";
 import "lenis/dist/lenis.css";
+import "react-phone-number-input/style.css";
 import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { SiteFooter } from "@/components/site-footer";
@@ -40,6 +41,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://bilexminerals.com",
   },
+  icons: {
+    icon: [
+      { url: "https://bilexminerals.com/favicon.ico", sizes: "any" },
+      {
+        url: "https://bilexminerals.com/icon.png",
+        type: "image/png",
+        sizes: "512x512",
+      },
+    ],
+    apple: [
+      {
+        url: "https://bilexminerals.com/apple-icon.png",
+        sizes: "180x180",
+      },
+    ],
+  },
   openGraph: {
     title: "Gold Testing & Assaying Services in Kenya | Bilex Minerals",
     description:
@@ -48,10 +65,10 @@ export const metadata: Metadata = {
     siteName: "Bilex Minerals",
     images: [
       {
-        url: "/bilex-logo.webp",
-        width: 512,
-        height: 512,
-        alt: "Bilex Minerals EA logo",
+        url: "https://bilexminerals.com/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Bilex Minerals gold testing and assaying",
       },
     ],
     locale: "en_KE",
@@ -62,7 +79,7 @@ export const metadata: Metadata = {
     title: "Bilex Minerals",
     description:
       "Gold testing, assaying, purity review and XAU/USD market reference.",
-    images: ["/bilex-logo.webp"],
+    images: ["https://bilexminerals.com/twitter-image.png"],
   },
 };
 

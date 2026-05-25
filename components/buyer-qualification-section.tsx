@@ -34,7 +34,7 @@ const botReplies = [
     icon: AlertTriangle,
     label: "Not a fit",
     title: "Unqualified inquiry",
-    text: "Vague messages, pressure tactics, no documentation or requests to bypass verification are not escalated.",
+    text: "Vague messages, pressure tactics, no documentation or requests to bypass review are not escalated.",
   },
 ];
 

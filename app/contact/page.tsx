@@ -1,13 +1,9 @@
 import {
-  Banknote,
-  Bitcoin,
   Clock,
-  CreditCard,
   Mail,
   MapPin,
   MessageCircle,
   Phone,
-  ShieldCheck,
 } from "lucide-react";
 import { BookingInquiryForm } from "@/components/booking-inquiry-form";
 import { PageIntro } from "@/components/page-intro";
@@ -15,7 +11,7 @@ import { SiteHeader } from "@/components/site-header";
 import { contact, visuals } from "@/lib/site-data";
 
 export const metadata = {
-  title: "Book Gold Testing Appointment",
+  title: "Book Appointment",
   description:
     "Request a private gold testing, assaying or consultation appointment with Bilex Minerals. Bank transfer, USDT, cryptocurrency and cash accepted.",
 };
@@ -33,13 +29,6 @@ const contactItems = [
   { icon: MapPin, label: "Office", value: contact.primaryOffice },
 ];
 
-const payments = [
-  [CreditCard, "Bank Transfer"],
-  [ShieldCheck, "USDT"],
-  [Bitcoin, "Cryptocurrency"],
-  [Banknote, "Cash"],
-];
-
 export default function ContactPage() {
   return (
     <>
@@ -47,7 +36,7 @@ export default function ContactPage() {
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
           eyebrow="Appointment"
-          title="Book a Gold Testing Appointment"
+          title="Book Appointment"
           text="Send your details and preferred appointment time. The Bilex team will confirm availability directly."
           image={visuals.logistics}
         />
@@ -103,38 +92,6 @@ export default function ContactPage() {
             </div>
 
             <BookingInquiryForm />
-          </div>
-        </section>
-
-        <section className="bg-[#0b0907] px-5 py-24 md:px-8 lg:px-12">
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.36em] text-[#d8bd6a]">
-                Accepted Payment Methods
-              </p>
-              <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Accepted payment methods.
-              </h2>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-white/60">
-                Payments are for testing, assaying, consultation and related
-                services only. Payment is not affected by test results.
-              </p>
-            </div>
-
-            <div className="grid gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 sm:grid-cols-2">
-              {payments.map(([Icon, label]) => {
-                const PaymentIcon = Icon as typeof CreditCard;
-
-                return (
-                  <div key={label as string} className="bg-[#11100d] p-7">
-                    <PaymentIcon className="text-[#d8bd6a]" size={24} />
-                    <h3 className="mt-7 font-display text-3xl text-[#fff7e7]">
-                      {label as string}
-                    </h3>
-                  </div>
-                );
-              })}
-            </div>
           </div>
         </section>
       </main>

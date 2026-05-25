@@ -8,7 +8,6 @@ import {
   Banknote,
   Bitcoin,
   CheckCircle2,
-  ClipboardCheck,
   CreditCard,
   FileText,
   FlaskConical,
@@ -17,10 +16,7 @@ import {
   Microscope,
 } from "lucide-react";
 import { BookingInquiryForm } from "@/components/booking-inquiry-form";
-import {
-  CompactGoldPriceCard,
-  GoldPriceReferenceSection,
-} from "@/components/live-gold-chart";
+import { HeroGoldChart } from "@/components/live-gold-chart";
 import { contact } from "@/lib/site-data";
 
 const fadeUp = {
@@ -33,13 +29,13 @@ const fadeUp = {
 const serviceSnapshot = [
   {
     icon: FlaskConical,
-    title: "Gold Assaying",
-    text: "Assay support for submitted gold samples, with review based on the tested material.",
+    title: "Testing",
+    text: "Testing support before buying, selling or making a decision.",
   },
   {
     icon: Microscope,
-    title: "Gold Testing",
-    text: "Testing support before buying, selling or making a decision.",
+    title: "Assaying",
+    text: "Assay support for submitted gold samples, with review based on the tested material.",
   },
   {
     icon: Gem,
@@ -111,14 +107,12 @@ export function HomePage() {
     <main className="overflow-hidden bg-[#050505] text-[#f8f1e4]">
       <HeroSection />
       <ServicesSnapshot />
-      <GoldSalesSupportSection />
-      <WhyChooseSection />
       <ProcessSection />
+      <WhyChooseSection />
       <PaymentMethodsSection />
-      <GoldPriceReferenceSection />
-      <BookingSection />
+      <GoldSalesSupportSection />
       <FaqSection />
-      <FinalCtaSection />
+      <BookingSection />
     </main>
   );
 }
@@ -156,62 +150,50 @@ function SectionHeader({
 
 function HeroSection() {
   return (
-    <section className="theme-dark-surface relative min-h-screen overflow-hidden bg-[#030303] px-5 pb-16 pt-28 md:px-8 lg:px-12">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_18%,rgba(216,189,106,0.16),transparent_34%),linear-gradient(120deg,#030303_0%,#0b0907_46%,#17130c_100%)]" />
-        <div className="hero-grid absolute inset-0 opacity-24" />
+    <section className="theme-dark-surface relative min-h-screen overflow-hidden bg-[#030303]">
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_18%,rgba(216,189,106,0.14),transparent_34%),linear-gradient(120deg,#030303_0%,#0b0907_46%,#17130c_100%)]" />
+      <div className="hero-chart-background relative z-[1] h-[100svh] min-h-[760px] w-full">
+        <HeroGoldChart />
+      </div>
+      <div className="pointer-events-none absolute inset-0 z-[2]">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,3,3,0.78)_0%,rgba(3,3,3,0.5)_54%,rgba(3,3,3,0.06)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#030303]/82 to-transparent" />
+        <div className="hero-grid absolute inset-0 opacity-22" />
         <div className="noise-layer absolute inset-0" />
       </div>
 
-      <div className="relative z-10 mx-auto grid min-h-[calc(100svh-7rem)] max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-        <motion.div {...fadeUp}>
-          <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#d8bd6a]">
-            Gold Testing • Assaying • Consultation
-          </p>
-          <h1 className="mt-7 max-w-5xl font-display text-5xl leading-[0.94] text-balance text-[#fff7e7] md:text-7xl xl:text-8xl">
-            Gold Testing and Assaying by Appointment
-          </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
-            Bilex Minerals provides gold testing, assaying, purity review and
-            private consultation for clients who need clear results before
-            buying, selling or proceeding.
-          </p>
+      <div className="absolute inset-0 z-[3] px-5 pb-16 pt-28 md:px-8 lg:px-12">
+        <div className="mx-auto flex h-full min-h-[calc(100svh-7rem)] max-w-7xl items-center">
+          <motion.div {...fadeUp}>
+            <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#d8bd6a]">
+              Gold Testing • Assaying • Consultation
+            </p>
+            <h1 className="mt-7 max-w-5xl font-display text-5xl leading-[0.94] text-balance text-[#fff7e7] md:text-7xl xl:text-8xl">
+              Book Appointment
+            </h1>
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
+              Bilex Minerals provides gold testing, assaying, purity review and
+              private consultation for clients who need clear results before
+              buying, selling or proceeding.
+            </p>
 
-          <div className="mt-8 flex flex-wrap gap-2">
-            {["Testing", "Assaying", "Purity Review", "Private Consultation"].map((item) => (
-              <span
-                key={item}
-                className="rounded-sm border border-[#d8bd6a]/28 bg-[#d8bd6a]/10 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#d8bd6a]"
+            <div className="mt-10 flex flex-wrap gap-3">
+              <a
+                href="#booking"
+                className="group inline-flex items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#080706] transition hover:bg-[#f5df9a]"
               >
-                {item}
-              </span>
-            ))}
-          </div>
-
-          <div className="mt-10 flex flex-wrap gap-3">
-            <a
-              href="#booking"
-              className="group inline-flex items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-[#080706] transition hover:bg-[#f5df9a]"
-            >
-              Book Gold Test
-              <ArrowRight size={17} className="transition group-hover:translate-x-1" />
-            </a>
-            <Link
-              href="/testing-assaying"
-              className="inline-flex items-center gap-3 rounded-sm border border-white/18 bg-white/[0.04] px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white transition hover:border-[#d8bd6a] hover:text-[#d8bd6a]"
-            >
-              View Testing Services
-            </Link>
-          </div>
-        </motion.div>
-
-        <motion.div
-          {...fadeUp}
-          transition={{ ...fadeUp.transition, delay: 0.08 }}
-          className="lg:justify-self-end"
-        >
-          <CompactGoldPriceCard />
-        </motion.div>
+                Book Appointment
+                <ArrowRight size={17} className="transition group-hover:translate-x-1" />
+              </a>
+              <Link
+                href="/testing-assaying"
+                className="inline-flex items-center gap-3 rounded-sm border border-white/18 bg-white/[0.04] px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white transition hover:border-[#d8bd6a] hover:text-[#d8bd6a]"
+              >
+                View Testing Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -364,8 +346,8 @@ function PaymentMethodsSection() {
     <section className="px-5 py-24 md:px-8 lg:px-12">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
         <SectionHeader
-          eyebrow="Accepted Payment Methods"
-          title="Payment methods accepted for appointments."
+          eyebrow="Payment Methods"
+          title="Accepted Payment Methods"
           text="Payments are for testing, assaying, consultation or related services. Payment is not affected by the test result."
         />
 
@@ -394,10 +376,15 @@ function BookingSection() {
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
         <SectionHeader
           eyebrow="Book Appointment"
-          title="Book a gold testing appointment."
+          title="Book Appointment"
           text="Send your details and preferred appointment time. The Bilex team will confirm availability before testing proceeds."
         />
-        <BookingInquiryForm />
+        <div>
+          <p className="mb-4 text-sm leading-7 text-[#d8bd6a]">
+            Appointments are confirmed directly by the Bilex team.
+          </p>
+          <BookingInquiryForm />
+        </div>
       </div>
     </section>
   );
@@ -408,8 +395,8 @@ function FaqSection() {
     <section className="bg-[#080705] px-5 py-24 md:px-8 lg:px-12">
       <div className="mx-auto max-w-5xl">
         <SectionHeader
-          eyebrow="FAQ"
-          title="Questions before booking"
+          eyebrow="Questions Before Booking"
+          title="Questions Before Booking"
           text="Quick answers before booking a testing or assaying appointment."
           align="center"
         />
@@ -427,42 +414,6 @@ function FaqSection() {
               </p>
             </details>
           ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FinalCtaSection() {
-  return (
-    <section className="px-5 py-20 md:px-8 lg:px-12">
-      <div className="mx-auto flex max-w-7xl flex-col gap-6 rounded-sm border border-[#d8bd6a]/28 bg-[#d8bd6a]/10 p-7 md:flex-row md:items-center md:justify-between">
-        <div>
-          <ClipboardCheck className="text-[#d8bd6a]" size={25} />
-          <h2 className="mt-4 font-display text-3xl text-[#fff7e7] md:text-4xl">
-            Need to test gold before making a decision?
-          </h2>
-          <p className="mt-2 max-w-2xl text-sm leading-7 text-white/58">
-            Book a private appointment for testing, assaying or result review.
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-3">
-          <a
-            href="#booking"
-            className="inline-flex w-fit items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:bg-[#f5df9a]"
-          >
-            Book Appointment
-            <ArrowRight size={17} />
-          </a>
-          <a
-            href={contact.whatsapp}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex w-fit items-center gap-3 rounded-sm border border-white/14 px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:border-[#d8bd6a] hover:text-[#d8bd6a]"
-          >
-            Speak With Our Team
-            <MessageCircle size={17} />
-          </a>
         </div>
       </div>
     </section>

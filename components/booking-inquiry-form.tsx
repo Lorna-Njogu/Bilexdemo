@@ -1,21 +1,23 @@
 "use client";
 
 import { FormEvent, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import { CalendarCheck, Mail, MessageCircle, ShieldCheck, X } from "lucide-react";
 import { contact } from "@/lib/site-data";
+
+const PhoneInput = dynamic(() => import("react-phone-number-input"), {
+  ssr: false,
+});
 
 type ContactDetails = typeof contact;
 
 type FormElements = HTMLFormElement & {
   elements: HTMLFormControlsCollection & {
     name: HTMLInputElement;
-    company: HTMLInputElement;
     email: HTMLInputElement;
-    phone: HTMLInputElement;
     service: HTMLSelectElement;
     sample: HTMLInputElement;
     appointment: HTMLInputElement;
-    payment: HTMLSelectElement;
     message: HTMLTextAreaElement;
   };
 };
@@ -28,7 +30,7 @@ const consentTerms = [
   "Bilex provides gold testing, assaying, purity review and consultation services.",
   "Results are based only on the material submitted for testing.",
   "Bilex does not confirm the origin, ownership or future market value of any gold or mineral sample.",
-  "The client confirms they have the legal right to present the material for testing.",
+  "Clients are expected to present material they are authorized to submit for testing.",
   "Payments made to Bilex are strictly for testing, assaying, consultation or related services and are not influenced by the outcome of the test results.",
   "Accepted payment methods include bank transfer, USDT, cryptocurrency and cash.",
   "Appointment times are subject to confirmation by the Bilex team.",
@@ -41,6 +43,7 @@ export function BookingInquiryForm({
   const [showConsent, setShowConsent] = useState(false);
   const [consentChecked, setConsentChecked] = useState(false);
   const [consentAccepted, setConsentAccepted] = useState(false);
+  const [phone, setPhone] = useState<string | undefined>();
   const pendingFormRef = useRef<FormElements | null>(null);
 
   function submitForm(form: FormElements) {
@@ -50,16 +53,14 @@ export function BookingInquiryForm({
       "Bilex Minerals gold testing appointment request",
       "",
       `Full Name: ${fields.name.value}`,
-      `Company / Representative Name: ${fields.company.value}`,
-      `Email Address: ${fields.email.value}`,
-      `Phone / WhatsApp Number: ${fields.phone.value}`,
+      `Phone / WhatsApp: ${phone ?? ""}`,
       `Appointment Type: ${fields.service.value}`,
-      `Sample Details: ${fields.sample.value}`,
+      `Email Address: ${fields.email.value}`,
       `Preferred Appointment Date & Time: ${fields.appointment.value}`,
-      `Preferred Payment Method: ${fields.payment.value}`,
-      `consentAccepted: true`,
+      `Sample Details: ${fields.sample.value}`,
+      `Consent Accepted: true`,
       "",
-      "Message:",
+      "Additional Message:",
       fields.message.value,
     ].join("\n");
 
@@ -71,6 +72,10 @@ export function BookingInquiryForm({
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    if (!phone) {
+      return;
+    }
 
     const form = event.currentTarget as FormElements;
 
@@ -110,7 +115,7 @@ export function BookingInquiryForm({
           </span>
           <div>
             <h3 className="font-display text-3xl text-[#fff7e7]">
-              Book Gold Testing Appointment
+              Book Appointment
             </h3>
             <p className="mt-2 text-sm leading-7 text-white/56">
               Consent terms must be accepted before submitting the booking
@@ -121,7 +126,7 @@ export function BookingInquiryForm({
 
         <div className="grid gap-5 md:grid-cols-2">
           <label className="grid gap-2 text-sm text-white/68">
-            Full Name
+            Full Name *
             <input
               name="name"
               type="text"
@@ -130,40 +135,27 @@ export function BookingInquiryForm({
               placeholder="Full name"
             />
           </label>
-          <label className="grid gap-2 text-sm text-white/68">
-            Company / Representative Name
-            <input
-              name="company"
-              type="text"
-              required
-              className="h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white outline-none transition placeholder:text-white/32 focus:border-[#d8bd6a]"
-              placeholder="Company, trader or individual"
-            />
-          </label>
-          <label className="grid gap-2 text-sm text-white/68">
-            Email Address
-            <input
-              name="email"
-              type="email"
-              required
-              className="h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white outline-none transition placeholder:text-white/32 focus:border-[#d8bd6a]"
-              placeholder="name@company.com"
-            />
-          </label>
-          <label className="grid gap-2 text-sm text-white/68">
-            Phone / WhatsApp Number
-            <input
+          <label
+            htmlFor="phone"
+            className="grid gap-2 text-sm text-white/68"
+          >
+            Phone / WhatsApp *
+            <PhoneInput
+              id="phone"
+              international
               name="phone"
-              type="tel"
+              value={phone}
+              onChange={setPhone}
               required
-              className="h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white outline-none transition placeholder:text-white/32 focus:border-[#d8bd6a]"
-              placeholder="+254..."
+              placeholder="Enter phone number"
+              className="phone-input h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white transition focus-within:border-[#d8bd6a]"
             />
           </label>
           <label className="grid gap-2 text-sm text-white/68">
-            Appointment Type
+            Appointment Type *
             <select
               name="service"
+              required
               className="h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white outline-none transition focus:border-[#d8bd6a]"
               defaultValue="Gold Testing"
             >
@@ -176,13 +168,12 @@ export function BookingInquiryForm({
             </select>
           </label>
           <label className="grid gap-2 text-sm text-white/68">
-            Sample Details
+            Email Address
             <input
-              name="sample"
-              type="text"
-              required
+              name="email"
+              type="email"
               className="h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white outline-none transition placeholder:text-white/32 focus:border-[#d8bd6a]"
-              placeholder="Dore, nugget, raw material, jewelry..."
+              placeholder="name@example.com"
             />
           </label>
           <label className="grid gap-2 text-sm text-white/68">
@@ -190,32 +181,26 @@ export function BookingInquiryForm({
             <input
               name="appointment"
               type="text"
-              required
               className="h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white outline-none transition placeholder:text-white/32 focus:border-[#d8bd6a]"
-              placeholder="Preferred date, time and location"
+              placeholder="Preferred date and time"
             />
           </label>
           <label className="grid gap-2 text-sm text-white/68">
-            Preferred Payment Method
-            <select
-              name="payment"
-              className="h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white outline-none transition focus:border-[#d8bd6a]"
-              defaultValue="Bank Transfer"
-            >
-              <option className="bg-[#0b0907]">Bank Transfer</option>
-              <option className="bg-[#0b0907]">USDT</option>
-              <option className="bg-[#0b0907]">Cryptocurrency</option>
-              <option className="bg-[#0b0907]">Cash</option>
-            </select>
+            Sample Details
+            <input
+              name="sample"
+              type="text"
+              className="h-12 rounded-sm border border-white/10 bg-white/[0.04] px-4 text-white outline-none transition placeholder:text-white/32 focus:border-[#d8bd6a]"
+              placeholder="Dore, nugget, raw material, jewelry..."
+            />
           </label>
           <label className="grid gap-2 text-sm text-white/68 md:col-span-2">
             Additional Message
             <textarea
               name="message"
               rows={5}
-              required
               className="resize-none rounded-sm border border-white/10 bg-white/[0.04] px-4 py-3 text-white outline-none transition placeholder:text-white/32 focus:border-[#d8bd6a]"
-              placeholder="Share your appointment need, sample context, consultation request and any timing notes."
+              placeholder="Share sample context, timing notes or questions."
             />
           </label>
         </div>
@@ -259,14 +244,12 @@ export function BookingInquiryForm({
         >
           <div className="max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-sm border border-[#d8bd6a]/42 bg-[#080705] p-5 shadow-[0_30px_100px_rgba(0,0,0,0.65)] md:p-7">
             <div className="flex items-start justify-between gap-5 border-b border-white/10 pb-5">
-              <div>
-                <h2
-                  id="consent-title"
-                  className="font-display text-3xl text-[#fff7e7] md:text-4xl"
-                >
-                  Client Consent Before Booking
-                </h2>
-              </div>
+              <h2
+                id="consent-title"
+                className="font-display text-3xl text-[#fff7e7] md:text-4xl"
+              >
+                Client Consent Before Booking
+              </h2>
               <button
                 type="button"
                 aria-label="Close consent modal"
