@@ -4,11 +4,9 @@ import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { contact, services } from "@/lib/site-data";
 
 const links = [
-  { href: "/minerals", label: "Minerals" },
-  { href: "/#applications", label: "Applications" },
-  { href: "/services", label: "Capabilities" },
-  { href: "/company", label: "Company" },
-  { href: "/standards", label: "Standards" },
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/gold-prices", label: "Gold Prices" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -38,13 +36,13 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-7 text-white/54">
-              Industrial mineral sourcing with global reach. Bilex Minerals
-              focuses on rare mineral supply, processing support, export and
-              import coordination, and long-term procurement partnerships.
+              Professional gold testing, assaying, purity analysis and
+              consultation for buyers, traders and investors who need clear
+              sample-led verification.
             </p>
             <p className="mt-4 max-w-sm text-xs leading-6 text-white/42">
-              Company registration and export documentation details are shared
-              with qualified buyers and partners during formal engagement.
+              Payments are accepted for testing, assaying, consultation and
+              related professional services only.
             </p>
           </div>
 
@@ -73,7 +71,7 @@ export function SiteFooter() {
               {services.slice(0, 5).map((service) => (
                 <Link
                   key={service.slug}
-                  href={`/services/${service.slug}`}
+                  href="/services"
                   className="transition hover:text-[#d8bd6a]"
                 >
                   {service.title}
@@ -120,7 +118,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs uppercase tracking-[0.18em] text-white/36 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Bilex Minerals EA</p>
-          <p>Rare minerals. Reliable supply.</p>
+          <p>Gold testing. Clear consultation.</p>
         </div>
       </div>
     </footer>

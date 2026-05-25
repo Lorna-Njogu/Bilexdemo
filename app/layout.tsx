@@ -4,6 +4,7 @@ import "lenis/dist/lenis.css";
 import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { SiteFooter } from "@/components/site-footer";
+import { FloatingSiteTools } from "@/components/floating-site-tools";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,29 +23,29 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://bilexminerals.com"),
   title: {
     default:
-      "Industrial Mineral Suppliers in Kenya | Bilex Minerals",
+      "Gold Testing & Assaying Services in Kenya | Bilex Minerals",
     template: "%s | Bilex Minerals",
   },
   description:
-    "Bilex Minerals supplies industrial minerals for construction, manufacturing and export markets, with reliable sourcing, quality focus and bulk supply capability.",
+    "Bilex Minerals provides professional gold testing, assaying, purity analysis, verification and consultation services for buyers, traders and investors.",
   keywords: [
-    "industrial minerals Kenya",
-    "mineral suppliers Kenya",
-    "mineral export company",
-    "bulk mineral supply",
-    "processed minerals",
-    "mining and mineral sourcing",
-    "mineral processing support",
-    "bismuth supplier",
-    "strategic minerals",
+    "gold suppliers Kenya",
+    "gold assaying Kenya",
+    "gold testing services",
+    "gold purity testing",
+    "gold verification Kenya",
+    "gold testing Kenya",
+    "live gold prices",
+    "gold price chart USD",
+    "gold market trends",
   ],
   alternates: {
     canonical: "https://bilexminerals.com",
   },
   openGraph: {
-    title: "Industrial Mineral Suppliers in Kenya | Bilex Minerals",
+    title: "Gold Testing & Assaying Services in Kenya | Bilex Minerals",
     description:
-      "Industrial mineral sourcing, bulk supply, processing support and export coordination for construction, manufacturing and export markets.",
+      "Professional gold testing, assaying, purity analysis, verification and consultation services.",
     url: "https://bilexminerals.com",
     siteName: "Bilex Minerals",
     images: [
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bilex Minerals",
     description:
-      "Industrial mineral sourcing, bulk supply, processing support and export coordination in Kenya.",
+      "Professional gold testing, assaying, purity analysis and live gold price reference.",
     images: ["/bilex-logo.webp"],
   },
 };
@@ -80,6 +81,7 @@ export default function RootLayout({
         <SmoothScroll />
         {children}
         <SiteFooter />
+        <FloatingSiteTools />
       </body>
     </html>
   );

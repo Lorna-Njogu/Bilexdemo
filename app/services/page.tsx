@@ -1,42 +1,63 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  Boxes,
+  BadgeCheck,
   ClipboardCheck,
-  Compass,
+  FileText,
+  FlaskConical,
   Gem,
-  HardHat,
   Microscope,
-  Scale,
-  Ship,
+  ShieldCheck,
 } from "lucide-react";
+import { BookingInquiryForm } from "@/components/booking-inquiry-form";
 import { PageIntro } from "@/components/page-intro";
 import { SiteHeader } from "@/components/site-header";
-import { contact, services, visuals, workflow } from "@/lib/site-data";
+import { visuals } from "@/lib/site-data";
 
 export const metadata = {
-  title: "Supply Capabilities",
+  title: "Gold Assaying and Testing Services",
   description:
-    "Bilex Minerals supply capabilities for rare mineral sourcing, mineral analysis, processing support, export logistics, and industrial procurement partnerships.",
+    "Gold assaying Kenya, gold testing services, gold purity testing, verification, consultation and reporting from Bilex Minerals.",
 };
 
-const serviceIcons = [Gem, Scale, Microscope, Ship, Compass, Boxes, HardHat];
-const serviceImages = [
-  visuals.hero,
-  visuals.assay,
-  visuals.assay,
-  visuals.logistics,
-  visuals.equipment,
-  visuals.equipment,
-  visuals.hero,
+const services = [
+  {
+    icon: FlaskConical,
+    title: "Gold Assaying",
+    text: "Professional assay support for samples presented for analysis, with a clear focus on the tested material.",
+    points: ["Sample-led analysis", "Assay consultation", "Professional handling"],
+  },
+  {
+    icon: Microscope,
+    title: "Gold Testing Services",
+    text: "Gold testing for buyers, traders and investors who need structured verification before making commercial decisions.",
+    points: ["Testing appointment", "Sample review", "Result explanation"],
+  },
+  {
+    icon: Gem,
+    title: "Gold Purity Testing",
+    text: "Purity-focused analysis that helps clients understand sample quality, limitations and practical context.",
+    points: ["Purity indicators", "Material review", "Clear boundaries"],
+  },
+  {
+    icon: ShieldCheck,
+    title: "Verification Consultation",
+    text: "Consultation around testing results, documentation context and professional next steps.",
+    points: ["Result discussion", "Documentation review", "Client guidance"],
+  },
+  {
+    icon: FileText,
+    title: "Reporting Support",
+    text: "Structured communication of testing outcomes for clients who need professional records and consultation notes.",
+    points: ["Result summary", "Appointment notes", "Service record"],
+  },
 ];
 
-const serviceGroups = [
-  ["Sourcing", "Rare and strategic mineral sourcing coordination."],
-  ["Processing", "Material handling, preparation, and specification support."],
-  ["Analysis", "Sample review, testing coordination, and documentation."],
-  ["Export", "Freight planning, cargo coordination, and buyer communication."],
+const standards = [
+  "Results are based on the sample presented for analysis.",
+  "Bilex does not guarantee sample origin, ownership or future market value.",
+  "Clients confirm they have the legal right to present samples for testing.",
+  "Payments are for testing, assaying, consultation or related professional services.",
 ];
 
 export default function ServicesPage() {
@@ -45,63 +66,51 @@ export default function ServicesPage() {
       <SiteHeader variant="solid" />
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
-          eyebrow="Supply Capabilities"
-          title="Mineral sourcing, analysis, processing support and export coordination."
-          text="A practical capability desk for industrial buyers, processors, exporters and procurement partners working with rare and strategic minerals."
-          image={visuals.refinery}
+          eyebrow="Services"
+          title="Gold assaying, testing, purity analysis and consultation."
+          text="A focused services page for gold assaying Kenya, gold testing services, gold purity testing, verification consultation and reporting."
+          image={visuals.assay}
         />
 
         <section className="px-5 py-24 md:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl">
+            <div className="mb-12 max-w-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.36em] text-[#d8bd6a]">
+                Service Detail
+              </p>
+              <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
+                One clear service page instead of shallow subpages.
+              </h2>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
+                Bilex focuses the user journey around testing, consultation
+                and appointment conversion. This page supports SEO without
+                splitting attention across unnecessary service routes.
+              </p>
+            </div>
+
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              {services.map((service, index) => {
-                const Icon = serviceIcons[index] ?? Gem;
-                const image = serviceImages[index] ?? visuals.hero;
+              {services.map((service) => {
+                const Icon = service.icon;
 
                 return (
                   <article
-                    key={service.slug}
-                    className="group relative min-h-[380px] overflow-hidden rounded-sm border border-white/10 bg-[#11100d] p-6"
+                    key={service.title}
+                    className="rounded-sm border border-white/10 bg-[#11100d] p-7"
                   >
-                    <Image
-                      src={image}
-                      alt={`${service.title} at Bilex Minerals`}
-                      fill
-                      sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-                      className="object-cover opacity-24 transition duration-700 group-hover:scale-105 group-hover:opacity-34"
-                    />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,5,0.24),rgba(5,5,5,0.96))]" />
-                    <div className="relative flex h-full min-h-[330px] flex-col justify-between">
-                      <div className="flex items-center justify-between">
-                        <div className="grid h-12 w-12 place-items-center rounded-sm border border-[#d8bd6a]/36 bg-black/40 text-[#d8bd6a]">
-                          <Icon size={22} />
+                    <Icon className="text-[#d8bd6a]" size={25} />
+                    <h2 className="mt-7 font-display text-3xl text-[#fff7e7]">
+                      {service.title}
+                    </h2>
+                    <p className="mt-4 text-sm leading-7 text-white/58">
+                      {service.text}
+                    </p>
+                    <div className="mt-6 grid gap-3">
+                      {service.points.map((point) => (
+                        <div key={point} className="flex gap-3 text-sm text-white/58">
+                          <BadgeCheck className="shrink-0 text-[#d8bd6a]" size={16} />
+                          {point}
                         </div>
-                        <p className="font-display text-3xl text-white/22">
-                          {String(index + 1).padStart(2, "0")}
-                        </p>
-                      </div>
-
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#d8bd6a]">
-                          {service.eyebrow}
-                        </p>
-                        <h2 className="mt-3 font-display text-3xl leading-tight text-[#fff7e7]">
-                          {service.title}
-                        </h2>
-                        <p className="mt-4 text-sm leading-7 text-white/62">
-                          {service.summary}
-                        </p>
-                        <Link
-                          href={`/services/${service.slug}`}
-                          className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#d8bd6a]"
-                        >
-                          View capability
-                          <ArrowRight
-                            size={15}
-                            className="transition group-hover:translate-x-1"
-                          />
-                        </Link>
-                      </div>
+                      ))}
                     </div>
                   </article>
                 );
@@ -111,63 +120,45 @@ export default function ServicesPage() {
         </section>
 
         <section className="bg-[#0b0907] px-5 py-24 md:px-8 lg:px-12">
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.75fr_1.25fr]">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.36em] text-[#d8bd6a]">
-                Capability Model
+                Professional Boundaries
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                One desk, four industrial supply lanes.
+                Clear testing terms build trust before appointments.
               </h2>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-white/60">
-                Buyers and partners can begin with a defined mineral requirement, then
-                move into analysis, processing coordination,
-                documentation and export support without losing operational
-                continuity.
-              </p>
             </div>
 
-            <div className="grid gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 md:grid-cols-2">
-              {serviceGroups.map(([title, text]) => (
-                <div key={title} className="bg-[#100e0a] p-6">
-                  <h3 className="font-display text-3xl text-[#d8bd6a]">
-                    {title}
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-white/58">
-                    {text}
-                  </p>
+            <div className="grid gap-3">
+              {standards.map((standard) => (
+                <div
+                  key={standard}
+                  className="flex gap-4 rounded-sm border border-white/10 bg-white/[0.035] p-5 text-sm leading-7 text-white/60"
+                >
+                  <ShieldCheck className="mt-1 shrink-0 text-[#d8bd6a]" size={18} />
+                  <span>{standard}</span>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="px-5 py-24 md:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl">
-            <div className="max-w-4xl">
+        <section id="booking" className="px-5 py-24 md:px-8 lg:px-12">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+            <div>
               <p className="text-xs font-semibold uppercase tracking-[0.36em] text-[#d8bd6a]">
-                Engagement Flow
+                Book Appointment
               </p>
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
-                Each service connects to a practical supply process.
+                Request gold testing or consultation.
               </h2>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
+                Submit your appointment details and accept the required consent
+                terms before the request proceeds.
+              </p>
             </div>
-
-            <div className="mt-12 grid gap-4 md:grid-cols-4">
-              {workflow.map((step, index) => (
-                <div
-                  key={step}
-                  className="rounded-sm border border-white/10 bg-white/[0.035] p-5"
-                >
-                  <p className="font-display text-3xl text-[#d8bd6a]">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="mt-7 text-sm font-bold uppercase tracking-[0.16em] text-[#fff7e7]">
-                    {step}
-                  </h3>
-                </div>
-              ))}
-            </div>
+            <BookingInquiryForm />
           </div>
         </section>
 
@@ -176,23 +167,20 @@ export default function ServicesPage() {
             <div>
               <ClipboardCheck className="text-[#d8bd6a]" size={25} />
               <h2 className="mt-4 font-display text-3xl text-[#fff7e7] md:text-4xl">
-                Need a custom industrial mineral supply workflow?
+                Need to discuss the right testing service?
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-7 text-white/58">
-                Start with a defined requirement and the team will route your
-                inquiry to the correct sourcing, processing, analysis or export
-                support lane.
+                Start with a consultation if you are unsure which testing or
+                assaying service fits your sample.
               </p>
             </div>
-            <a
-              href={contact.whatsapp}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              href="/contact"
               className="inline-flex w-fit items-center gap-3 rounded-sm bg-[#d8bd6a] px-6 py-4 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:bg-[#f5df9a]"
             >
-              Request supply information
+              Contact Bilex
               <ArrowRight size={17} />
-            </a>
+            </Link>
           </div>
         </section>
       </main>

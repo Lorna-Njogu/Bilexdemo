@@ -15,7 +15,7 @@ export function PageIntro({
   image = visuals.hero,
 }: PageIntroProps) {
   return (
-    <section className="relative min-h-[58svh] overflow-hidden bg-[#050505] px-5 pt-32 text-white md:px-8 lg:px-12">
+    <section className="theme-dark-surface relative min-h-[58svh] overflow-hidden bg-[#050505] px-5 pt-32 text-white md:px-8 lg:px-12">
       <div className="absolute inset-0">
         <Image
           src={image}

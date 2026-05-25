@@ -15,7 +15,7 @@ export default function NotFound() {
           </h1>
           <p className="mt-5 max-w-2xl text-white/68">
             Return to the homepage to explore Bilex Minerals services,
-            compliance standards, and consultation options.
+            live gold prices, and consultation options.
           </p>
           <Link
             href="/"

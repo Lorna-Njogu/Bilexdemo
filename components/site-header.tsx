@@ -8,11 +8,9 @@ type SiteHeaderProps = {
 };
 
 const navItems = [
-  { href: "/minerals", label: "Minerals" },
-  { href: "/#applications", label: "Applications" },
-  { href: "/services", label: "Capabilities" },
-  { href: "/company", label: "Company" },
-  { href: "/standards", label: "Standards" },
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/gold-prices", label: "Gold Prices" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -47,7 +45,7 @@ export function SiteHeader({ variant = "solid" }: SiteHeaderProps) {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 text-xs font-semibold uppercase tracking-[0.18em] text-white/58 lg:flex">
+        <nav className="hidden items-center gap-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/58 xl:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -60,7 +58,7 @@ export function SiteHeader({ variant = "solid" }: SiteHeaderProps) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <details className="group relative lg:hidden">
+          <details className="group relative xl:hidden">
             <summary
               aria-label="Open navigation menu"
               className="inline-flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-sm border border-white/14 bg-white/[0.04] text-white transition hover:border-[#d8bd6a] hover:text-[#d8bd6a] [&::-webkit-details-marker]:hidden"
@@ -89,10 +87,10 @@ export function SiteHeader({ variant = "solid" }: SiteHeaderProps) {
             <MessageCircle size={18} />
           </a>
           <Link
-            href="/#quote"
+            href="/#booking"
             className="hidden items-center gap-3 rounded-sm bg-[#d8bd6a] px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-black transition hover:bg-[#f5df9a] sm:inline-flex"
           >
-            Request Supply Quote
+            Book Appointment
             <ArrowRight size={16} />
           </Link>
         </div>

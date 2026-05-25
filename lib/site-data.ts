@@ -32,143 +32,94 @@ export const heroImages = {
 };
 
 export const stats = [
-  { value: "Network", label: "Regional supply network" },
-  { value: "Export", label: "Export-focused operations" },
-  { value: "Sectors", label: "Multi-sector mineral applications" },
+  { value: "Testing", label: "Gold testing appointments" },
+  { value: "Assay", label: "Assaying and purity analysis" },
+  { value: "Consult", label: "Results and client consultation" },
 ];
 
 export const services = [
   {
-    slug: "mineral-sourcing-advisory",
-    title: "Mineral Sourcing",
-    eyebrow: "Sourcing",
-    summary:
-      "Strategic sourcing of industrial and rare minerals through verified supply networks.",
+    slug: "gold-assaying",
+    title: "Gold Assaying",
+    eyebrow: "Assaying",
+    summary: "Professional assay support for gold samples presented for analysis.",
     description:
-      "Bilex Minerals supports industrial buyers and supply partners with mineral sourcing, supplier review, documentation checks, and procurement planning for bismuth, rare minerals and strategic mineral requirements.",
+      "Bilex Minerals provides professional gold assaying support for samples presented by clients, with attention to handling, documentation context and clear result consultation.",
     highlights: [
-      "Supplier and buyer requirement review",
-      "Rare and strategic mineral sourcing",
-      "Origin and documentation checks",
-      "Procurement planning for long-term demand",
+      "Sample-led assay support",
+      "Professional appointment handling",
+      "Result consultation",
+      "Clear service boundaries",
     ],
   },
   {
-    slug: "mineral-processing-support",
-    title: "Mineral Processing Support",
-    eyebrow: "Processing",
-    summary:
-      "Processing coordination for mineral preparation, handling, sorting and buyer-specific specifications.",
+    slug: "gold-testing",
+    title: "Gold Testing",
+    eyebrow: "Testing",
+    summary: "Structured gold testing services for buyers, traders and investors.",
     description:
-      "The processing support desk helps coordinate handling, preparation, specification review and operational partners for buyers who require consistent industrial-grade supply.",
+      "Gold testing services help buyers, traders and investors review samples through a structured professional process before making their own commercial decisions.",
     highlights: [
-      "Processing partner coordination",
-      "Material handling and preparation support",
-      "Specification review before shipment planning",
-      "Specification-focused supply coordination",
+      "Gold sample testing",
+      "Appointment-based review",
+      "Client communication",
+      "Testing result explanation",
     ],
   },
   {
-    slug: "quality-assessment",
-    title: "Mineral Analysis",
-    eyebrow: "Verification",
-    summary:
-      "Material verification and mineral analysis to support consistent industrial use.",
+    slug: "purity-analysis",
+    title: "Purity Analysis",
+    eyebrow: "Purity",
+    summary: "Gold purity testing and sample-led analysis consultation.",
     description:
-      "Bilex Minerals supports mineral analysis through sample handling, testing coordination, documentation packages and specification checks before commercial movement.",
+      "Purity analysis focuses on the sample presented for testing, helping clients understand quality indicators, limitations and appropriate next steps.",
     highlights: [
-      "Sample intake and custody tracking",
-      "Testing and result coordination",
-      "Documentation packages for buyer review",
-      "Commercial-grade consistency standards",
+      "Purity-focused sample review",
+      "Material condition context",
+      "Testing limitation clarity",
+      "Consultation after results",
     ],
   },
   {
-    slug: "export-logistics-coordination",
-    title: "Export & Logistics",
-    eyebrow: "Export",
-    summary:
-      "Coordinated mineral transportation and export handling for regional and international markets.",
+    slug: "consultation",
+    title: "Consultation",
+    eyebrow: "Consultation",
+    summary: "Professional consultation around testing results and next steps.",
     description:
-      "From local handling to export planning, Bilex Minerals coordinates documentation, freight, cargo movement and buyer communication for mineral shipments.",
+      "Consultation gives clients a professional way to discuss testing results, documentation questions, payment options and appointment requirements.",
     highlights: [
-      "Export and import documentation support",
-      "Freight and cargo coordination",
-      "Shipment planning for qualified buyers",
-      "Buyer-side delivery communication",
-    ],
-  },
-  {
-    slug: "international-supply-partnerships",
-    title: "Supply Partnerships",
-    eyebrow: "Partnerships",
-    summary:
-      "Long-term procurement partnerships tailored for manufacturers and industrial buyers.",
-    description:
-      "Bilex Minerals works with manufacturers, processors, exporters and supply partners that require structured procurement relationships and clear supply-chain coordination.",
-    highlights: [
-      "Industrial buyer relationship support",
-      "Long-term supply coordination",
-      "Manufacturing and refining market alignment",
-      "Export partnership communication",
-    ],
-  },
-  {
-    slug: "field-operations-support",
-    title: "Field Operations Support",
-    eyebrow: "Field",
-    summary:
-      "Field coordination, geological support, site information gathering and equipment access for mineral supply projects.",
-    description:
-      "Field operations support helps partners coordinate exploration requirements, site information, sampling support, and practical operational resources.",
-    highlights: [
-      "Geological survey coordination",
-      "Exploration and sampling support",
-      "Project-based equipment access",
-      "Site and operator alignment",
-    ],
-  },
-  {
-    slug: "mineral-market-consultation",
-    title: "Mineral Market Consultation",
-    eyebrow: "Advisory",
-    summary:
-      "Practical consultation for mineral sourcing, supply planning, market entry and export readiness.",
-    description:
-      "Bilex Minerals provides market consultation for buyers, processors, exporters and partners entering rare and industrial mineral supply channels.",
-    highlights: [
-      "Market entry and sourcing advisory",
-      "Supply requirement planning",
-      "Documentation and export guidance",
-      "Industrial buyer readiness review",
+      "Testing result discussion",
+      "Documentation context",
+      "Payment method guidance",
+      "Appointment confirmation",
     ],
   },
 ];
 
 export const mineralShowcase = [
   {
-    name: "Bismuth",
-    note: "Rare mineral supply support for manufacturing, alloy, chemical and processing markets.",
+    name: "Gold Dore Bars",
+    note: "Qualified inquiries for Gold Dore Bars are reviewed through assay, documentation, lot details and export readiness.",
   },
   {
-    name: "Rare Minerals",
-    note: "Sourcing coordination for high-value minerals used in industrial, energy and technology supply chains.",
+    name: "Raw Gold Material",
+    note: "Raw gold suppliers and buyers are supported through source context, sample review, handling requirements and destination planning.",
   },
   {
-    name: "Industrial Mineral Lots",
-    note: "Supply coordination for processors, refiners, exporters, and long-term commercial partners.",
+    name: "Gold Nuggets",
+    note: "Gold nugget lots require buyer qualification, documentation discipline and verified commercial review before sensitive details are shared.",
   },
   {
-    name: "Processed Materials",
-    note: "Processing support, specification review, and shipment planning for buyer-ready materials.",
+    name: "Precious Minerals",
+    note: "Precious minerals supply support for refiners, exporters, industrial buyers, traders and long-term procurement partners.",
   },
 ];
 
 export const workflow = [
-  "Mineral Sourcing",
-  "Mineral Analysis",
-  "Processing Coordination",
-  "Delivery & Export",
+  "Sample Submission",
+  "Testing & Analysis",
+  "Verification",
+  "Results & Consultation",
 ];
 
 export const complianceItems = [

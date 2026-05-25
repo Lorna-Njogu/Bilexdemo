@@ -1,6 +1,12 @@
 import { HomePage } from "@/components/home-page";
 import { SiteHeader } from "@/components/site-header";
 
+export const metadata = {
+  title: "Professional Gold Testing and Assaying Services",
+  description:
+    "Professional gold testing, assaying, purity analysis, verification and consultation for buyers, traders and investors, with a live XAU/USD gold price reference.",
+};
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -8,7 +14,7 @@ const organizationSchema = {
   url: "https://bilexminerals.com",
   logo: "https://bilexminerals.com/bilex-logo.webp",
   description:
-    "Industrial mineral supplier in Kenya supporting bulk mineral supply, processed minerals, mining and mineral sourcing, and export coordination.",
+    "Professional gold testing, assaying, purity analysis, verification and consultation services in Kenya.",
   areaServed: ["Kenya", "Tanzania", "East Africa"],
   address: {
     "@type": "PostalAddress",
@@ -23,13 +29,11 @@ const organizationSchema = {
     availableLanguage: ["English", "Swahili"],
   },
   knowsAbout: [
-    "industrial minerals Kenya",
-    "mineral suppliers Kenya",
-    "mineral export company",
-    "bulk mineral supply",
-    "processed minerals",
-    "mining and mineral sourcing",
-    "bismuth supply",
+    "gold assaying Kenya",
+    "gold testing services",
+    "gold purity testing",
+    "gold quality verification",
+    "live gold prices",
   ],
 };
 
