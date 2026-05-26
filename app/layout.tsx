@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "lenis/dist/lenis.css";
 import "react-phone-number-input/style.css";
 import "./globals.css";
@@ -74,6 +75,7 @@ export default function RootLayout({
         <SiteFooter />
         <FloatingSiteTools />
         <Analytics scriptSrc="https://va.vercel-scripts.com/v1/script.js" />
+        <SpeedInsights />
       </body>
     </html>
   );
