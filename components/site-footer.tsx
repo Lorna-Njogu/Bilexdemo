@@ -44,8 +44,9 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-7 text-white/54">
-              Gold testing, assaying, purity review and private consultation
-              for clients who need clear sample-based results.
+              Gold testing, assaying, private consultation, sourcing, exporting
+              and exploration support for clients who need clear
+              sample-based guidance.
             </p>
             <p className="mt-4 max-w-sm text-xs leading-6 text-white/42">
               Payments are accepted for testing, assaying, consultation and
@@ -125,7 +126,10 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs uppercase tracking-[0.18em] text-white/36 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Bilex Minerals EA</p>
-          <p>Testing. Assaying. Consultation. Sourcing. Exporting. Exploration.</p>
+          <p>
+            Testing. Assaying. Private Consultation. Sourcing. Exporting.
+            Exploration.
+          </p>
         </div>
       </div>
     </footer>
