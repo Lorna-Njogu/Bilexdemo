@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -18,6 +19,7 @@ import {
   Microscope,
   PackageCheck,
   Plus,
+  RefreshCw,
 } from "lucide-react";
 import { BookingInquiryForm } from "@/components/booking-inquiry-form";
 import { HeroGoldChart } from "@/components/live-gold-chart";
@@ -62,7 +64,7 @@ const reasons = [
   ["Result Review", "Results are reviewed with the client directly. Next steps are the client's to decide."],
 ];
 
-const process = [
+const appointmentSteps = [
   { icon: CalendarCheck, title: "Book Appointment" },
   { icon: PackageCheck, title: "Submit Sample" },
   { icon: FlaskConical, title: "Testing & Assay Review" },
@@ -75,6 +77,55 @@ const payments = [
   [Bitcoin, "Cryptocurrency"],
   [Banknote, "Cash"],
 ];
+
+const goldPriceEndpoint = "https://api.gold-api.com/price/XAU/USD";
+const fallbackGoldPrice = 4535.3;
+
+type MarketDirection = "up" | "down" | "flat";
+type FeedState = "connecting" | "live" | "offline";
+
+type MarketState = {
+  price: number;
+  basePrice: number;
+  low: number;
+  high: number;
+  direction: MarketDirection;
+  feed: FeedState;
+  updatedAt: Date | null;
+  isUpdating: boolean;
+  series: number[];
+  flashKey: number;
+};
+
+function createInitialSeries(price: number) {
+  return [
+    price - 2.4,
+    price - 1.2,
+    price - 1.8,
+    price - 0.6,
+    price + 0.4,
+    price - 0.2,
+    price + 1.1,
+    price + 0.7,
+    price + 1.8,
+    price + 1.3,
+    price + 2.2,
+    price + 1.7,
+  ];
+}
+
+const initialMarketState: MarketState = {
+  price: fallbackGoldPrice,
+  basePrice: fallbackGoldPrice,
+  low: fallbackGoldPrice - 2.4,
+  high: fallbackGoldPrice + 2.2,
+  direction: "flat",
+  feed: "connecting",
+  updatedAt: null,
+  isUpdating: true,
+  series: createInitialSeries(fallbackGoldPrice),
+  flashKey: 0,
+};
 
 export function HomePage() {
   return (
@@ -126,17 +177,23 @@ function HeroSection() {
   return (
     <section className="theme-dark-surface relative min-h-screen overflow-hidden bg-[#030303]">
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_18%,rgba(216,189,106,0.14),transparent_34%),linear-gradient(120deg,#030303_0%,#0b0907_46%,#17130c_100%)]" />
-      <div className="hero-chart-background relative z-[1] h-[100svh] min-h-[760px] w-full">
-        <HeroGoldChart />
+
+      <div className="relative z-[1] md:hidden">
+        <MobileGoldMarketHero />
       </div>
-      <div className="pointer-events-none absolute inset-0 z-[2]">
+
+      <div className="hero-chart-background relative z-[1] hidden h-[100svh] min-h-[760px] w-full md:block">
+        <DesktopHeroGoldChart />
+      </div>
+
+      <div className="pointer-events-none absolute inset-0 z-[2] hidden md:block">
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,3,3,0.78)_0%,rgba(3,3,3,0.5)_54%,rgba(3,3,3,0.06)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#030303]/82 to-transparent" />
         <div className="hero-grid absolute inset-0 opacity-22" />
         <div className="noise-layer absolute inset-0" />
       </div>
 
-      <div className="absolute inset-0 z-[3] px-5 pb-16 pt-28 md:px-8 lg:px-12">
+      <div className="absolute inset-0 z-[3] hidden px-5 pb-16 pt-28 md:block md:px-8 lg:px-12">
         <div className="mx-auto flex h-full min-h-[calc(100svh-7rem)] max-w-7xl items-center">
           <motion.div {...fadeUp}>
             <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#d8bd6a]">
@@ -169,6 +226,309 @@ function HeroSection() {
       </div>
     </section>
   );
+}
+
+function DesktopHeroGoldChart() {
+  const shouldRenderChart = useMediaQuery("(min-width: 768px)");
+
+  if (!shouldRenderChart) {
+    return null;
+  }
+
+  return <HeroGoldChart />;
+}
+
+function MobileGoldMarketHero() {
+  const [market, setMarket] = useState<MarketState>(initialMarketState);
+
+  useEffect(() => {
+    let active = true;
+
+    async function loadGoldPrice() {
+      setMarket((previous) => ({ ...previous, isUpdating: true }));
+
+      try {
+        const response = await fetch(goldPriceEndpoint, {
+          cache: "no-store",
+        });
+
+        if (!response.ok) {
+          throw new Error("Gold price feed unavailable");
+        }
+
+        const data = (await response.json()) as {
+          price?: number;
+          updatedAt?: string;
+        };
+        const nextPrice = Number(data.price);
+
+        if (!Number.isFinite(nextPrice)) {
+          throw new Error("Gold price feed returned an invalid price");
+        }
+
+        const nextUpdatedAt = data.updatedAt
+          ? new Date(data.updatedAt)
+          : new Date();
+        const updatedAt = Number.isNaN(nextUpdatedAt.getTime())
+          ? new Date()
+          : nextUpdatedAt;
+
+        if (!active) {
+          return;
+        }
+
+        setMarket((previous) => {
+          const isFirstLivePrice = previous.feed === "connecting";
+          const direction: MarketDirection = isFirstLivePrice
+            ? "flat"
+            : nextPrice > previous.price + 0.01
+              ? "up"
+              : nextPrice < previous.price - 0.01
+                ? "down"
+                : "flat";
+          const series = isFirstLivePrice
+            ? createInitialSeries(nextPrice)
+            : [...previous.series.slice(-17), nextPrice];
+          const low = Math.min(isFirstLivePrice ? nextPrice : previous.low, nextPrice);
+          const high = Math.max(isFirstLivePrice ? nextPrice : previous.high, nextPrice);
+
+          return {
+            price: nextPrice,
+            basePrice: isFirstLivePrice ? nextPrice : previous.basePrice,
+            low,
+            high,
+            direction,
+            feed: "live",
+            updatedAt,
+            isUpdating: false,
+            series,
+            flashKey: direction === "flat" ? previous.flashKey : previous.flashKey + 1,
+          };
+        });
+      } catch {
+        if (!active) {
+          return;
+        }
+
+        setMarket((previous) => ({
+          ...previous,
+          feed: previous.feed === "live" ? "live" : "offline",
+          isUpdating: false,
+        }));
+      }
+    }
+
+    loadGoldPrice();
+    const intervalId = window.setInterval(loadGoldPrice, 10000);
+
+    return () => {
+      active = false;
+      window.clearInterval(intervalId);
+    };
+  }, []);
+
+  const priceChange = market.price - market.basePrice;
+  const percentChange = market.basePrice
+    ? (priceChange / market.basePrice) * 100
+    : 0;
+  const isNegative = percentChange < 0;
+  const sparklinePath = useMemo(
+    () => buildSparklinePath(market.series),
+    [market.series],
+  );
+  const priceFlashClass =
+    market.direction === "up"
+      ? "mobile-market-flash-up"
+      : market.direction === "down"
+        ? "mobile-market-flash-down"
+        : "";
+  const movementClass = isNegative ? "text-[#ff8f8f]" : "text-[#7dffca]";
+  const feedLabel =
+    market.feed === "live"
+      ? "Live feed"
+      : market.feed === "connecting"
+        ? "Connecting"
+        : "Reference feed";
+  const lastUpdatedLabel = market.updatedAt
+    ? formatLastUpdated(market.updatedAt)
+    : "syncing";
+
+  return (
+    <div className="relative flex min-h-[100svh] items-center justify-center overflow-hidden px-5 pb-16 pt-24">
+      <div className="mobile-market-gradient absolute inset-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,3,3,0.12)_0%,rgba(3,3,3,0.72)_62%,#030303_100%)]" />
+      <div className="noise-layer absolute inset-0 opacity-60" />
+      <div className="pointer-events-none absolute inset-0">
+        {[18, 32, 46, 58, 71, 84].map((left, index) => (
+          <span
+            key={left}
+            className="mobile-gold-particle absolute h-1 w-1 rounded-full bg-[#d8bd6a]"
+            style={{
+              left: `${left}%`,
+              top: `${18 + ((index * 13) % 58)}%`,
+              animationDelay: `${index * 0.68}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative z-10 w-full max-w-md text-center">
+        <div className="mx-auto flex w-fit items-center gap-2 rounded-full border border-[#d8bd6a]/24 bg-black/28 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#d8bd6a] backdrop-blur-md">
+          <span
+            className={`h-2 w-2 rounded-full ${
+              market.feed === "live" ? "bg-[#7dffca]" : "bg-[#d8bd6a]"
+            }`}
+          />
+          {feedLabel}
+          <RefreshCw
+            aria-hidden="true"
+            size={11}
+            className={`mobile-update-indicator ${
+              market.isUpdating ? "mobile-update-spin text-[#7dffca]" : "text-white/38"
+            }`}
+          />
+        </div>
+
+        <div className="mobile-market-price-glow relative mx-auto mt-9">
+          <p className="text-sm font-semibold uppercase tracking-[0.34em] text-[#d8bd6a]">
+            XAU/USD
+          </p>
+          <p className="mt-2 text-xs uppercase tracking-[0.24em] text-white/48">
+            Gold Spot
+          </p>
+          <p
+            key={market.flashKey}
+            className={`mt-7 text-5xl font-semibold leading-none text-[#fff7e7] tabular-nums min-[390px]:text-6xl sm:text-7xl ${priceFlashClass}`}
+          >
+            {formatMarketPrice(market.price)}
+          </p>
+          <p className="mt-2 text-xs font-bold uppercase tracking-[0.24em] text-white/46">
+            USD / Troy oz
+          </p>
+        </div>
+
+        <div className="mt-7 flex items-center justify-center gap-3">
+          <span
+            className={`rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-semibold tabular-nums ${movementClass}`}
+          >
+            {isNegative ? "▼" : "▲"} {formatPercent(percentChange)}
+          </span>
+          <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-white/54">
+            Market Reference
+          </span>
+        </div>
+
+        <div className="mx-auto mt-8 h-20 max-w-sm">
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 320 80"
+            className="h-full w-full overflow-visible"
+          >
+            <defs>
+              <linearGradient id="mobileGoldLine" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0%" stopColor="#8f7650" />
+                <stop offset="54%" stopColor="#d8bd6a" />
+                <stop offset="100%" stopColor="#7dffca" />
+              </linearGradient>
+              <filter id="mobileGoldGlow" x="-20%" y="-80%" width="140%" height="260%">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <path
+              d={sparklinePath}
+              fill="none"
+              stroke="rgba(216,189,106,0.16)"
+              strokeWidth="12"
+              strokeLinecap="round"
+            />
+            <path
+              d={sparklinePath}
+              className="mobile-sparkline-path"
+              fill="none"
+              filter="url(#mobileGoldGlow)"
+              stroke="url(#mobileGoldLine)"
+              strokeLinecap="round"
+              strokeWidth="3"
+            />
+          </svg>
+        </div>
+
+        <p className="mt-5 text-sm font-medium text-white/62 tabular-nums">
+          {formatMarketPrice(market.low)} — {formatMarketPrice(market.high)} Session range
+        </p>
+        <p className="mt-3 flex items-center justify-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/42">
+          <span
+            className={`h-1.5 w-1.5 rounded-full ${
+              market.feed === "live" || market.isUpdating
+                ? "mobile-live-dot bg-[#7dffca]"
+                : "bg-[#d8bd6a]/70"
+            }`}
+          />
+          Last updated: {lastUpdatedLabel}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function useMediaQuery(query: string) {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(query);
+    const updateMatches = () => setMatches(mediaQuery.matches);
+
+    updateMatches();
+    mediaQuery.addEventListener("change", updateMatches);
+
+    return () => mediaQuery.removeEventListener("change", updateMatches);
+  }, [query]);
+
+  return matches;
+}
+
+function buildSparklinePath(points: number[]) {
+  const width = 320;
+  const height = 80;
+  const padding = 8;
+  const min = Math.min(...points);
+  const max = Math.max(...points);
+  const range = max - min || 1;
+
+  return points
+    .map((point, index) => {
+      const x =
+        points.length === 1
+          ? width / 2
+          : (index / (points.length - 1)) * width;
+      const y =
+        height - padding - ((point - min) / range) * (height - padding * 2);
+
+      return `${index === 0 ? "M" : "L"} ${x.toFixed(2)} ${y.toFixed(2)}`;
+    })
+    .join(" ");
+}
+
+function formatMarketPrice(value: number) {
+  return new Intl.NumberFormat("en-US", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(value);
+}
+
+function formatPercent(value: number) {
+  return `${value >= 0 ? "+" : ""}${value.toFixed(2)}%`;
+}
+
+function formatLastUpdated(value: Date) {
+  return new Intl.DateTimeFormat("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+  }).format(value);
 }
 
 function ServicesSnapshot() {
@@ -290,7 +650,7 @@ function ProcessSection() {
         />
 
         <div className="mt-14 grid gap-4 md:grid-cols-4">
-          {process.map((step, index) => {
+          {appointmentSteps.map((step, index) => {
             const Icon = step.icon;
 
             return (

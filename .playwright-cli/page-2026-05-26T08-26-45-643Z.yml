@@ -1,0 +1,278 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Bilex Minerals logo Bilex Minerals EA" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Bilex Minerals logo" [ref=e6]
+        - generic [ref=e7]:
+          - generic [ref=e8]: Bilex
+          - generic [ref=e9]: Minerals EA
+      - navigation [ref=e10]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: /
+        - link "Testing & Assaying" [ref=e12] [cursor=pointer]:
+          - /url: /testing-assaying
+        - link "Contact" [ref=e13] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=e14]:
+        - link "Open WhatsApp appointment" [ref=e15] [cursor=pointer]:
+          - /url: https://wa.me/254735405910?text=Hello%20Bilex%20Minerals%2C%20I%20would%20like%20to%20request%20an%20appointment.
+          - img [ref=e16]
+        - link "Book Appointment" [ref=e18] [cursor=pointer]:
+          - /url: /#booking
+          - text: Book Appointment
+          - img [ref=e19]
+  - main [ref=e21]:
+    - generic [ref=e27]:
+      - paragraph [ref=e28]: Gold Testing • Assaying • Consultation
+      - heading "Precision in Every Test" [level=1] [ref=e29]
+      - paragraph [ref=e30]: Bilex Minerals provides testing, assaying, purity review and private consultation for clients with gold samples requiring accurate results.
+      - generic [ref=e31]:
+        - link "Book Appointment" [ref=e32] [cursor=pointer]:
+          - /url: "#booking"
+          - text: Book Appointment
+          - img [ref=e33]
+        - link "View Services" [ref=e35] [cursor=pointer]:
+          - /url: /testing-assaying
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - paragraph [ref=e40]: Testing Services
+          - heading "Testing, assaying and purity review — handled in a single appointment." [level=2] [ref=e41]
+          - paragraph [ref=e42]: From a first pass test to a detailed assay with documented results. Choose the service that matches your needs.
+        - link "View Testing Services" [ref=e43] [cursor=pointer]:
+          - /url: /testing-assaying
+          - text: View Testing Services
+          - img [ref=e44]
+      - generic [ref=e46]:
+        - article [ref=e47]:
+          - img [ref=e48]
+          - heading "Testing" [level=3] [ref=e50]
+          - paragraph [ref=e51]: Professional sample evaluation for clients preparing to buy, sell or proceed.
+        - article [ref=e52]:
+          - img [ref=e53]
+          - heading "Assaying" [level=3] [ref=e57]
+          - paragraph [ref=e58]: Detailed chemical analysis of submitted gold samples, with results documented against the tested material.
+        - article [ref=e59]:
+          - img [ref=e60]
+          - heading "Purity Review" [level=3] [ref=e63]
+          - paragraph [ref=e64]: A precise assessment of sample grade and physical condition.
+        - article [ref=e65]:
+          - img [ref=e66]
+          - heading "Private Consultation" [level=3] [ref=e69]
+          - paragraph [ref=e70]: One-on-one review of your results and a clear discussion of next steps.
+    - generic [ref=e72]:
+      - generic [ref=e73]:
+        - paragraph [ref=e74]: Appointment Process
+        - heading "A clear process for testing appointments." [level=2] [ref=e75]
+        - paragraph [ref=e76]: Appointments are confirmed before testing proceeds.
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - img [ref=e79]
+          - heading "Book Appointment" [level=3] [ref=e82]
+        - generic [ref=e83]:
+          - img [ref=e84]
+          - heading "Submit Sample" [level=3] [ref=e89]
+        - generic [ref=e90]:
+          - img [ref=e91]
+          - heading "Testing & Assay Review" [level=3] [ref=e93]
+        - generic [ref=e94]:
+          - img [ref=e95]
+          - heading "Result Discussion" [level=3] [ref=e97]
+    - generic [ref=e99]:
+      - generic [ref=e100]:
+        - paragraph [ref=e101]: Appointment Handling
+        - heading "How appointments are run." [level=2] [ref=e102]
+        - paragraph [ref=e103]: Each appointment follows a defined process from submission through to result discussion.
+      - generic [ref=e104]:
+        - article [ref=e105]:
+          - img [ref=e106]
+          - heading "Accurate Testing" [level=3] [ref=e109]
+          - paragraph [ref=e110]: Results are produced from the submitted sample. The methodology is consistent across all appointments.
+        - article [ref=e111]:
+          - img [ref=e112]
+          - heading "Private Handling" [level=3] [ref=e115]
+          - paragraph [ref=e116]: Appointments, samples and client discussions are handled with full discretion.
+        - article [ref=e117]:
+          - img [ref=e118]
+          - heading "Clear Process" [level=3] [ref=e121]
+          - paragraph [ref=e122]: The testing process is confirmed with the client before the appointment begins.
+        - article [ref=e123]:
+          - img [ref=e124]
+          - heading "Defined Boundaries" [level=3] [ref=e127]
+          - paragraph [ref=e128]: Bilex provides sample-based results. Origin, ownership and market value sit outside the scope of a testing appointment.
+        - article [ref=e129]:
+          - img [ref=e130]
+          - heading "Result Review" [level=3] [ref=e133]
+          - paragraph [ref=e134]: Results are reviewed with the client directly. Next steps are the client's to decide.
+    - generic [ref=e136]:
+      - generic [ref=e137]:
+        - paragraph [ref=e138]: Payment Methods
+        - heading "Accepted Payment Methods" [level=2] [ref=e139]
+        - paragraph [ref=e140]: Payments are for testing, assaying, consultation or related services. Payment is not affected by the test result.
+      - generic [ref=e141]:
+        - generic [ref=e142]:
+          - img [ref=e143]
+          - heading "Bank Transfer" [level=3] [ref=e145]
+        - generic [ref=e146]:
+          - img [ref=e147]
+          - heading "USDT" [level=3] [ref=e150]
+        - generic [ref=e151]:
+          - img [ref=e152]
+          - heading "Cryptocurrency" [level=3] [ref=e154]
+        - generic [ref=e155]:
+          - img [ref=e156]
+          - heading "Cash" [level=3] [ref=e159]
+    - generic [ref=e161]:
+      - generic [ref=e162]:
+        - paragraph [ref=e163]: Gold Sales Support
+        - heading "Gold sales and sourcing, by private inquiry." [level=2] [ref=e164]
+        - paragraph [ref=e165]: Select sales and sourcing are available for qualifying clients. Inquiries are handled directly.
+      - link "Submit an Inquiry" [ref=e166] [cursor=pointer]:
+        - /url: https://wa.me/254735405910?text=Hello%20Bilex%20Minerals%2C%20I%20would%20like%20to%20request%20an%20appointment.
+        - text: Submit an Inquiry
+        - img [ref=e167]
+    - generic [ref=e170]:
+      - generic [ref=e171]:
+        - paragraph [ref=e172]: Questions Before Booking
+        - heading "Questions Before Booking" [level=2] [ref=e173]
+        - paragraph [ref=e174]: Quick answers before booking a testing or assaying appointment.
+      - generic [ref=e175]:
+        - group [ref=e176]:
+          - generic "How long does a testing appointment take?" [ref=e177] [cursor=pointer]:
+            - text: How long does a testing appointment take?
+            - img [ref=e178]
+        - group [ref=e179]:
+          - generic "What services can I book at Bilex Minerals?" [ref=e180] [cursor=pointer]:
+            - text: What services can I book at Bilex Minerals?
+            - img [ref=e181]
+        - group [ref=e182]:
+          - generic "How are results provided?" [ref=e183] [cursor=pointer]:
+            - text: How are results provided?
+            - img [ref=e184]
+        - group [ref=e185]:
+          - generic "What payment methods does Bilex Minerals accept?" [ref=e186] [cursor=pointer]:
+            - text: What payment methods does Bilex Minerals accept?
+            - img [ref=e187]
+        - group [ref=e188]:
+          - generic "Does Bilex also sell gold?" [ref=e189] [cursor=pointer]:
+            - text: Does Bilex also sell gold?
+            - img [ref=e190]
+        - group [ref=e191]:
+          - generic "Does the test result affect payment?" [ref=e192] [cursor=pointer]:
+            - text: Does the test result affect payment?
+            - img [ref=e193]
+    - generic [ref=e195]:
+      - generic [ref=e196]:
+        - paragraph [ref=e197]: Book Appointment
+        - heading "Book Appointment" [level=2] [ref=e198]
+        - paragraph [ref=e199]: Send your details and preferred appointment time. The Bilex team will confirm availability before testing proceeds.
+      - generic [ref=e200]:
+        - paragraph [ref=e201]: Appointments are confirmed directly by the Bilex team.
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - img [ref=e205]
+            - generic [ref=e208]:
+              - heading "Book Appointment" [level=3] [ref=e209]
+              - paragraph [ref=e210]: Consent terms must be accepted before submitting the booking request.
+          - generic [ref=e211]:
+            - generic [ref=e212]:
+              - text: Full Name *
+              - textbox "Full Name *" [ref=e213]:
+                - /placeholder: Full name
+            - generic [ref=e214]: Phone / WhatsApp *
+            - generic [ref=e215]:
+              - text: Appointment Type *
+              - combobox "Appointment Type *" [ref=e216]:
+                - option "Gold Testing" [selected]
+                - option "Gold Assaying"
+                - option "Purity Review"
+                - option "Result Review"
+                - option "Buying Consultation"
+                - option "Selling Consultation"
+            - generic [ref=e217]:
+              - text: Email Address
+              - textbox "Email Address" [ref=e218]:
+                - /placeholder: name@example.com
+            - generic [ref=e219]:
+              - text: Preferred Appointment Date & Time
+              - textbox "Preferred Appointment Date & Time" [ref=e220]:
+                - /placeholder: Preferred date and time
+            - generic [ref=e221]:
+              - text: Sample Details
+              - textbox "Sample Details" [ref=e222]:
+                - /placeholder: Dore, nugget, raw material, jewelry...
+            - generic [ref=e223]:
+              - text: Additional Message
+              - textbox "Additional Message" [ref=e224]:
+                - /placeholder: Share sample context, timing notes or questions.
+          - generic [ref=e225]:
+            - button "Book Appointment" [ref=e226] [cursor=pointer]:
+              - text: Book Appointment
+              - img [ref=e227]
+            - link "WhatsApp" [ref=e230] [cursor=pointer]:
+              - /url: https://wa.me/254735405910?text=Hello%20Bilex%20Minerals%2C%20I%20would%20like%20to%20request%20an%20appointment.
+              - text: WhatsApp
+              - img [ref=e231]
+          - paragraph [ref=e233]:
+            - img [ref=e234]
+            - text: Consent required before submission
+  - contentinfo [ref=e237]:
+    - generic [ref=e238]:
+      - generic [ref=e239]:
+        - generic [ref=e240]:
+          - link "Bilex Minerals logo Bilex Minerals EA" [ref=e241] [cursor=pointer]:
+            - /url: /
+            - img "Bilex Minerals logo" [ref=e243]
+            - generic [ref=e244]:
+              - generic [ref=e245]: Bilex
+              - generic [ref=e246]: Minerals EA
+          - paragraph [ref=e247]: Gold testing, assaying, purity review and private consultation for clients who need clear sample-based results.
+          - paragraph [ref=e248]: Payments are accepted for testing, assaying, consultation and related services only. Payment is not affected by test results.
+        - generic [ref=e249]:
+          - heading "Navigation" [level=2] [ref=e250]
+          - navigation [ref=e251]:
+            - link "Home" [ref=e252] [cursor=pointer]:
+              - /url: /
+            - link "Testing & Assaying" [ref=e253] [cursor=pointer]:
+              - /url: /testing-assaying
+            - link "Contact" [ref=e254] [cursor=pointer]:
+              - /url: /contact
+        - generic [ref=e255]:
+          - heading "Services" [level=2] [ref=e256]
+          - navigation [ref=e257]:
+            - link "Testing" [ref=e258] [cursor=pointer]:
+              - /url: /testing-assaying
+            - link "Assaying" [ref=e259] [cursor=pointer]:
+              - /url: /testing-assaying
+            - link "Purity Review" [ref=e260] [cursor=pointer]:
+              - /url: /testing-assaying
+            - link "Result Review" [ref=e261] [cursor=pointer]:
+              - /url: /testing-assaying
+        - generic [ref=e262]:
+          - heading "Contact" [level=2] [ref=e263]
+          - generic [ref=e264]:
+            - link "+254 735 405 910" [ref=e265] [cursor=pointer]:
+              - /url: tel:+254735405910
+              - img [ref=e266]
+              - text: +254 735 405 910
+            - link "info@bilexminerals.com" [ref=e268] [cursor=pointer]:
+              - /url: mailto:info@bilexminerals.com
+              - img [ref=e269]
+              - text: info@bilexminerals.com
+            - paragraph [ref=e272]:
+              - img [ref=e273]
+              - text: Nairobi, Kenya / Dar es Salaam, Tanzania
+            - link "WhatsApp" [ref=e276] [cursor=pointer]:
+              - /url: https://wa.me/254735405910?text=Hello%20Bilex%20Minerals%2C%20I%20would%20like%20to%20request%20an%20appointment.
+              - text: WhatsApp
+              - img [ref=e277]
+      - generic [ref=e279]:
+        - paragraph [ref=e280]: © 2026 Bilex Minerals EA
+        - paragraph [ref=e281]: Gold testing. Assaying. Clear results.
+  - generic [ref=e282]:
+    - link "Chat with Bilex Minerals on WhatsApp" [ref=e283] [cursor=pointer]:
+      - /url: https://wa.me/254735405910?text=Hello%20Bilex%20Minerals%2C%20I%20would%20like%20to%20request%20an%20appointment.
+      - img [ref=e284]
+    - button "Switch to light mode" [ref=e286] [cursor=pointer]:
+      - img [ref=e287]
