@@ -26,19 +26,19 @@ const storySections = [
   {
     icon: Building2,
     eyebrow: "Our Story",
-    title: "Founded in 2019. Built for a reason.",
+    title: "",
     text: "Bilex Minerals EA was founded in 2019, in the period that immediately followed the disruption of the COVID-19 pandemic. The founding family had seen the mineral trade in East Africa from the inside, and what they saw was a market operating largely without accountability. Fraud was systemic. Buyers could not verify what they were purchasing. Sellers had no independent reference point. Investors were operating on trust alone, and that trust was frequently misplaced. The company was founded to address that directly, not by policy or advocacy, but by providing a service: accurate, accredited, independent testing that anyone could access by appointment and leave with a result they could rely on.",
   },
   {
     icon: Users,
     eyebrow: "A Family Business",
-    title: "Built by a family. Being carried forward by the next.",
+    title: "",
     text: "Bilex is not a corporation. It is a family business, and that distinction matters in how it is run. The standards the company holds, the discretion it extends to every client and the reputation it has built in both Kenya and Tanzania are the direct responsibility of the people whose name is behind it. The next generation is now taking an active role in the company, bringing with them the same standards and a long-term commitment to the work. A family business does not cut corners on its own reputation.",
   },
   {
     icon: ShieldCheck,
     eyebrow: "Industry Position",
-    title: "Independent testing in a market that needs it.",
+    title: "Independent testing ",
     text: "Fraud in the East African gold and mineral trade is not a peripheral issue. It affects buyers, legitimate operators and governments alike, and it has done so for years. Bilex operates as a direct counter to that reality. Our results are based solely on the material submitted, produced by certified staff using accredited methodology, with no interest in the transaction surrounding the sample. We support and cooperate with government-led efforts in both Kenya and Tanzania to bring accountability and traceability to the mineral trade, and we operate within the full regulatory frameworks of both countries.",
   },
   {
@@ -132,7 +132,7 @@ const familyQuotes = [
   {
     quote:
       "Growing up around this business, you understand early that accuracy is not optional. It is the whole point. That is the standard I intend to keep.",
-    byline: "Next Generation Director, Bilex Minerals EA",
+    byline: "Director, Bilex Minerals EA",
   },
 ];
 
