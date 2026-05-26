@@ -6,6 +6,7 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { SiteFooter } from "@/components/site-footer";
 import { FloatingSiteTools } from "@/components/floating-site-tools";
+import { createPageMetadata, homeKeywords } from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,26 +22,22 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
+  ...createPageMetadata({
+    title: "Gold Testing & Assaying Services in East Africa | Bilex Minerals",
+    description:
+      "Professional gold testing, assaying and purity review in Nairobi, Kenya. Serving international traders, buyers and investors from the US and Europe. By appointment.",
+    keywords: homeKeywords,
+    openGraphDescription:
+      "Professional gold testing, assaying and purity review in Nairobi, Kenya. Serving international traders, buyers and investors. By appointment.",
+    twitterTitle: "Gold Testing & Assaying Services | Bilex Minerals",
+    twitterDescription:
+      "Gold testing, assaying, purity review and result documentation. Nairobi, Kenya. Serving international clients.",
+  }),
   metadataBase: new URL("https://bilexminerals.com"),
-  title: {
-    default:
-      "Gold Testing & Assaying Services in Kenya | Bilex Minerals",
-    template: "%s | Bilex Minerals",
-  },
-  description:
-    "Book gold testing, assaying, purity review and private consultation with Bilex Minerals. Payment is accepted by bank transfer, USDT, cryptocurrency and cash.",
-  keywords: [
-    "gold assaying Kenya",
-    "gold testing services",
-    "gold purity testing",
-    "gold purity review",
-    "gold testing Kenya",
-    "gold result review",
-    "gold testing appointment",
-  ],
-  alternates: {
-    canonical: "https://bilexminerals.com",
-  },
+  robots:
+    process.env.VERCEL_ENV === "preview"
+      ? { index: false, follow: false }
+      : { index: true, follow: true },
   icons: {
     icon: [
       { url: "https://bilexminerals.com/favicon.ico", sizes: "any" },
@@ -56,30 +53,6 @@ export const metadata: Metadata = {
         sizes: "180x180",
       },
     ],
-  },
-  openGraph: {
-    title: "Gold Testing & Assaying Services in Kenya | Bilex Minerals",
-    description:
-      "Book gold testing, assaying, purity review and private consultation with Bilex Minerals.",
-    url: "https://bilexminerals.com",
-    siteName: "Bilex Minerals",
-    images: [
-      {
-        url: "https://bilexminerals.com/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Bilex Minerals gold testing and assaying",
-      },
-    ],
-    locale: "en_KE",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bilex Minerals",
-    description:
-      "Gold testing, assaying, purity review and XAU/USD market reference.",
-    images: ["https://bilexminerals.com/twitter-image.png"],
   },
 };
 

@@ -1,64 +1,54 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
-  BadgeCheck,
   ClipboardCheck,
   FileText,
   FlaskConical,
   Gem,
   Microscope,
-  ShieldCheck,
 } from "lucide-react";
 import { BookingInquiryForm } from "@/components/booking-inquiry-form";
 import { PageIntro } from "@/components/page-intro";
 import { SiteHeader } from "@/components/site-header";
+import { createPageMetadata } from "@/lib/seo";
 import { visuals } from "@/lib/site-data";
 
-export const metadata = {
-  title: "Gold Testing and Assaying Services",
+export const metadata: Metadata = createPageMetadata({
+  title: "Gold Assaying, Purity Testing and Result Documentation | Bilex Minerals",
   description:
-    "Gold testing, assaying, purity review, result documentation and private consultation for clients presenting gold samples by appointment.",
-};
+    "Gold assaying, purity testing and result documentation for international clients operating in East Africa. Appointment-based. Nairobi, Kenya.",
+  path: "/testing-assaying",
+  imageAlt: "Gold assay laboratory equipment, Bilex Minerals Nairobi",
+  openGraphDescription:
+    "Gold assaying, purity testing and result documentation for international clients in East Africa. By appointment, Nairobi.",
+});
 
 const services = [
   {
-    icon: FlaskConical,
-    title: "Gold Assaying",
-    text: "Detailed chemical analysis of submitted gold samples, with results documented against the tested material.",
-    points: ["Sample review", "Assay support", "Private handling"],
+    icon: Microscope,
+    title: "Testing",
+    text: "Professional sample evaluation for clients preparing to buy, sell or proceed.",
   },
   {
-    icon: Microscope,
-    title: "Gold Testing Services",
-    text: "Professional sample evaluation for clients preparing to buy, sell or proceed.",
-    points: ["Appointment", "Sample review", "Result discussion"],
+    icon: FlaskConical,
+    title: "Assaying",
+    text: "Detailed chemical analysis of submitted gold samples, with results documented against the tested material.",
   },
   {
     icon: Gem,
-    title: "Gold Purity Testing",
+    title: "Purity Review",
     text: "A precise assessment of sample grade and physical condition.",
-    points: ["Purity review", "Material condition", "Result guidance"],
-  },
-  {
-    icon: ShieldCheck,
-    title: "Result Review",
-    text: "One-on-one review of your results and a clear discussion of next steps.",
-    points: ["Result discussion", "Document context", "Next steps"],
   },
   {
     icon: FileText,
-    title: "Result Documentation",
-    text: "Written documentation of test results, issued as a service record where required.",
-    points: ["Result summary", "Service record", "Client copy"],
+    title: "Private Consultation",
+    text: "One-on-one review of your results and a clear discussion of next steps.",
   },
 ];
 
-const standards = [
-  "Results are based on the material submitted for testing.",
-  "Bilex does not assess origin, ownership or market value.",
-  "Clients confirm they have the legal right to present material for testing.",
-  "Payment applies to the service rendered, independent of the test outcome.",
-];
+const appointmentTerms =
+  "Results reflect the material submitted for testing. Bilex does not assess origin, ownership or market value. Clients presenting material confirm their legal right to do so. Payment applies to the service rendered, independent of the test outcome.";
 
 export default function TestingAssayingPage() {
   return (
@@ -67,9 +57,10 @@ export default function TestingAssayingPage() {
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
           eyebrow="Testing & Assaying"
-          title="Gold Testing and Assaying Services"
-          text="Comprehensive sample review, from initial testing through to documented results."
+          title="Gold testing and assaying services."
+          text="Comprehensive sample review — from initial testing through to documented results — by appointment."
           image={visuals.assay}
+          imageAlt="Gold assay laboratory equipment, Bilex Minerals Nairobi"
         />
 
         <section className="px-5 py-24 md:px-8 lg:px-12">
@@ -81,13 +72,9 @@ export default function TestingAssayingPage() {
               <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
                 Available services.
               </h2>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
-                Clients can book an appointment for testing, assaying, result
-                review or consultation, depending on the service required.
-              </p>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               {services.map((service) => {
                 const Icon = service.icon;
 
@@ -103,14 +90,6 @@ export default function TestingAssayingPage() {
                     <p className="mt-4 text-sm leading-7 text-white/58">
                       {service.text}
                     </p>
-                    <div className="mt-6 grid gap-3">
-                      {service.points.map((point) => (
-                        <div key={point} className="flex gap-3 text-sm text-white/58">
-                          <BadgeCheck className="shrink-0 text-[#d8bd6a]" size={16} />
-                          {point}
-                        </div>
-                      ))}
-                    </div>
                   </article>
                 );
               })}
@@ -129,16 +108,10 @@ export default function TestingAssayingPage() {
               </h2>
             </div>
 
-            <div className="grid gap-3">
-              {standards.map((standard) => (
-                <div
-                  key={standard}
-                  className="flex gap-4 rounded-sm border border-white/10 bg-white/[0.035] p-5 text-sm leading-7 text-white/60"
-                >
-                  <ShieldCheck className="mt-1 shrink-0 text-[#d8bd6a]" size={18} />
-                  <span>{standard}</span>
-                </div>
-              ))}
+            <div className="rounded-sm border border-white/10 bg-white/[0.035] p-7">
+              <p className="max-w-3xl text-base leading-8 text-white/62">
+                {appointmentTerms}
+              </p>
             </div>
           </div>
         </section>

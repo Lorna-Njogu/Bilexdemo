@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   Clock,
   Mail,
@@ -8,13 +9,18 @@ import {
 import { BookingInquiryForm } from "@/components/booking-inquiry-form";
 import { PageIntro } from "@/components/page-intro";
 import { SiteHeader } from "@/components/site-header";
+import { createPageMetadata } from "@/lib/seo";
 import { contact, visuals } from "@/lib/site-data";
 
-export const metadata = {
-  title: "Book an appointment.",
+export const metadata: Metadata = createPageMetadata({
+  title: "Book a Gold Testing Appointment | Bilex Minerals",
   description:
-    "Request a private gold testing, assaying or consultation appointment with Bilex Minerals. Bank transfer, USDT, cryptocurrency and cash accepted.",
-};
+    "Book a private gold testing or assaying appointment with Bilex Minerals, Nairobi. Open to international clients. Appointment confirmed directly by the team.",
+  path: "/contact",
+  imageAlt: "Bilex Minerals gold logistics and appointment support",
+  openGraphDescription:
+    "Book a private gold testing or assaying appointment with Bilex Minerals, Nairobi. Open to international clients.",
+});
 
 const contactItems = [
   { icon: Mail, label: "Email", value: contact.email, href: contact.emailHref },
@@ -39,6 +45,7 @@ export default function ContactPage() {
           title="Book an appointment."
           text="Submit your details and preferred time. The team confirms availability directly."
           image={visuals.logistics}
+          imageAlt="Bilex Minerals gold logistics and appointment support"
         />
 
         <section className="px-5 py-24 md:px-8 lg:px-12">

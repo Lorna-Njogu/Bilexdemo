@@ -2,7 +2,14 @@
 
 import { FormEvent, useRef, useState } from "react";
 import dynamic from "next/dynamic";
-import { CalendarCheck, Mail, MessageCircle, ShieldCheck, X } from "lucide-react";
+import {
+  CalendarCheck,
+  CheckCircle2,
+  Mail,
+  MessageCircle,
+  ShieldCheck,
+  X,
+} from "lucide-react";
 import { contact } from "@/lib/site-data";
 
 const PhoneInput = dynamic(() => import("react-phone-number-input"), {
@@ -264,16 +271,18 @@ export function BookingInquiryForm({
               <p>
                 By submitting a booking request, you confirm the following:
               </p>
-              <ol className="mt-5 grid gap-3">
-                {consentTerms.map((term, index) => (
+              <ul className="mt-5 grid gap-3">
+                {consentTerms.map((term) => (
                   <li key={term} className="grid grid-cols-[auto_1fr] gap-3">
-                    <span className="font-bold text-[#d8bd6a]">
-                      {index + 1}.
-                    </span>
+                    <CheckCircle2
+                      aria-hidden="true"
+                      className="mt-1 text-[#d8bd6a]"
+                      size={17}
+                    />
                     <span>{term}</span>
                   </li>
                 ))}
-              </ol>
+              </ul>
             </div>
 
             <label className="mt-6 flex cursor-pointer items-start gap-3 rounded-sm border border-white/10 bg-white/[0.04] p-4 text-sm leading-6 text-white/72">

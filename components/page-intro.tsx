@@ -6,6 +6,7 @@ type PageIntroProps = {
   title: string;
   text?: string;
   image?: string;
+  imageAlt?: string;
 };
 
 export function PageIntro({
@@ -13,13 +14,14 @@ export function PageIntro({
   title,
   text,
   image = visuals.hero,
+  imageAlt = "Bilex Minerals gold testing and assaying services",
 }: PageIntroProps) {
   return (
     <section className="theme-dark-surface relative min-h-[58svh] overflow-hidden bg-[#050505] px-5 pt-32 text-white md:px-8 lg:px-12">
       <div className="absolute inset-0">
         <Image
           src={image}
-          alt=""
+          alt={imageAlt}
           fill
           priority
           sizes="100vw"

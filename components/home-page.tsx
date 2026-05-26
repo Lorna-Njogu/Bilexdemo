@@ -7,16 +7,21 @@ import {
   BadgeCheck,
   Banknote,
   Bitcoin,
+  CalendarCheck,
   CheckCircle2,
   CreditCard,
   FileText,
   FlaskConical,
   Gem,
   MessageCircle,
+  MessageSquareText,
   Microscope,
+  PackageCheck,
+  Plus,
 } from "lucide-react";
 import { BookingInquiryForm } from "@/components/booking-inquiry-form";
 import { HeroGoldChart } from "@/components/live-gold-chart";
+import { homeFaqs } from "@/lib/seo";
 import { contact } from "@/lib/site-data";
 
 const fadeUp = {
@@ -54,14 +59,14 @@ const reasons = [
   ["Private Handling", "Appointments, samples and client discussions are handled with full discretion."],
   ["Clear Process", "The testing process is confirmed with the client before the appointment begins."],
   ["Defined Boundaries", "Bilex provides sample-based results. Origin, ownership and market value sit outside the scope of a testing appointment."],
-  ["Result Review", "Results are reviewed with the client directly. Next steps are at your discretion."],
+  ["Result Review", "Results are reviewed with the client directly. Next steps are the client's to decide."],
 ];
 
 const process = [
-  "Book Appointment",
-  "Submit Sample",
-  "Testing & Assay Review",
-  "Result Discussion",
+  { icon: CalendarCheck, title: "Book Appointment" },
+  { icon: PackageCheck, title: "Submit Sample" },
+  { icon: FlaskConical, title: "Testing & Assay Review" },
+  { icon: MessageSquareText, title: "Result Discussion" },
 ];
 
 const payments = [
@@ -69,37 +74,6 @@ const payments = [
   [BadgeCheck, "USDT"],
   [Bitcoin, "Cryptocurrency"],
   [Banknote, "Cash"],
-];
-
-const faqs = [
-  [
-    "How long does gold testing take?",
-    "Timing is confirmed at booking and depends on the service and sample. Most appointments are completed within the session.",
-  ],
-  [
-    "What services can I book?",
-    "You can book testing, assaying, purity review, result review, buying consultation or selling consultation.",
-  ],
-  [
-    "Is consultation available after testing?",
-    "Yes. Results can be reviewed with the team before you decide the next step.",
-  ],
-  [
-    "How are results provided?",
-    "Results are reviewed in person at the appointment. A written service record is provided where required.",
-  ],
-  [
-    "What payment methods are accepted?",
-    "Bank transfer, USDT, cryptocurrency and cash are accepted.",
-  ],
-  [
-    "Does Bilex also sell gold?",
-    "Gold sales and sourcing support are available through direct inquiry. Testing and assaying remain the main focus.",
-  ],
-  [
-    "Does the test result affect payment?",
-    "No. Payment is for the service. The result has no bearing on the fee.",
-  ],
 ];
 
 export function HomePage() {
@@ -168,7 +142,9 @@ function HeroSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#d8bd6a]">
               Gold Testing • Assaying • Consultation
             </p>
-          
+            <h1 className="mt-7 max-w-5xl font-display text-5xl leading-[0.94] text-balance text-[#fff7e7] md:text-7xl xl:text-8xl">
+              Precision in Every Test
+            </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
               Bilex Minerals provides testing, assaying, purity review and private consultation for clients with gold samples requiring accurate results.
             </p>
@@ -202,8 +178,7 @@ function ServicesSnapshot() {
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <SectionHeader
             eyebrow="Testing Services"
-            title="Testing, assaying and purity review, handled in a single appointment."
-            text="From a first pass test to a detailed assay with documented results. Choose the service that matches your needs."
+            title="Testing, assaying and purity review — handled in a single appointment."
           />
           <Link
             href="/testing-assaying"
@@ -314,21 +289,23 @@ function ProcessSection() {
         />
 
         <div className="mt-14 grid gap-4 md:grid-cols-4">
-          {process.map((step, index) => (
-            <motion.div
-              key={step}
-              {...fadeUp}
-              transition={{ ...fadeUp.transition, delay: index * 0.04 }}
-              className="rounded-sm border border-white/10 bg-[#11100d] p-6"
-            >
-              <p className="font-display text-4xl text-[#d8bd6a]">
-                {String(index + 1).padStart(2, "0")}
-              </p>
-              <h3 className="mt-8 text-sm font-bold uppercase tracking-[0.18em] text-[#fff7e7]">
-                {step}
-              </h3>
-            </motion.div>
-          ))}
+          {process.map((step, index) => {
+            const Icon = step.icon;
+
+            return (
+              <motion.div
+                key={step.title}
+                {...fadeUp}
+                transition={{ ...fadeUp.transition, delay: index * 0.04 }}
+                className="rounded-sm border border-white/10 bg-[#11100d] p-6"
+              >
+                <Icon className="text-[#d8bd6a]" size={26} />
+                <h3 className="mt-8 text-sm font-bold uppercase tracking-[0.18em] text-[#fff7e7]">
+                  {step.title}
+                </h3>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -395,13 +372,15 @@ function FaqSection() {
           align="center"
         />
         <div className="mt-12 divide-y divide-white/10 border-y border-white/10">
-          {faqs.map(([question, answer]) => (
+          {homeFaqs.map(({ question, answer }) => (
             <details key={question} className="group py-6">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left font-display text-2xl text-[#fff7e7] [&::-webkit-details-marker]:hidden">
                 {question}
-                <span className="text-[#d8bd6a] transition group-open:rotate-45">
-                  +
-                </span>
+                <Plus
+                  aria-hidden="true"
+                  className="shrink-0 text-[#d8bd6a] transition group-open:rotate-45"
+                  size={22}
+                />
               </summary>
               <p className="mt-4 max-w-3xl text-sm leading-7 text-white/58">
                 {answer}
