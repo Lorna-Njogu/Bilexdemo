@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 
 const baseUrl = "https://bilexminerals.com";
 
+export const dynamic = "force-static";
+
 const routes = [
   { path: "/", priority: 1 },
   { path: "/testing-assaying", priority: 0.9 },

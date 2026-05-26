@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cinzel, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "lenis/dist/lenis.css";
 import "react-phone-number-input/style.css";
 import "./globals.css";
@@ -72,6 +73,7 @@ export default function RootLayout({
         {children}
         <SiteFooter />
         <FloatingSiteTools />
+        <Analytics scriptSrc="https://va.vercel-scripts.com/v1/script.js" />
       </body>
     </html>
   );
