@@ -5,6 +5,7 @@ import { contact } from "@/lib/site-data";
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/testing-assaying", label: "Testing & Assaying" },
   { href: "/contact", label: "Contact" },
 ];

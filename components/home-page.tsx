@@ -81,12 +81,49 @@ export function HomePage() {
     <main className="overflow-hidden bg-[#050505] text-[#f8f1e4]">
       <HomeHero />
       <ServicesSnapshot />
+      <AboutBilexSection />
       <ProcessSection />
       <WhyChooseSection />
       <PaymentMethodsSection />
       <FaqSection />
       <BookingSection />
     </main>
+  );
+}
+
+function AboutBilexSection() {
+  return (
+    <section className="bg-[#050505] px-5 py-24 md:px-8 lg:px-12">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#d8bd6a]">
+            About
+          </p>
+          <h2 className="mt-5 font-display text-4xl leading-[1.02] text-[#fff7e7] md:text-6xl">
+            About Bilex Minerals EA
+          </h2>
+        </div>
+
+        <div className="border-t border-[#d8bd6a]/30 pt-8 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+          <p className="text-base leading-8 text-white/62 md:text-lg">
+            Bilex Minerals EA is a family-owned minerals company founded in
+            2019, operating from Nairobi, Kenya and Dar es Salaam, Tanzania.
+            We specialise in gold testing and assaying services, with
+            additional support in sourcing, export coordination and exploration
+            across East Africa. The business was built to bring independent,
+            accredited testing to a market that needed it, and is now being
+            carried forward by the next generation of the family that built it.
+          </p>
+          <Link
+            href="/about"
+            className="mt-8 inline-flex w-fit items-center gap-3 rounded-sm border border-[#d8bd6a]/40 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#d8bd6a] transition hover:bg-[#d8bd6a] hover:text-black"
+          >
+            More about Bilex
+            <ArrowRight size={16} />
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -35,7 +35,7 @@ export function HomeHero() {
               Precision in Every Test
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
-              Bilex Minerals provides testing, assaying, purity review and private consultation for clients with gold samples requiring accurate results.
+              Bilex Minerals EA is a minerals company operating from Nairobi, Kenya and Dar es Salaam, Tanzania. We specialise in gold testing and assaying services, with additional support in sourcing, export coordination and exploration across East Africa.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">

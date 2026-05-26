@@ -6,6 +6,7 @@ export const dynamic = "force-static";
 
 const routes = [
   { path: "/", priority: 1 },
+  { path: "/about", priority: 0.8 },
   { path: "/testing-assaying", priority: 0.9 },
   { path: "/contact", priority: 0.8 },
 ];

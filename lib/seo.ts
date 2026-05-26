@@ -417,6 +417,38 @@ export const testingAssayingSchema = {
   ],
 };
 
+export const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/about`,
+      url: `${siteUrl}/about`,
+      name: "About Bilex Minerals EA | Accredited Gold Testing, Kenya and Tanzania",
+      description:
+        "Bilex Minerals EA is a family-owned, ISO/IEC 17025 accredited gold testing and assaying company founded in 2019, operating from Nairobi and Dar es Salaam.",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "About Bilex Minerals EA",
+            item: `${siteUrl}/about`,
+          },
+        ],
+      },
+    },
+  ],
+};
+
 export const contactPageSchema = {
   "@context": "https://schema.org",
   "@graph": [
