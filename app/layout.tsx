@@ -7,6 +7,7 @@ import { SmoothScroll } from "@/components/smooth-scroll";
 import { SiteFooter } from "@/components/site-footer";
 import { FloatingSiteTools } from "@/components/floating-site-tools";
 import { createPageMetadata, homeKeywords } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -72,6 +73,7 @@ export default function RootLayout({
         {children}
         <SiteFooter />
         <FloatingSiteTools />
+        <Analytics />
       </body>
     </html>
   );
