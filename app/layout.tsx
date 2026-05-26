@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "lenis/dist/lenis.css";
 import "react-phone-number-input/style.css";
 import "./globals.css";
@@ -21,6 +22,20 @@ const cinzel = Cinzel({
   variable: "--font-cinzel",
   weight: ["500", "700"],
 });
+
+const analyticsDsn = process.env.NEXT_PUBLIC_VERCEL_ANALYTICS_DSN;
+const speedInsightsDsn = process.env.NEXT_PUBLIC_VERCEL_SPEED_INSIGHTS_DSN;
+
+const analyticsProps = {
+  mode: "production" as const,
+  scriptSrc: "https://va.vercel-scripts.com/v1/script.js",
+  ...(analyticsDsn ? { dsn: analyticsDsn } : {}),
+};
+
+const speedInsightsProps = {
+  scriptSrc: "https://va.vercel-scripts.com/v1/speed-insights/script.js",
+  ...(speedInsightsDsn ? { dsn: speedInsightsDsn } : {}),
+};
 
 export const metadata: Metadata = {
   ...createPageMetadata({
@@ -73,7 +88,8 @@ export default function RootLayout({
         {children}
         <SiteFooter />
         <FloatingSiteTools />
-        <Analytics scriptSrc="https://va.vercel-scripts.com/v1/script.js" />
+        <Analytics {...analyticsProps} />
+        <SpeedInsights {...speedInsightsProps} />
       </body>
     </html>
   );
