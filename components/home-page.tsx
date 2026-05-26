@@ -358,19 +358,6 @@ function MobileGoldMarketHero() {
       <div className="mobile-market-gradient absolute inset-0" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,3,3,0.12)_0%,rgba(3,3,3,0.72)_62%,#030303_100%)]" />
       <div className="noise-layer absolute inset-0 opacity-60" />
-      <div className="pointer-events-none absolute inset-0">
-        {[18, 32, 46, 58, 71, 84].map((left, index) => (
-          <span
-            key={left}
-            className="mobile-gold-particle absolute h-1 w-1 rounded-full bg-[#d8bd6a]"
-            style={{
-              left: `${left}%`,
-              top: `${18 + ((index * 13) % 58)}%`,
-              animationDelay: `${index * 0.68}s`,
-            }}
-          />
-        ))}
-      </div>
 
       <div className="relative z-10 w-full max-w-md text-center">
         <div className="mx-auto flex w-fit items-center gap-2 rounded-full border border-[#d8bd6a]/24 bg-black/28 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#d8bd6a] backdrop-blur-md">
