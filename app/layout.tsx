@@ -23,15 +23,16 @@ const cinzel = Cinzel({
 
 export const metadata: Metadata = {
   ...createPageMetadata({
-    title: "Gold Testing & Assaying Services in East Africa | Bilex Minerals",
+    title: "Professional Gold Testing & Assaying Services | Bilex Minerals EA",
     description:
-      "Professional gold testing, assaying and purity review in Nairobi, Kenya. Serving international traders, buyers and investors from the US and Europe. By appointment.",
+      "Gold testing, assaying and purity review by appointment in Nairobi, Kenya. Accurate sample-based results for buyers, sellers and international clients. Bank transfer, USDT and cash accepted.",
     keywords: homeKeywords,
     openGraphDescription:
-      "Professional gold testing, assaying and purity review in Nairobi, Kenya. Serving international traders, buyers and investors. By appointment.",
-    twitterTitle: "Gold Testing & Assaying Services | Bilex Minerals",
+      "Gold testing, assaying and purity review by appointment in Nairobi, Kenya. Accurate sample-based results for buyers, sellers and international clients. Bank transfer, USDT and cash accepted.",
+    twitterTitle:
+      "Professional Gold Testing & Assaying Services | Bilex Minerals EA",
     twitterDescription:
-      "Gold testing, assaying, purity review and result documentation. Nairobi, Kenya. Serving international clients.",
+      "Gold testing, assaying and purity review by appointment in Nairobi, Kenya. Accurate sample-based results for buyers, sellers and international clients. Bank transfer, USDT and cash accepted.",
   }),
   metadataBase: new URL("https://bilexminerals.com"),
   robots:

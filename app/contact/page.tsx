@@ -9,17 +9,17 @@ import {
 import { BookingInquiryForm } from "@/components/booking-inquiry-form";
 import { PageIntro } from "@/components/page-intro";
 import { SiteHeader } from "@/components/site-header";
-import { createPageMetadata } from "@/lib/seo";
+import { contactPageSchema, createPageMetadata } from "@/lib/seo";
 import { contact, visuals } from "@/lib/site-data";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Book a Gold Testing Appointment | Bilex Minerals",
+  title: "Book a Gold Testing Appointment | Bilex Minerals Nairobi",
   description:
-    "Book a private gold testing or assaying appointment with Bilex Minerals, Nairobi. Open to international clients. Appointment confirmed directly by the team.",
+    "Book a gold testing or assaying appointment with Bilex Minerals in Nairobi, Kenya. Submit your details online or contact the team directly by WhatsApp or phone.",
   path: "/contact",
   imageAlt: "Bilex Minerals gold logistics and appointment support",
   openGraphDescription:
-    "Book a private gold testing or assaying appointment with Bilex Minerals, Nairobi. Open to international clients.",
+    "Book a gold testing or assaying appointment with Bilex Minerals in Nairobi, Kenya. Submit your details online or contact the team directly by WhatsApp or phone.",
 });
 
 const contactItems = [
@@ -39,6 +39,10 @@ export default function ContactPage() {
   return (
     <>
       <SiteHeader variant="solid" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+      />
       <main className="bg-[#050505] text-[#f8f1e4]">
         <PageIntro
           eyebrow="Appointment"

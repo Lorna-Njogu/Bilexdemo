@@ -35,9 +35,18 @@ export const homeFaqs = [
       "Timing is confirmed at booking and depends on the service and sample. Most appointments are completed within the session.",
   },
   {
+    question: "What services can I book at Bilex Minerals?",
+    answer:
+      "You can book gold testing, assaying, purity review, result review, buying consultation or selling consultation.",
+  },
+  {
     question: "How are results provided?",
     answer:
       "Results are reviewed in person at the appointment. A written service record is provided where required.",
+  },
+  {
+    question: "What payment methods does Bilex Minerals accept?",
+    answer: "Accepted payment methods: bank transfer, USDT, cryptocurrency and cash.",
   },
   {
     question: "Does Bilex also sell gold?",
@@ -128,98 +137,276 @@ export const professionalServiceSchema = {
   areaServed: ["Kenya", "Tanzania", "East Africa"],
 };
 
-export const localBusinessSchema = {
+export const homePageSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Bilex Minerals EA",
-  description:
-    "Professional gold testing, assaying, purity review and private consultation in Nairobi, Kenya. Serving international traders, buyers and investors.",
-  url: siteUrl,
-  telephone: "+254735405910",
-  email: "info@bilexminerals.com",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Off Mombasa Road",
-    addressLocality: "Nairobi",
-    addressRegion: "Nairobi County",
-    addressCountry: "KE",
-  },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ],
-    description: "By appointment only",
-  },
-  currenciesAccepted: "USD, KES, USDT",
-  paymentAccepted: "Cash, Bank Transfer, Cryptocurrency, USDT",
-  areaServed: [
-    { "@type": "Country", name: "Kenya" },
-    { "@type": "Country", name: "Tanzania" },
-    { "@type": "Country", name: "United States" },
-    { "@type": "Country", name: "United Kingdom" },
-    { "@type": "Country", name: "Germany" },
-    { "@type": "Country", name: "Switzerland" },
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Bilex Minerals EA",
+      url: siteUrl,
+      logo: `${siteUrl}/bilex-logo.webp`,
+      email: "info@bilexminerals.com",
+      telephone: "+254735405910",
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${siteUrl}/#business`,
+      name: "Bilex Minerals EA",
+      description:
+        "Professional gold testing, assaying, purity review and private consultation in Nairobi, Kenya.",
+      url: siteUrl,
+      telephone: "+254735405910",
+      email: "info@bilexminerals.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Off Mombasa Road",
+        addressLocality: "Nairobi",
+        addressRegion: "Nairobi County",
+        addressCountry: "KE",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: -1.3031,
+        longitude: 36.8218,
+      },
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: "08:00",
+        closes: "17:00",
+      },
+      paymentAccepted: "Bank Transfer, Cash, Cryptocurrency, USDT",
+      areaServed: [
+        { "@type": "Country", name: "Kenya" },
+        { "@type": "Country", name: "Tanzania" },
+        { "@type": "Country", name: "United States" },
+        { "@type": "Continent", name: "Europe" },
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Gold Testing and Assaying Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Gold Testing" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Gold Assaying" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Gold Purity Review" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Private Consultation" },
+          },
+        ],
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "Bilex Minerals EA",
+      publisher: { "@id": `${siteUrl}/#organization` },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How long does gold testing take?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Timing is confirmed at booking and depends on the service and sample. Most appointments are completed within the session.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What gold testing services can I book?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You can book gold testing, gold assaying, purity review, result review, buying consultation or selling consultation.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is consultation available after gold testing?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Results are reviewed with the client directly. Next steps are the client's to decide.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How are gold test results provided?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Results are reviewed in person at the appointment. A written service record is provided where required.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What payment methods are accepted?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Bank transfer, USDT, cryptocurrency and cash are accepted.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does Bilex Minerals sell gold?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Gold sales are handled by private inquiry, separately from testing and assaying services.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does the test result affect payment?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Payment is for the service. The result has no bearing on the fee.",
+          },
+        },
+      ],
+    },
   ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Gold Testing and Assaying Services",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Gold Testing",
-          description:
-            "Professional sample evaluation for clients preparing to buy, sell or proceed.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Gold Assaying",
-          description:
-            "Detailed chemical analysis of submitted gold samples with documented results.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Gold Purity Review",
-          description:
-            "Precise assessment of sample grade and physical condition.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Private Consultation",
-          description:
-            "One-on-one review of results and discussion of next steps.",
-        },
-      },
-    ],
-  },
-  sameAs: ["https://wa.me/254735405910"],
 };
 
-export const faqSchema = {
+export const testingAssayingSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: homeFaqs.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/testing-assaying`,
+      url: `${siteUrl}/testing-assaying`,
+      name: "Gold Assaying, Purity Testing and Result Review | Bilex Minerals",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Testing and Assaying",
+            item: `${siteUrl}/testing-assaying`,
+          },
+        ],
+      },
     },
-  })),
+    {
+      "@type": "Service",
+      name: "Gold Testing and Assaying",
+      provider: { "@id": `${siteUrl}/#business` },
+      serviceType: "Gold Assaying and Testing",
+      description:
+        "Comprehensive gold testing, assaying, purity review and result documentation for clients presenting gold samples by appointment in Nairobi, Kenya.",
+      areaServed: [
+        { "@type": "Country", name: "Kenya" },
+        { "@type": "Country", name: "Tanzania" },
+        { "@type": "Country", name: "United States" },
+        { "@type": "Continent", name: "Europe" },
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Gold Testing Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Gold Assaying",
+              description:
+                "Detailed chemical analysis of submitted gold samples, with results documented against the tested material.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Gold Testing",
+              description:
+                "Professional sample evaluation for clients preparing to buy, sell or proceed.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Gold Purity Testing",
+              description:
+                "A precise assessment of sample grade and physical condition.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Result Review",
+              description:
+                "One-on-one review of your results and a clear discussion of next steps.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Result Documentation",
+              description:
+                "Written documentation of test results, issued as a service record where required.",
+            },
+          },
+        ],
+      },
+    },
+  ],
+};
+
+export const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/contact`,
+      url: `${siteUrl}/contact`,
+      name: "Book a Gold Testing Appointment | Bilex Minerals Nairobi",
+      description:
+        "Book a gold testing or assaying appointment with Bilex Minerals in Nairobi, Kenya.",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Book Appointment",
+            item: `${siteUrl}/contact`,
+          },
+        ],
+      },
+    },
+  ],
 };

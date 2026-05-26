@@ -59,7 +59,7 @@ const reasons = [
   ["Private Handling", "Appointments, samples and client discussions are handled with full discretion."],
   ["Clear Process", "The testing process is confirmed with the client before the appointment begins."],
   ["Defined Boundaries", "Bilex provides sample-based results. Origin, ownership and market value sit outside the scope of a testing appointment."],
-  ["Result Review", "Results are reviewed with the client directly. Any next steps remain at the client's discretion."],
+  ["Result Review", "Results are reviewed with the client directly. Next steps are the client's to decide."],
 ];
 
 const process = [
@@ -179,6 +179,7 @@ function ServicesSnapshot() {
           <SectionHeader
             eyebrow="Testing Services"
             title="Testing, assaying and purity review — handled in a single appointment."
+            text="From a first pass test to a detailed assay with documented results. Choose the service that matches your needs."
           />
           <Link
             href="/testing-assaying"
