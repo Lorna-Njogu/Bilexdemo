@@ -9,7 +9,14 @@ const links = [
   { href: "/contact", label: "Contact" },
 ];
 
-const serviceLinks = ["Testing", "Assaying", "Purity Review", "Documentation"];
+const serviceLinks = [
+  "Testing",
+  "Assaying",
+  "Private Consultation",
+  "Sourcing",
+  "Exporting",
+  "Exploration",
+];
 
 export function SiteFooter() {
   return (
@@ -118,7 +125,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs uppercase tracking-[0.18em] text-white/36 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Bilex Minerals EA</p>
-          <p>Gold testing. Assaying.Documentation.</p>
+          <p>Testing. Assaying. Consultation. Sourcing. Exporting. Exploration.</p>
         </div>
       </div>
     </footer>
