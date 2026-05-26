@@ -140,27 +140,8 @@ html[data-theme="light"] body {
   animation: mobile-price-glow 4.8s ease-in-out infinite;
 }
 
-.mobile-market-flash-up {
-  animation: mobile-market-flash-up 900ms ease-out;
-}
-
-.mobile-market-flash-down {
-  animation: mobile-market-flash-down 900ms ease-out;
-}
-
-.mobile-sparkline-path {
-  stroke-dasharray: 520;
-  stroke-dashoffset: 520;
-  animation: mobile-sparkline-draw 1.2s ease-out forwards;
-}
-
-.mobile-update-indicator {
-  transform-origin: center;
-  animation: mobile-update-breathe 1.8s ease-in-out infinite;
-}
-
-.mobile-update-spin {
-  animation: mobile-update-spin 1s linear infinite;
+.mobile-tradingview-quote iframe {
+  color-scheme: dark;
 }
 
 .mobile-live-dot {
@@ -382,55 +363,6 @@ html[data-theme="light"] .theme-dark-surface [class*="text-[#d8bd6a]"] {
   50% {
     opacity: 1;
     transform: scale(1.06);
-  }
-}
-
-@keyframes mobile-market-flash-up {
-  0% {
-    color: #7dffca;
-    text-shadow: 0 0 34px rgba(125, 255, 202, 0.58);
-  }
-
-  100% {
-    color: #fff7e7;
-    text-shadow: 0 0 0 rgba(125, 255, 202, 0);
-  }
-}
-
-@keyframes mobile-market-flash-down {
-  0% {
-    color: #ff8f8f;
-    text-shadow: 0 0 34px rgba(255, 143, 143, 0.48);
-  }
-
-  100% {
-    color: #fff7e7;
-    text-shadow: 0 0 0 rgba(255, 143, 143, 0);
-  }
-}
-
-@keyframes mobile-sparkline-draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes mobile-update-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes mobile-update-breathe {
-  0%,
-  100% {
-    opacity: 0.42;
-    transform: rotate(0deg) scale(0.96);
-  }
-
-  50% {
-    opacity: 0.9;
-    transform: rotate(12deg) scale(1.08);
   }
 }
 

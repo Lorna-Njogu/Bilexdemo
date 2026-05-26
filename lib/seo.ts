@@ -196,19 +196,57 @@ export const homePageSchema = {
         itemListElement: [
           {
             "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Gold Testing" },
+            itemOffered: {
+              "@type": "Service",
+              name: "Gold Testing",
+              description:
+                "Professional sample evaluation for clients preparing to buy, sell or proceed.",
+            },
           },
           {
             "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Gold Assaying" },
+            itemOffered: {
+              "@type": "Service",
+              name: "Gold Assaying",
+              description:
+                "Detailed chemical analysis of submitted gold samples, with results documented against the tested material.",
+            },
           },
           {
             "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Gold Purity Review" },
+            itemOffered: {
+              "@type": "Service",
+              name: "Private Consultation",
+              description:
+                "One-on-one review of your results and a clear discussion of next steps.",
+            },
           },
           {
             "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Private Consultation" },
+            itemOffered: {
+              "@type": "Service",
+              name: "Gold Sourcing",
+              description:
+                "Gold sourcing support for buyers with specific grade, volume or origin requirements.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Gold Exporting",
+              description:
+                "Support for clients moving gold across borders. Documentation, compliance guidance and export coordination.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Gold Exploration",
+              description:
+                "Advisory and field support for clients with active or prospective exploration interests in East Africa.",
+            },
           },
         ],
       },

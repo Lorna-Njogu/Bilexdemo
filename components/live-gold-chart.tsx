@@ -18,6 +18,14 @@ const chartConfig = {
   autosize: true,
 };
 
+const singleQuoteConfig = {
+  symbol: "OANDA:XAUUSD",
+  width: "100%",
+  isTransparent: true,
+  colorTheme: "dark",
+  locale: "en",
+};
+
 export function GoldChartPanel() {
   const chartUrl = `https://www.tradingview-widget.com/embed-widget/advanced-chart/?locale=en#${encodeURIComponent(
     JSON.stringify(chartConfig),
@@ -27,6 +35,21 @@ export function GoldChartPanel() {
     <iframe
       title="Live XAU/USD market reference"
       src={chartUrl}
+      className="h-full w-full border-0"
+      loading="eager"
+    />
+  );
+}
+
+export function GoldSingleQuotePanel() {
+  const quoteUrl = `https://www.tradingview-widget.com/embed-widget/single-quote/?locale=en#${encodeURIComponent(
+    JSON.stringify(singleQuoteConfig),
+  )}`;
+
+  return (
+    <iframe
+      title="Live XAU/USD price from TradingView"
+      src={quoteUrl}
       className="h-full w-full border-0"
       loading="eager"
     />
